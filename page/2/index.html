@@ -194,29 +194,301 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="springboot-layui-弹出层复选框反选数据" class="article article-type-springboot  article-index" itemscope itemprop="blogPost">
+    <article id="springboot-整合SpringDataJpa" class="article article-type-springboot  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/16/layui-弹出层复选框反选数据/">layui 弹出层复选框反选数据</a>
+      <a class="article-title" href="/2019/02/17/整合SpringDataJpa/">整合SpringDataJpa</a>
     </h1>
   
 
         
-        <a href="/2019/02/16/layui-弹出层复选框反选数据/" class="archive-article-date">
-  	<time datetime="2019-02-16T14:41:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-16</time>
+        <a href="/2019/02/17/整合SpringDataJpa/" class="archive-article-date">
+  	<time datetime="2019-02-17T14:35:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-17</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="https://img-blog.csdnimg.cn/20190216224230801.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzY0NzIyNA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>
+        <h2 id="JPA"><a href="#JPA" class="headerlink" title="JPA"></a>JPA</h2><p>JPA是Java Persistence API的简称，中文名Java持久层API，是官方（Sun）在JDK5.0后提出的Java持久化规范。其目的是为了简化现有JAVA EE和JAVA SE应用开发工作，以及整合现有的ORM技术实现规范统一<br>
         
-          <a class="article-more-a" href="/2019/02/16/layui-弹出层复选框反选数据/#more">more >></a>
+          <a class="article-more-a" href="/2019/02/17/整合SpringDataJpa/#more">more >></a>
+        
+      
+
+      
+    </p></div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springBoot</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">SpringDataJpa</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/springBoot/" class="article-tag-list-link color1">springBoot</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/SpringDataJpa/" class="article-tag-list-link color4">SpringDataJpa</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/02/17/整合SpringDataJpa/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="springboot-JSON-stringify出现Converting-circular-structure-to-JSON" class="article article-type-springboot  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/02/16/JSON-stringify出现Converting-circular-structure-to-JSON/">JSON.stringify出现Converting circular structure to JSON</a>
+    </h1>
+  
+
+        
+        <a href="/2019/02/16/JSON-stringify出现Converting-circular-structure-to-JSON/" class="archive-article-date">
+  	<time datetime="2019-02-16T15:10:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <a id="more"></a>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> cache = [];</span><br><span class="line">                   <span class="keyword">var</span> row1 =  <span class="built_in">JSON</span>.stringify(row, <span class="function"><span class="keyword">function</span> (<span class="params">key, value</span>) </span>&#123;</span><br><span class="line">                       <span class="keyword">if</span> (<span class="keyword">typeof</span> value === <span class="string">'object'</span> &amp;&amp; value !== <span class="literal">null</span>) &#123;</span><br><span class="line">                           <span class="keyword">if</span> (cache.indexOf(value) !== <span class="number">-1</span>) &#123;</span><br><span class="line">                               <span class="comment">// Circular reference found, discard key</span></span><br><span class="line">                               <span class="keyword">return</span>;</span><br><span class="line">                           &#125;</span><br><span class="line">                           <span class="comment">// Store value in our collection</span></span><br><span class="line">                           cache.push(value);</span><br><span class="line">                       &#125;</span><br><span class="line">                       <span class="keyword">return</span> value;</span><br><span class="line">                   &#125;);</span><br><span class="line">                   cache = <span class="literal">null</span>;</span><br><span class="line">                   <span class="built_in">window</span>.localStorage.setItem(<span class="string">"row"</span>, row1);</span><br><span class="line">                   <span class="built_in">console</span>.log(<span class="built_in">JSON</span>.parse(localStorage.getItem(<span class="string">"row"</span>)));</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">JSON</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">错误解决</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/JSON/" class="article-tag-list-link color5">JSON</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/02/16/JSON-stringify出现Converting-circular-structure-to-JSON/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="springboot-菜单管理-解决表单回显" class="article article-type-springboot  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/02/16/菜单管理-解决表单回显/">菜单管理 解决表单回显</a>
+    </h1>
+  
+
+        
+        <a href="/2019/02/16/菜单管理-解决表单回显/" class="archive-article-date">
+  	<time datetime="2019-02-16T15:06:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="解决表单回显"><a href="#解决表单回显" class="headerlink" title="解决表单回显"></a>解决表单回显</h2>
+        
+          <a class="article-more-a" href="/2019/02/16/菜单管理-解决表单回显/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springBoot</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/springBoot/" class="article-tag-list-link color1">springBoot</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/02/16/菜单管理-解决表单回显/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="springboot-layui-使用弹窗功能及树控件" class="article article-type-springboot  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/02/16/layui-使用弹窗功能及树控件/">layui 使用弹窗功能及树控件</a>
+    </h1>
+  
+
+        
+        <a href="/2019/02/16/layui-使用弹窗功能及树控件/" class="archive-article-date">
+  	<time datetime="2019-02-16T15:04:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://img-blog.csdnimg.cn/20190216230451368.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzY0NzIyNA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>
+        
+          <a class="article-more-a" href="/2019/02/16/layui-使用弹窗功能及树控件/#more">more >></a>
         
       
 
@@ -251,7 +523,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/02/16/layui-弹出层复选框反选数据/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/02/16/layui-使用弹窗功能及树控件/">展开全文 >></a>
         </p>
       
 
@@ -281,29 +553,29 @@
 
 
   
-    <article id="springboot-treegrid-js-BootstrapTable进行封装" class="article article-type-springboot  article-index" itemscope itemprop="blogPost">
+    <article id="springboot-layui-引入插件" class="article article-type-springboot  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/16/treegrid-js-BootstrapTable进行封装/">treegrid.js BootstrapTable进行封装</a>
+      <a class="article-title" href="/2019/02/16/layui-引入插件/">layui 引入插件</a>
     </h1>
   
 
         
-        <a href="/2019/02/16/treegrid-js-BootstrapTable进行封装/" class="archive-article-date">
-  	<time datetime="2019-02-16T14:39:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-16</time>
+        <a href="/2019/02/16/layui-引入插件/" class="archive-article-date">
+  	<time datetime="2019-02-16T15:02:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="main-js"><a href="#main-js" class="headerlink" title="main.js"></a>main.js</h2>
+        <figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">layui</span><span class="selector-class">.config</span>(&#123;</span><br><span class="line">    <span class="attribute">base</span>: Main.getContextPath()+<span class="string">'/assets/plugins/layui/lay/modules/'</span> <span class="comment">//假设这是test.js所在的目录   可以把你需要扩展的js插件都放在一个文件夹内</span></span><br><span class="line">&#125;)<span class="selector-class">.extend</span>(&#123; <span class="comment">//设定组件别名</span></span><br><span class="line">    <span class="attribute">dtree</span>: <span class="string">'dtree'</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
         
-          <a class="article-more-a" href="/2019/02/16/treegrid-js-BootstrapTable进行封装/#more">more >></a>
+          <a class="article-more-a" href="/2019/02/16/layui-引入插件/#more">more >></a>
         
       
 
@@ -317,7 +589,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">layui</a>
         		</li>
       		
 		</ul>
@@ -329,7 +601,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/前端/" class="article-tag-list-link color3">前端</a>
+        			<a href="/categories/layui/" class="article-tag-list-link color1">layui</a>
         		</li>
       		
 		</ul>
@@ -338,7 +610,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/02/16/treegrid-js-BootstrapTable进行封装/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/02/16/layui-引入插件/">展开全文 >></a>
         </p>
       
 
@@ -368,29 +640,29 @@
 
 
   
-    <article id="springboot-java提高篇（一）—–理解java的三大特性之封装" class="article article-type-springboot  article-index" itemscope itemprop="blogPost">
+    <article id="springboot-layui-使用layui-扩展组件-dtree" class="article article-type-springboot  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/16/java提高篇（一）—–理解java的三大特性之封装/">java提高篇（一）—–理解java的三大特性之封装</a>
+      <a class="article-title" href="/2019/02/16/layui-使用layui-扩展组件-dtree/">layui 使用layui 扩展组件 dtree</a>
     </h1>
   
 
         
-        <a href="/2019/02/16/java提高篇（一）—–理解java的三大特性之封装/" class="archive-article-date">
-  	<time datetime="2019-02-16T14:34:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-16</time>
+        <a href="/2019/02/16/layui-使用layui-扩展组件-dtree/" class="archive-article-date">
+  	<time datetime="2019-02-16T14:56:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="三大特性之—封装"><a href="#三大特性之—封装" class="headerlink" title="三大特性之—封装"></a>三大特性之—封装</h2><p>封装从字面上来理解就是包装的意思，专业点就是信息隐藏，是指利用抽象数据类型将数据和基于数据的操作封装在一起，使其构成一个不可分割的独立实体，数据被保护在抽象数据类型的内部，尽可能地隐藏内部的细节，只保留一些对外接口使之与外部发生联系。系统的其他对象只能通过包裹在数据外面的已经授权的操作来与这个封装的对象进行交流和交互。也就是说用户是无需知道对象内部的细节（当然也无从知道），但可以通过该对象对外的提供的接口来访问该对象。<br>
+        <p><img src="https://img-blog.csdnimg.cn/20190216225730342.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzY0NzIyNA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>
         
-          <a class="article-more-a" href="/2019/02/16/java提高篇（一）—–理解java的三大特性之封装/#more">more >></a>
+          <a class="article-more-a" href="/2019/02/16/layui-使用layui-扩展组件-dtree/#more">more >></a>
         
       
 
@@ -404,7 +676,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java提高</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">layui</a>
         		</li>
       		
 		</ul>
@@ -416,7 +688,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/java提高/" class="article-tag-list-link color2">java提高</a>
+        			<a href="/categories/layui/" class="article-tag-list-link color1">layui</a>
         		</li>
       		
 		</ul>
@@ -425,7 +697,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/02/16/java提高篇（一）—–理解java的三大特性之封装/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/02/16/layui-使用layui-扩展组件-dtree/">展开全文 >></a>
         </p>
       
 
@@ -455,112 +727,20 @@
 
 
   
-    <article id="springboot-使用Ajax向服务端传送form表单数据-文件上传" class="article article-type-springboot  article-index" itemscope itemprop="blogPost">
+    <article id="springboot-layui-dtree-树形组件-elem和obj的区别-目的解决了弹窗关闭后再打开出现空白树" class="article article-type-springboot  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/16/使用Ajax向服务端传送form表单数据-文件上传/">使用Ajax向服务端传送form表单数据 文件上传</a>
+      <a class="article-title" href="/2019/02/16/layui-dtree-树形组件-elem和obj的区别-目的解决了弹窗关闭后再打开出现空白树/">layui dtree 树形组件 elem和obj的区别 目的解决了弹窗关闭后再打开出现空白树</a>
     </h1>
   
 
         
-        <a href="/2019/02/16/使用Ajax向服务端传送form表单数据-文件上传/" class="archive-article-date">
-  	<time datetime="2019-02-16T14:30:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>今天在做附件Demo的时候，发现form表单的submit按钮会自动刷新页面，但在很多情况下，页面的刷新会很大程度影响体验。于是想到用Ajax来代替submit向服务端发送数据，网络上的说法是通过JQuery的serialize()方法序列化表单，但实验之后发现该方法只能传递一般的参数，上传的文件并不能被序列化传递到服务端。</p>
-<p>继续查找资料发现可以使用formData方法来使用Ajax请求向服务端上传form表单附件：<br>
-        
-          <a class="article-more-a" href="/2019/02/16/使用Ajax向服务端传送form表单数据-文件上传/#more">more >></a>
-        
-      
-
-      
-    </p></div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">AJAX</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">文件上传</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/文件上传/" class="article-tag-list-link color5">文件上传</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/02/16/使用Ajax向服务端传送form表单数据-文件上传/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="springboot-layero是什么意思-虚拟dom-解决弹出框虚拟dom找不到，树无法加载" class="article article-type-springboot  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/16/layero是什么意思-虚拟dom-解决弹出框虚拟dom找不到，树无法加载/">layero是什么意思 虚拟dom 解决弹出框虚拟dom找不到，树无法加载</a>
-    </h1>
-  
-
-        
-        <a href="/2019/02/16/layero是什么意思-虚拟dom-解决弹出框虚拟dom找不到，树无法加载/" class="archive-article-date">
-  	<time datetime="2019-02-16T14:28:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-16</time>
+        <a href="/2019/02/16/layui-dtree-树形组件-elem和obj的区别-目的解决了弹窗关闭后再打开出现空白树/" class="archive-article-date">
+  	<time datetime="2019-02-16T14:53:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-16</time>
 </a>
         
       </header>
@@ -568,9 +748,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>layero = layer object = layer 的对象 = 弹出层的对象<br>就相当于你平时的 $(‘#id’)<br>iframe 不是也有 id class 之类的么，id 就是选择器…<br>
+<p>elem：树绑定的元素ID。 obj：树绑定的DOM。<br>使用elem元素可以绑定已经在页面中存在的元素，而如果是页面中点击某个按钮生成的元素的话，则可以用obj来指定，这在使用layer.open()中打开一个树极为有效，它可以规避元素在生成之前被绑定从而找不到的问题。最终组件会将elem转换为该属性，elem和obj属性必须指定一个，如果同时指定，则优先obj属性的配置项<br>
         
-          <a class="article-more-a" href="/2019/02/16/layero是什么意思-虚拟dom-解决弹出框虚拟dom找不到，树无法加载/#more">more >></a>
+          <a class="article-more-a" href="/2019/02/16/layui-dtree-树形组件-elem和obj的区别-目的解决了弹窗关闭后再打开出现空白树/#more">more >></a>
         
       
 
@@ -584,7 +764,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">错误解决</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">layui</a>
         		</li>
       		
 		</ul>
@@ -596,7 +776,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/错误解决/" class="article-tag-list-link color5">错误解决</a>
+        			<a href="/categories/layui/" class="article-tag-list-link color1">layui</a>
         		</li>
       		
 		</ul>
@@ -605,7 +785,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/02/16/layero是什么意思-虚拟dom-解决弹出框虚拟dom找不到，树无法加载/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/02/16/layui-dtree-树形组件-elem和obj的区别-目的解决了弹窗关闭后再打开出现空白树/">展开全文 >></a>
         </p>
       
 
@@ -635,29 +815,29 @@
 
 
   
-    <article id="springboot-使用Bootstrap-modal（模态窗）关闭后layui无法渲染表单" class="article article-type-springboot  article-index" itemscope itemprop="blogPost">
+    <article id="springboot-layui-dtree-树形组件使用递归处理返回数据" class="article article-type-springboot  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/16/使用Bootstrap-modal（模态窗）关闭后layui无法渲染表单/">使用Bootstrap modal（模态窗）关闭后layui无法渲染表单</a>
+      <a class="article-title" href="/2019/02/16/layui-dtree-树形组件使用递归处理返回数据/">layui dtree 树形组件使用递归处理返回数据</a>
     </h1>
   
 
         
-        <a href="/2019/02/16/使用Bootstrap-modal（模态窗）关闭后layui无法渲染表单/" class="archive-article-date">
-  	<time datetime="2019-02-16T14:26:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-16</time>
+        <a href="/2019/02/16/layui-dtree-树形组件使用递归处理返回数据/" class="archive-article-date">
+  	<time datetime="2019-02-16T14:49:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">       $(<span class="string">"#editModal"</span>).on(<span class="string">"shown.bs.modal"</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">           <span class="built_in">window</span>.setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">               form.render(); <span class="comment">//重新渲染表单</span></span><br><span class="line">           &#125;,<span class="number">500</span>)</span><br><span class="line">       &#125;);</span><br><span class="line">   &#125;)</span><br></pre></td></tr></table></figure>
+        <h2 id="递归处理返回数据"><a href="#递归处理返回数据" class="headerlink" title="递归处理返回数据"></a>递归处理返回数据</h2>
         
-          <a class="article-more-a" href="/2019/02/16/使用Bootstrap-modal（模态窗）关闭后layui无法渲染表单/#more">more >></a>
+          <a class="article-more-a" href="/2019/02/16/layui-dtree-树形组件使用递归处理返回数据/#more">more >></a>
         
       
 
@@ -671,185 +851,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">错误解决</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/错误解决/" class="article-tag-list-link color5">错误解决</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/02/16/使用Bootstrap-modal（模态窗）关闭后layui无法渲染表单/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="springboot-记录自己理解的一些设计模式" class="article article-type-springboot  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/16/记录自己理解的一些设计模式/">记录自己理解的一些设计模式</a>
-    </h1>
-  
-
-        
-        <a href="/2019/02/16/记录自己理解的一些设计模式/" class="archive-article-date">
-  	<time datetime="2019-02-16T14:23:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="策略模式"><a href="#策略模式" class="headerlink" title="策略模式"></a>策略模式</h2>
-        
-          <a class="article-more-a" href="/2019/02/16/记录自己理解的一些设计模式/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/设计模式/" class="article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/02/16/记录自己理解的一些设计模式/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="springboot-配置-sql打印拦截器" class="article article-type-springboot  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/16/配置-sql打印拦截器/">配置 sql打印拦截器</a>
-    </h1>
-  
-
-        
-        <a href="/2019/02/16/配置-sql打印拦截器/" class="archive-article-date">
-  	<time datetime="2019-02-16T14:11:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="MyBatisConfig"><a href="#MyBatisConfig" class="headerlink" title="MyBatisConfig"></a>MyBatisConfig</h2>
-        
-          <a class="article-more-a" href="/2019/02/16/配置-sql打印拦截器/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Mybatis</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">layui</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">sql打印拦截器</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">递归处理返回数据</a>
         		</li>
       		
 		</ul>
@@ -861,7 +867,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Mybatis/" class="article-tag-list-link color3">Mybatis</a>
+        			<a href="/categories/layui/" class="article-tag-list-link color1">layui</a>
         		</li>
       		
 		</ul>
@@ -870,7 +876,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/02/16/配置-sql打印拦截器/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/02/16/layui-dtree-树形组件使用递归处理返回数据/">展开全文 >></a>
         </p>
       
 
@@ -902,7 +908,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
     </nav>
   
 
@@ -997,6 +1003,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">多线程</a>
               </li>
              
@@ -1009,18 +1019,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">过滤器和拦截器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">启动和终止线程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Java中的锁</a>
               </li>
              
@@ -1029,7 +1027,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">容器</a>
+                <a href="javascript:void(0)" class="js-tag color3">过滤器和拦截器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">启动和终止线程</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1037,15 +1039,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">容器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">线程应用实例</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">线程间通信</a>
+                <a href="javascript:void(0)" class="js-tag color1">队列同步器</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">队列同步器</a>
+                <a href="javascript:void(0)" class="js-tag color3">数据结构与算法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1057,19 +1063,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">iwiilsay小程序</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">数据结构与算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">仿土巴兔小程序</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">iwiilsay小程序</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">微课堂</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">线程间通信</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1089,10 +1095,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Java基础</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">JSON</a>
               </li>
              
@@ -1101,11 +1103,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">java提高</a>
+                <a href="javascript:void(0)" class="js-tag color2">lambda</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">lambda</a>
+                <a href="javascript:void(0)" class="js-tag color2">Java基础</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1117,23 +1119,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">java提高</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">文件上传</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">事务</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1145,11 +1139,51 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">文件上传</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">SpringDataJpa</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">使用Spring Cache集成Redis</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">通用Mapper与分页插件的集成</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">轻松搞定全局异常</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">轻松搞定数据验证（二）</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Thinking In Java</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">读书笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">集成Swagger在线调试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">轻松搞定数据验证（一）</a>
               </li>
              
               <li class="article-tag-list-item">

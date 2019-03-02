@@ -194,29 +194,30 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="springboot-JSON-stringify出现Converting-circular-structure-to-JSON" class="article article-type-springboot  article-index" itemscope itemprop="blogPost">
+    <article id="springboot-轻松搞定数据验证（二）" class="article article-type-springboot  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/16/JSON-stringify出现Converting-circular-structure-to-JSON/">JSON.stringify出现Converting circular structure to JSON</a>
+      <a class="article-title" href="/2019/02/19/轻松搞定数据验证（二）/">轻松搞定数据验证（二）</a>
     </h1>
   
 
         
-        <a href="/2019/02/16/JSON-stringify出现Converting-circular-structure-to-JSON/" class="archive-article-date">
-  	<time datetime="2019-02-16T15:10:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-16</time>
+        <a href="/2019/02/19/轻松搞定数据验证（二）/" class="archive-article-date">
+  	<time datetime="2019-02-19T14:19:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-19</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> cache = [];</span><br><span class="line">                   <span class="keyword">var</span> row1 =  <span class="built_in">JSON</span>.stringify(row, <span class="function"><span class="keyword">function</span> (<span class="params">key, value</span>) </span>&#123;</span><br><span class="line">                       <span class="keyword">if</span> (<span class="keyword">typeof</span> value === <span class="string">'object'</span> &amp;&amp; value !== <span class="literal">null</span>) &#123;</span><br><span class="line">                           <span class="keyword">if</span> (cache.indexOf(value) !== <span class="number">-1</span>) &#123;</span><br><span class="line">                               <span class="comment">// Circular reference found, discard key</span></span><br><span class="line">                               <span class="keyword">return</span>;</span><br><span class="line">                           &#125;</span><br><span class="line">                           <span class="comment">// Store value in our collection</span></span><br><span class="line">                           cache.push(value);</span><br><span class="line">                       &#125;</span><br><span class="line">                       <span class="keyword">return</span> value;</span><br><span class="line">                   &#125;);</span><br><span class="line">                   cache = <span class="literal">null</span>;</span><br><span class="line">                   <span class="built_in">window</span>.localStorage.setItem(<span class="string">"row"</span>, row1);</span><br><span class="line">                   <span class="built_in">console</span>.log(<span class="built_in">JSON</span>.parse(localStorage.getItem(<span class="string">"row"</span>)));</span><br></pre></td></tr></table></figure>
-
+        <p>一起来学SpringBoot | 第十九篇：轻松搞定数据验证（一） 中介绍了数据有效性校验的重要性，也简单介绍了如何用轻松的方式搞定数据有效性校验，但是当系统自带的注解无法满足我们的要求时候应该咋办呢？这就是本章将给各位介绍的自定义 Validator 注解</p>
+        
+          <a class="article-more-a" href="/2019/02/19/轻松搞定数据验证（二）/#more">more >></a>
+        
       
 
       
@@ -229,11 +230,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">JSON</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springBoot</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">错误解决</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">轻松搞定数据验证（二）</a>
         		</li>
       		
 		</ul>
@@ -245,7 +246,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/JSON/" class="article-tag-list-link color5">JSON</a>
+        			<a href="/categories/springBoot/" class="article-tag-list-link color1">springBoot</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/轻松搞定数据验证（二）/" class="article-tag-list-link color2">轻松搞定数据验证（二）</a>
         		</li>
       		
 		</ul>
@@ -254,7 +259,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/02/16/JSON-stringify出现Converting-circular-structure-to-JSON/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/02/19/轻松搞定数据验证（二）/">展开全文 >></a>
         </p>
       
 
@@ -284,34 +289,224 @@
 
 
   
-    <article id="springboot-菜单管理-解决表单回显" class="article article-type-springboot  article-index" itemscope itemprop="blogPost">
+    <article id="springboot-轻松搞定数据验证（一）" class="article article-type-springboot  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/16/菜单管理-解决表单回显/">菜单管理 解决表单回显</a>
+      <a class="article-title" href="/2019/02/19/轻松搞定数据验证（一）/">轻松搞定数据验证（一）</a>
     </h1>
   
 
         
-        <a href="/2019/02/16/菜单管理-解决表单回显/" class="archive-article-date">
-  	<time datetime="2019-02-16T15:06:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-16</time>
+        <a href="/2019/02/19/轻松搞定数据验证（一）/" class="archive-article-date">
+  	<time datetime="2019-02-19T13:48:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-19</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="解决表单回显"><a href="#解决表单回显" class="headerlink" title="解决表单回显"></a>解决表单回显</h2>
+        <p>对于任何一个应用而言，客户端做的数据有效性验证都不是安全有效的，而数据验证又是一个企业级项目架构上最为基础的功能模块，这时候就要求我们在服务端接收到数据的时候也对数据的有效性进行验证。为什么这么说呢？往往我们在编写程序的时候都会感觉后台的验证无关紧要，毕竟客户端已经做过验证了，后端没必要在浪费资源对数据进行验证了，但恰恰是这种思维最为容易被别人钻空子。毕竟只要有点开发经验的都知道，我们完全可以模拟 HTTP 请求到后台地址，模拟请求过程中发送一些涉及系统安全的数据到后台，后果可想而知….</p>
         
-          <a class="article-more-a" href="/2019/02/16/菜单管理-解决表单回显/#more">more >></a>
+          <a class="article-more-a" href="/2019/02/19/轻松搞定数据验证（一）/#more">more >></a>
         
       
 
       
     </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springBoot</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">轻松搞定数据验证（一）</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/springBoot/" class="article-tag-list-link color1">springBoot</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/轻松搞定数据验证（一）/" class="article-tag-list-link color2">轻松搞定数据验证（一）</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/02/19/轻松搞定数据验证（一）/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="springboot-轻松搞定全局异常" class="article article-type-springboot  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/02/19/轻松搞定全局异常/">轻松搞定全局异常</a>
+    </h1>
+  
+
+        
+        <a href="/2019/02/19/轻松搞定全局异常/" class="archive-article-date">
+  	<time datetime="2019-02-19T13:30:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>实际项目开发中，程序往往会发生各式各样的异常情况，特别是身为服务端开发人员的我们，总是不停的编写接口提供给前端调用，分工协作的情况下，避免不了异常的发生，如果直接将错误的信息直接暴露给用户，这样的体验可想而知，且对黑客而言，详细异常信息往往会提供非常大的帮助…</p>
+        
+          <a class="article-more-a" href="/2019/02/19/轻松搞定全局异常/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springBoot</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">轻松搞定全局异常</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/springBoot/" class="article-tag-list-link color1">springBoot</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/轻松搞定全局异常/" class="article-tag-list-link color4">轻松搞定全局异常</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/02/19/轻松搞定全局异常/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="springboot-定时任务详解" class="article article-type-springboot  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/02/19/定时任务详解/">定时任务详解</a>
+    </h1>
+  
+
+        
+        <a href="/2019/02/19/定时任务详解/" class="archive-article-date">
+  	<time datetime="2019-02-19T05:36:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在我们日常开发中，经常会遇到 数据定时增量同步、定时发送邮件、爬虫定时抓取 的需求；这时我们可以采用定时任务的方式去进行工作…..<br>
+        
+          <a class="article-more-a" href="/2019/02/19/定时任务详解/#more">more >></a>
+        
+      
+
+      
+    </p></div>
     <div class="article-info article-info-index">
       
       
@@ -341,7 +536,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/02/16/菜单管理-解决表单回显/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/02/19/定时任务详解/">展开全文 >></a>
         </p>
       
 
@@ -371,29 +566,30 @@
 
 
   
-    <article id="springboot-layui-使用弹窗功能及树控件" class="article article-type-springboot  article-index" itemscope itemprop="blogPost">
+    <article id="springboot-集成Swagger在线调试" class="article article-type-springboot  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/16/layui-使用弹窗功能及树控件/">layui 使用弹窗功能及树控件</a>
+      <a class="article-title" href="/2019/02/18/集成Swagger在线调试/">集成Swagger在线调试</a>
     </h1>
   
 
         
-        <a href="/2019/02/16/layui-使用弹窗功能及树控件/" class="archive-article-date">
-  	<time datetime="2019-02-16T15:04:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-16</time>
+        <a href="/2019/02/18/集成Swagger在线调试/" class="archive-article-date">
+  	<time datetime="2019-02-18T13:47:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-18</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="https://img-blog.csdnimg.cn/20190216230451368.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzY0NzIyNA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>
+        <p>随着互联网技术的发展，现在的网站架构基本都由原来的后端渲染，变成了：前端渲染、前后端分离的形态，而且前端技术和后端技术在各自的道路上越走越远。</p>
+<p>前端和后端唯一联系，变成了API接口；API文档自然就成了前后端开发人员联系的纽带，变得尤为的重要，swagger就是一款让你更好的书写API文档的框架。<br>
         
-          <a class="article-more-a" href="/2019/02/16/layui-使用弹窗功能及树控件/#more">more >></a>
+          <a class="article-more-a" href="/2019/02/18/集成Swagger在线调试/#more">more >></a>
         
       
 
@@ -407,360 +603,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">layui</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/layui/" class="article-tag-list-link color1">layui</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/02/16/layui-使用弹窗功能及树控件/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="springboot-layui-引入插件" class="article article-type-springboot  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/16/layui-引入插件/">layui 引入插件</a>
-    </h1>
-  
-
-        
-        <a href="/2019/02/16/layui-引入插件/" class="archive-article-date">
-  	<time datetime="2019-02-16T15:02:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">layui</span><span class="selector-class">.config</span>(&#123;</span><br><span class="line">    <span class="attribute">base</span>: Main.getContextPath()+<span class="string">'/assets/plugins/layui/lay/modules/'</span> <span class="comment">//假设这是test.js所在的目录   可以把你需要扩展的js插件都放在一个文件夹内</span></span><br><span class="line">&#125;)<span class="selector-class">.extend</span>(&#123; <span class="comment">//设定组件别名</span></span><br><span class="line">    <span class="attribute">dtree</span>: <span class="string">'dtree'</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2019/02/16/layui-引入插件/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">layui</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/layui/" class="article-tag-list-link color1">layui</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/02/16/layui-引入插件/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="springboot-layui-使用layui-扩展组件-dtree" class="article article-type-springboot  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/16/layui-使用layui-扩展组件-dtree/">layui 使用layui 扩展组件 dtree</a>
-    </h1>
-  
-
-        
-        <a href="/2019/02/16/layui-使用layui-扩展组件-dtree/" class="archive-article-date">
-  	<time datetime="2019-02-16T14:56:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="https://img-blog.csdnimg.cn/20190216225730342.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzY0NzIyNA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>
-        
-          <a class="article-more-a" href="/2019/02/16/layui-使用layui-扩展组件-dtree/#more">more >></a>
-        
-      
-
-      
-    </p></div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">layui</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/layui/" class="article-tag-list-link color1">layui</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/02/16/layui-使用layui-扩展组件-dtree/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="springboot-layui-dtree-树形组件-elem和obj的区别-目的解决了弹窗关闭后再打开出现空白树" class="article article-type-springboot  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/16/layui-dtree-树形组件-elem和obj的区别-目的解决了弹窗关闭后再打开出现空白树/">layui dtree 树形组件 elem和obj的区别 目的解决了弹窗关闭后再打开出现空白树</a>
-    </h1>
-  
-
-        
-        <a href="/2019/02/16/layui-dtree-树形组件-elem和obj的区别-目的解决了弹窗关闭后再打开出现空白树/" class="archive-article-date">
-  	<time datetime="2019-02-16T14:53:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>elem：树绑定的元素ID。 obj：树绑定的DOM。<br>使用elem元素可以绑定已经在页面中存在的元素，而如果是页面中点击某个按钮生成的元素的话，则可以用obj来指定，这在使用layer.open()中打开一个树极为有效，它可以规避元素在生成之前被绑定从而找不到的问题。最终组件会将elem转换为该属性，elem和obj属性必须指定一个，如果同时指定，则优先obj属性的配置项<br>
-        
-          <a class="article-more-a" href="/2019/02/16/layui-dtree-树形组件-elem和obj的区别-目的解决了弹窗关闭后再打开出现空白树/#more">more >></a>
-        
-      
-
-      
-    </p></blockquote></div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">layui</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/layui/" class="article-tag-list-link color1">layui</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/02/16/layui-dtree-树形组件-elem和obj的区别-目的解决了弹窗关闭后再打开出现空白树/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="springboot-layui-dtree-树形组件使用递归处理返回数据" class="article article-type-springboot  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/16/layui-dtree-树形组件使用递归处理返回数据/">layui dtree 树形组件使用递归处理返回数据</a>
-    </h1>
-  
-
-        
-        <a href="/2019/02/16/layui-dtree-树形组件使用递归处理返回数据/" class="archive-article-date">
-  	<time datetime="2019-02-16T14:49:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="递归处理返回数据"><a href="#递归处理返回数据" class="headerlink" title="递归处理返回数据"></a>递归处理返回数据</h2>
-        
-          <a class="article-more-a" href="/2019/02/16/layui-dtree-树形组件使用递归处理返回数据/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">layui</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springBoot</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">递归处理返回数据</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">集成Swagger在线调试</a>
         		</li>
       		
 		</ul>
@@ -772,7 +619,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/layui/" class="article-tag-list-link color1">layui</a>
+        			<a href="/categories/springBoot/" class="article-tag-list-link color1">springBoot</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/集成Swagger在线调试/" class="article-tag-list-link color4">集成Swagger在线调试</a>
         		</li>
       		
 		</ul>
@@ -781,7 +632,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/02/16/layui-dtree-树形组件使用递归处理返回数据/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/02/18/集成Swagger在线调试/">展开全文 >></a>
         </p>
       
 
@@ -811,29 +662,29 @@
 
 
   
-    <article id="springboot-JAVA中分为基本数据类型及引用数据类型" class="article article-type-springboot  article-index" itemscope itemprop="blogPost">
+    <article id="springboot-使用Spring-Cache集成Redis" class="article article-type-springboot  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/16/JAVA中分为基本数据类型及引用数据类型/">JAVA中分为基本数据类型及引用数据类型</a>
+      <a class="article-title" href="/2019/02/18/使用Spring-Cache集成Redis/">使用Spring Cache集成Redis</a>
     </h1>
   
 
         
-        <a href="/2019/02/16/JAVA中分为基本数据类型及引用数据类型/" class="archive-article-date">
-  	<time datetime="2019-02-16T14:45:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-16</time>
+        <a href="/2019/02/18/使用Spring-Cache集成Redis/" class="archive-article-date">
+  	<time datetime="2019-02-18T11:09:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-18</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="一、基本数据类型："><a href="#一、基本数据类型：" class="headerlink" title="一、基本数据类型："></a>一、基本数据类型：</h2>
+        <p>Spring 3.1 引入了激动人心的基于注释（annotation）的缓存（cache）技术，它本质上不是一个具体的缓存实现方案（例如 EHCache 或者 Redis），而是一个对缓存使用的抽象，通过在既有代码中添加少量它定义的各种 annotation，即能够达到缓存方法的返回对象的效果。</p>
         
-          <a class="article-more-a" href="/2019/02/16/JAVA中分为基本数据类型及引用数据类型/#more">more >></a>
+          <a class="article-more-a" href="/2019/02/18/使用Spring-Cache集成Redis/#more">more >></a>
         
       
 
@@ -847,7 +698,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Java基础</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springBoot</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">使用Spring Cache集成Redis</a>
         		</li>
       		
 		</ul>
@@ -859,7 +714,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Java基础/" class="article-tag-list-link color2">Java基础</a>
+        			<a href="/categories/springBoot/" class="article-tag-list-link color1">springBoot</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/使用SpringCache集成Redis/" class="article-tag-list-link color2">使用Spring Cache集成Redis</a>
         		</li>
       		
 		</ul>
@@ -868,7 +727,189 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/02/16/JAVA中分为基本数据类型及引用数据类型/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/02/18/使用Spring-Cache集成Redis/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="springboot-整合Lettuce-Redis" class="article article-type-springboot  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/02/18/整合Lettuce-Redis/">整合Lettuce Redis</a>
+    </h1>
+  
+
+        
+        <a href="/2019/02/18/整合Lettuce-Redis/" class="archive-article-date">
+  	<time datetime="2019-02-18T10:53:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-18</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Spring Boot 除了支持常见的ORM框架外，更是对常用的中间件提供了非常好封装，随着Spring Boot2.x的到来，支持的组件越来越丰富，也越来越成熟，其中对Redis的支持不仅仅是丰富了它的API，更是替换掉底层Jedis的依赖，取而代之换成了Lettuce(生菜)<br>
+        
+          <a class="article-more-a" href="/2019/02/18/整合Lettuce-Redis/#more">more >></a>
+        
+      
+
+      
+    </p></div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springBoot</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/springBoot/" class="article-tag-list-link color1">springBoot</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/02/18/整合Lettuce-Redis/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="springboot-通用Mapper与分页插件的集成" class="article article-type-springboot  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/02/18/通用Mapper与分页插件的集成/">通用Mapper与分页插件的集成</a>
+    </h1>
+  
+
+        
+        <a href="/2019/02/18/通用Mapper与分页插件的集成/" class="archive-article-date">
+  	<time datetime="2019-02-18T05:15:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-18</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在没有分页插件之前，写一个分页需要两条SQL语句，一条查询一条统计，然后才能计算出页码，这样的代码冗余而又枯燥，更重要的一点是数据库迁移，众所周知不同的数据库分页写法是不同的，而Mybatis不同于Hibernate的是它只提供动态SQL和结果集映射。值得庆幸的是，它虽然没有为分页提供良好的解决方案，但却提供了Interceptor以供开发者自己扩展，这也是这款分页插件的由来….</p>
+        
+          <a class="article-more-a" href="/2019/02/18/通用Mapper与分页插件的集成/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springBoot</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">通用Mapper与分页插件的集成</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/springBoot/" class="article-tag-list-link color1">springBoot</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/通用Mapper与分页插件的集成/" class="article-tag-list-link color2">通用Mapper与分页插件的集成</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/02/18/通用Mapper与分页插件的集成/">展开全文 >></a>
         </p>
       
 
@@ -900,7 +941,7 @@
   
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 
@@ -995,6 +1036,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">多线程</a>
               </li>
              
@@ -1007,18 +1052,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">过滤器和拦截器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">启动和终止线程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Java中的锁</a>
               </li>
              
@@ -1027,7 +1060,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">容器</a>
+                <a href="javascript:void(0)" class="js-tag color3">过滤器和拦截器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">启动和终止线程</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1035,15 +1072,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">容器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">线程应用实例</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">线程间通信</a>
+                <a href="javascript:void(0)" class="js-tag color1">队列同步器</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">队列同步器</a>
+                <a href="javascript:void(0)" class="js-tag color3">数据结构与算法</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1055,19 +1096,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">iwiilsay小程序</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">数据结构与算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">仿土巴兔小程序</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">iwiilsay小程序</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">微课堂</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">线程间通信</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1087,10 +1128,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Java基础</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">JSON</a>
               </li>
              
@@ -1099,11 +1136,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">java提高</a>
+                <a href="javascript:void(0)" class="js-tag color2">lambda</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">lambda</a>
+                <a href="javascript:void(0)" class="js-tag color2">Java基础</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1115,23 +1152,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">java提高</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">文件上传</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">事务</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1143,11 +1172,51 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">文件上传</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">SpringDataJpa</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">使用Spring Cache集成Redis</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">通用Mapper与分页插件的集成</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">轻松搞定全局异常</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">轻松搞定数据验证（二）</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Thinking In Java</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">读书笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">集成Swagger在线调试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">轻松搞定数据验证（一）</a>
               </li>
              
               <li class="article-tag-list-item">
