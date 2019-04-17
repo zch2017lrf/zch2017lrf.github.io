@@ -1,20 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>are you aha</title>
+  <title>感觉还行吧</title>
   <icon>https://www.gravatar.com/avatar/6caa9034bb44f76c5c3cbb52bd3130ef</icon>
   <subtitle>怕什么真理无穷,进一寸有一寸的欢喜</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="//aha.me/"/>
-  <updated>2019-02-19T14:23:22.646Z</updated>
+  <updated>2019-04-17T02:17:11.035Z</updated>
   <id>//aha.me/</id>
   
   <author>
-    <name>aha</name>
+    <name>Kaleldo</name>
     <email>1158809285@qq.com</email>
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Ajax跨域请求，同时保证session一致</title>
+    <link href="//aha.me/2019/04/17/Ajax%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82%EF%BC%8C%E5%90%8C%E6%97%B6%E4%BF%9D%E8%AF%81session%E4%B8%80%E8%87%B4/"/>
+    <id>//aha.me/2019/04/17/Ajax跨域请求，同时保证session一致/</id>
+    <published>2019-04-17T02:13:24.000Z</published>
+    <updated>2019-04-17T02:17:11.035Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近在项目中碰到一个问题，ajax跨域请求时，每次tomcat都会生成一个新的session。</p><p>在百度中找到了解决方法。<a href="http://blog.sina.com.cn/s/blog_e774c01e0102we37.html" target="_blank" rel="noopener">http://blog.sina.com.cn/s/blog_e774c01e0102we37.html</a></p><p>当我们在进行跨域访问的时候，我们的sessionId就不会被保存下来，也就是说，每一次的请求，服务器就会以为是一个新的人，而不是同一个人，为了解决这样的办法，需要对跨域访问的request头部重写。</p><a id="more"></a><figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">response.setContentType(<span class="string">"textml;charset=UTF-8"</span>);</span><br><span class="line">response.setHeader(<span class="string">"Access-Control-Allow-Origin"</span>, request.getHeader(<span class="string">"Origin"</span>));</span><br><span class="line">response.setHeader(<span class="string">"Access-Control-Allow-Methods"</span>, <span class="string">"<span class="keyword">POST</span>, <span class="keyword">GET</span>, <span class="keyword">OPTIONS</span>, <span class="keyword">DELETE</span>"</span>);</span><br><span class="line">response.setHeader(<span class="string">"Access-Control-Max-Age"</span>, <span class="string">"0"</span>);</span><br><span class="line">response.setHeader(<span class="string">"Access-Control-Allow-Headers"</span>, <span class="string">"Origin, No-Cache, X-Requested-With, If-Modified-Since, Pragma, Last-Modified, Cache-Control, Expires, Content-Type, X-E4M-With,userId,token"</span>);</span><br><span class="line">response.setHeader(<span class="string">"Access-Control-Allow-Credentials"</span>, <span class="string">"true"</span>);</span><br><span class="line">response.setHeader(<span class="string">"XDomainRequestAllowed"</span>,<span class="string">"1"</span>);</span><br></pre></td></tr></table></figure><p>同时ajax也需要设置withCredentials和crossDomain</p><p>jQuery的ajax</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line">url:url,</span><br><span class="line"><span class="comment">//加上这句话</span></span><br><span class="line">xhrFields: &#123;</span><br><span class="line">           withCredentials: <span class="literal">true</span></span><br><span class="line">       &#125;,</span><br><span class="line">       crossDomain: <span class="literal">true</span>,</span><br><span class="line"></span><br><span class="line">success:<span class="function"><span class="keyword">function</span>(<span class="params">result</span>)</span>&#123;</span><br><span class="line">alert(<span class="string">"test"</span>);</span><br><span class="line">&#125;,</span><br><span class="line">error:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">&#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><p>原生ajax<br><figure class="highlight qml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> xhr = <span class="built_in">window</span>.XMLHttpRequest ? <span class="keyword">new</span> <span class="built_in">window</span>.XMLHttpRequest() : <span class="built_in">window</span>.ActiveXObject ? <span class="keyword">new</span> ActiveXObject(<span class="string">'Microsoft.XMLHTTP'</span>) : <span class="literal">null</span>;</span><br><span class="line">xhr.open(<span class="string">'GET'</span>, <span class="built_in">url</span>, <span class="literal">true</span>);</span><br><span class="line"><span class="comment">//设置支持跨域和带cookie一起发送</span></span><br><span class="line">xhr.withCredentials = <span class="literal">true</span>;</span><br><span class="line">xhr.crossDomain = <span class="literal">true</span>;</span><br><span class="line">xhr.send();</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近在项目中碰到一个问题，ajax跨域请求时，每次tomcat都会生成一个新的session。&lt;/p&gt;
+&lt;p&gt;在百度中找到了解决方法。&lt;a href=&quot;http://blog.sina.com.cn/s/blog_e774c01e0102we37.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://blog.sina.com.cn/s/blog_e774c01e0102we37.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;当我们在进行跨域访问的时候，我们的sessionId就不会被保存下来，也就是说，每一次的请求，服务器就会以为是一个新的人，而不是同一个人，为了解决这样的办法，需要对跨域访问的request头部重写。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="springBoot" scheme="//aha.me/categories/springBoot/"/>
+    
+    
+      <category term="springBoot" scheme="//aha.me/tags/springBoot/"/>
+    
+  </entry>
   
   <entry>
     <title>轻松搞定数据验证（二）</title>
