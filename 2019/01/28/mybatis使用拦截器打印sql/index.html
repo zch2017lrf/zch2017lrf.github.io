@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="//aha.me">
-  <title>mybatis使用拦截器打印sql | 感觉还行吧</title>
+  <title>mybatis使用拦截器打印sql | 神经漫游者</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="mybatis使用拦截器打印sql">
 <meta name="keywords" content="springBoot">
 <meta property="og:type" content="article">
 <meta property="og:title" content="mybatis使用拦截器打印sql">
 <meta property="og:url" content="//aha.me/2019/01/28/mybatis使用拦截器打印sql/index.html">
-<meta property="og:site_name" content="感觉还行吧">
+<meta property="og:site_name" content="神经漫游者">
 <meta property="og:description" content="mybatis使用拦截器打印sql">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-16T12:14:27.382Z">
+<meta property="og:updated_time" content="2019-02-16T12:14:27.383Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mybatis使用拦截器打印sql">
 <meta name="twitter:description" content="mybatis使用拦截器打印sql">
@@ -52,7 +52,7 @@
 		  <h1 class="header-author"><a href="/">Kaleldo</a></h1>
 		</hgroup>
 		
-		<p class="header-subtitle">怕什么真理无穷,进一寸有一寸的欢喜</p>
+		<p class="header-subtitle">不要说自己为了梦想去努力吃了多少苦，总有人比你更努力，更上进。</p>
 		
 
 		<nav class="header-menu">
@@ -86,27 +86,7 @@
 		        
 					<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
 		        
-					<a class="psn" target="_blank" href="#1" title="psn"><i class="icon-psn"></i></a>
-		        
-					<a class="zhihu" target="_blank" href="#2" title="zhihu"><i class="icon-zhihu"></i></a>
-		        
-					<a class="douban" target="_blank" href="#3" title="douban"><i class="icon-douban"></i></a>
-		        
-					<a class="segmentfault" target="_blank" href="#4" title="segmentfault"><i class="icon-segmentfault"></i></a>
-		        
-					<a class="bilibili" target="_blank" href="#5" title="bilibili"><i class="icon-bilibili"></i></a>
-		        
-					<a class="acfun" target="_blank" href="#6" title="acfun"><i class="icon-acfun"></i></a>
-		        
 					<a class="mail" target="_blank" href="/1158809285@qq.com" title="mail"><i class="icon-mail"></i></a>
-		        
-					<a class="facebook" target="_blank" href="#7" title="facebook"><i class="icon-facebook"></i></a>
-		        
-					<a class="google" target="_blank" href="#8" title="google"><i class="icon-google"></i></a>
-		        
-					<a class="twitter" target="_blank" href="#9" title="twitter"><i class="icon-twitter"></i></a>
-		        
-					<a class="linkedin" target="_blank" href="#0" title="linkedin"><i class="icon-linkedin"></i></a>
 		        
 			</div>
 		</nav>
@@ -130,7 +110,7 @@
 			  <h1 class="header-author js-header-author">Kaleldo</h1>
 			</hgroup>
 			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>怕什么真理无穷,进一寸有一寸的欢喜<i class="icon icon-quo-right"></i></p>
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>不要说自己为了梦想去努力吃了多少苦，总有人比你更努力，更上进。<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -147,27 +127,7 @@
 			        
 						<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
 			        
-						<a class="psn" target="_blank" href="#1" title="psn"><i class="icon-psn"></i></a>
-			        
-						<a class="zhihu" target="_blank" href="#2" title="zhihu"><i class="icon-zhihu"></i></a>
-			        
-						<a class="douban" target="_blank" href="#3" title="douban"><i class="icon-douban"></i></a>
-			        
-						<a class="segmentfault" target="_blank" href="#4" title="segmentfault"><i class="icon-segmentfault"></i></a>
-			        
-						<a class="bilibili" target="_blank" href="#5" title="bilibili"><i class="icon-bilibili"></i></a>
-			        
-						<a class="acfun" target="_blank" href="#6" title="acfun"><i class="icon-acfun"></i></a>
-			        
 						<a class="mail" target="_blank" href="/1158809285@qq.com" title="mail"><i class="icon-mail"></i></a>
-			        
-						<a class="facebook" target="_blank" href="#7" title="facebook"><i class="icon-facebook"></i></a>
-			        
-						<a class="google" target="_blank" href="#8" title="google"><i class="icon-google"></i></a>
-			        
-						<a class="twitter" target="_blank" href="#9" title="twitter"><i class="icon-twitter"></i></a>
-			        
-						<a class="linkedin" target="_blank" href="#0" title="linkedin"><i class="icon-linkedin"></i></a>
 			        
 				</div>
 			</nav>
@@ -221,7 +181,7 @@
 <h3 id="BaseService"><a href="#BaseService" class="headerlink" title="BaseService"></a>BaseService</h3><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.yxkj.aha.MybatisConfig;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line"><span class="keyword">import</span> org.springframework.transaction.annotation.Propagation;</span><br><span class="line"><span class="keyword">import</span> org.springframework.transaction.annotation.Transactional;</span><br><span class="line"><span class="keyword">import</span> tk.mybatis.mapper.common.Mapper;</span><br><span class="line"><span class="keyword">import</span> tk.mybatis.mapper.entity.Example;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Transactional</span>(propagation = Propagation.SUPPORTS, readOnly = <span class="keyword">true</span>, rollbackFor = Exception.class)</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">BaseService</span>&lt;<span class="title">T</span>&gt; <span class="keyword">implements</span> <span class="title">IService</span>&lt;<span class="title">T</span>&gt; </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">protected</span> Mapper&lt;T&gt; mapper;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> Mapper&lt;T&gt; getMapper() &#123;</span><br><span class="line">        <span class="keyword">return</span> mapper;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> List&lt;T&gt; selectAll() &#123;</span><br><span class="line">        <span class="function"><span class="keyword">return</span> mapper.<span class="title">selectAll</span><span class="params">()</span></span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="function">T <span class="title">selectByKey</span><span class="params">(Object key)</span> </span>&#123;</span><br><span class="line">        <span class="function"><span class="keyword">return</span> mapper.<span class="title">selectByPrimaryKey</span><span class="params">(key)</span></span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="meta">@Transactional</span></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">int</span> <span class="title">save</span><span class="params">(T entity)</span> </span>&#123;</span><br><span class="line">        <span class="function"><span class="keyword">return</span> mapper.<span class="title">insert</span><span class="params">(entity)</span></span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="meta">@Transactional</span></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">int</span> <span class="title">delete</span><span class="params">(Object key)</span> </span>&#123;</span><br><span class="line">        <span class="function"><span class="keyword">return</span> mapper.<span class="title">deleteByPrimaryKey</span><span class="params">(key)</span></span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="meta">@Transactional</span></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">int</span> <span class="title">batchDelete</span><span class="params">(List&lt;String&gt; list, String property, Class&lt;T&gt; clazz)</span> </span>&#123;</span><br><span class="line">        Example example = <span class="keyword">new</span> Example(clazz);</span><br><span class="line">        example.createCriteria().andIn(property, list);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.mapper.deleteByExample(example);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="meta">@Transactional</span></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">int</span> <span class="title">updateAll</span><span class="params">(T entity)</span> </span>&#123;</span><br><span class="line">        <span class="function"><span class="keyword">return</span> mapper.<span class="title">updateByPrimaryKey</span><span class="params">(entity)</span></span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="meta">@Transactional</span></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">int</span> <span class="title">updateNotNull</span><span class="params">(T entity)</span> </span>&#123;</span><br><span class="line">        <span class="function"><span class="keyword">return</span> mapper.<span class="title">updateByPrimaryKeySelective</span><span class="params">(entity)</span></span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> List&lt;T&gt; selectByExample(Object example) &#123;</span><br><span class="line">        <span class="function"><span class="keyword">return</span> mapper.<span class="title">selectByExample</span><span class="params">(example)</span></span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="IService"><a href="#IService" class="headerlink" title="IService"></a>IService</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.yxkj.aha.MybatisConfig;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Service;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">IService</span>&lt;<span class="title">T</span>&gt; </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function">List&lt;T&gt; <span class="title">selectAll</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function">T <span class="title">selectByKey</span><span class="params">(Object key)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">save</span><span class="params">(T entity)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">delete</span><span class="params">(Object key)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">batchDelete</span><span class="params">(List&lt;String&gt; list, String property, Class&lt;T&gt; clazz)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">updateAll</span><span class="params">(T entity)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">updateNotNull</span><span class="params">(T entity)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function">List&lt;T&gt; <span class="title">selectByExample</span><span class="params">(Object example)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="MyBatisConfig"><a href="#MyBatisConfig" class="headerlink" title="MyBatisConfig"></a>MyBatisConfig</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">package</span> <span class="selector-tag">com</span><span class="selector-class">.yxkj</span><span class="selector-class">.aha</span><span class="selector-class">.MybatisConfig</span>;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">import</span> <span class="selector-tag">org</span><span class="selector-class">.springframework</span><span class="selector-class">.boot</span><span class="selector-class">.autoconfigure</span><span class="selector-class">.condition</span><span class="selector-class">.ConditionalOnProperty</span>;</span><br><span class="line"><span class="selector-tag">import</span> <span class="selector-tag">org</span><span class="selector-class">.springframework</span><span class="selector-class">.context</span><span class="selector-class">.annotation</span><span class="selector-class">.Bean</span>;</span><br><span class="line"><span class="selector-tag">import</span> <span class="selector-tag">org</span><span class="selector-class">.springframework</span><span class="selector-class">.context</span><span class="selector-class">.annotation</span><span class="selector-class">.Configuration</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @Auther: zch</span></span><br><span class="line"><span class="comment"> * @Date: 2018/12/21 16:02</span></span><br><span class="line"><span class="comment"> * @Description:</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">@<span class="keyword">Configuration</span></span><br><span class="line"><span class="keyword">public</span> class MyBatisConfig &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 配置 sql打印拦截器</span></span><br><span class="line"><span class="comment">     * application.yml中 febs.showsql: true 时生效</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * @return SqlStatementInterceptor</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    @<span class="keyword">Bean</span></span><br><span class="line">    @ConditionalOnProperty(name = <span class="string">"febs.showsql"</span>, havingValue = <span class="string">"true"</span>)</span><br><span class="line">    SqlStatementInterceptor sqlStatementInterceptor() &#123;</span><br><span class="line">        <span class="selector-tag">return</span> <span class="selector-tag">new</span> <span class="selector-tag">SqlStatementInterceptor</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="SqlStatementInterceptor"><a href="#SqlStatementInterceptor" class="headerlink" title="SqlStatementInterceptor"></a>SqlStatementInterceptor</h3><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br></pre></td><td class="code"><pre><span class="line">package com.yxkj.aha.MybatisConfig;</span><br><span class="line"></span><br><span class="line"><span class="comment"><span class="markdown">/**</span></span></span><br><span class="line"><span class="comment"><span class="markdown"> * @Auther: zch</span></span></span><br><span class="line"><span class="comment"><span class="markdown"> * @Date: 2018/12/21 15:57</span></span></span><br><span class="line"><span class="comment"><span class="markdown"> * @Description:</span></span></span><br><span class="line"><span class="comment"><span class="markdown"> */</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.apache.ibatis.cache.CacheKey;</span><br><span class="line"><span class="keyword">import</span> org.apache.ibatis.executor.Executor;</span><br><span class="line"><span class="keyword">import</span> org.apache.ibatis.mapping.BoundSql;</span><br><span class="line"><span class="keyword">import</span> org.apache.ibatis.mapping.MappedStatement;</span><br><span class="line"><span class="keyword">import</span> org.apache.ibatis.mapping.ParameterMapping;</span><br><span class="line"><span class="keyword">import</span> org.apache.ibatis.plugin.*;</span><br><span class="line"><span class="keyword">import</span> org.apache.ibatis.reflection.MetaObject;</span><br><span class="line"><span class="keyword">import</span> org.apache.ibatis.session.Configuration;</span><br><span class="line"><span class="keyword">import</span> org.apache.ibatis.session.ResultHandler;</span><br><span class="line"><span class="keyword">import</span> org.apache.ibatis.session.RowBounds;</span><br><span class="line"><span class="keyword">import</span> org.apache.ibatis.type.TypeHandlerRegistry;</span><br><span class="line"><span class="keyword">import</span> org.slf4j.Logger;</span><br><span class="line"><span class="keyword">import</span> org.slf4j.LoggerFactory;</span><br><span class="line"><span class="keyword">import</span> org.springframework.util.CollectionUtils;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.text.DateFormat;</span><br><span class="line"><span class="keyword">import</span> java.util.Date;</span><br><span class="line"><span class="keyword">import</span> java.util.<span class="built_in">List</span>;</span><br><span class="line"><span class="keyword">import</span> java.util.Locale;</span><br><span class="line"><span class="keyword">import</span> java.util.Properties;</span><br><span class="line"><span class="keyword">import</span> java.util.regex.Matcher;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Intercepts</span>(value = &#123;</span><br><span class="line">        <span class="meta">@Signature</span>(type = Executor.<span class="keyword">class</span>, method = <span class="string">"update"</span>, args = &#123;MappedStatement.<span class="keyword">class</span>, <span class="built_in">Object</span>.<span class="keyword">class</span>&#125;),</span><br><span class="line">        <span class="meta">@Signature</span>(type = Executor.<span class="keyword">class</span>, method = <span class="string">"query"</span>, args = &#123;MappedStatement.<span class="keyword">class</span>, <span class="built_in">Object</span>.<span class="keyword">class</span>, RowBounds.<span class="keyword">class</span>, ResultHandler.<span class="keyword">class</span>, CacheKey.<span class="keyword">class</span>, BoundSql.<span class="keyword">class</span>&#125;),</span><br><span class="line">        <span class="meta">@Signature</span>(type = Executor.<span class="keyword">class</span>, method = <span class="string">"query"</span>, args = &#123;MappedStatement.<span class="keyword">class</span>, <span class="built_in">Object</span>.<span class="keyword">class</span>, RowBounds.<span class="keyword">class</span>, ResultHandler.<span class="keyword">class</span>&#125;)&#125;)</span><br><span class="line">public <span class="class"><span class="keyword">class</span> <span class="title">SqlStatementInterceptor</span> <span class="keyword">implements</span> <span class="title">Interceptor</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    private Logger logger = LoggerFactory.getLogger(<span class="keyword">this</span>.getClass());</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    public <span class="built_in">Object</span> intercept(Invocation invocation) throws Throwable &#123;</span><br><span class="line">        <span class="built_in">Object</span> returnValue;</span><br><span class="line">        long start = System.currentTimeMillis();</span><br><span class="line">        <span class="comment">// 执行 SQL语句</span></span><br><span class="line">        returnValue = invocation.proceed();</span><br><span class="line">        long end = System.currentTimeMillis();</span><br><span class="line">        <span class="comment">// 耗时</span></span><br><span class="line">        long time = end - start;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">final</span> <span class="built_in">Object</span>[] args = invocation.getArgs();</span><br><span class="line">            MappedStatement ms = (MappedStatement) args[<span class="number">0</span>];</span><br><span class="line">            <span class="built_in">Object</span> parameter = <span class="keyword">null</span>;</span><br><span class="line">            <span class="comment">//获取参数，if语句成立，表示sql语句有参数，参数格式是map形式</span></span><br><span class="line">            <span class="keyword">if</span> (args.length &gt; <span class="number">1</span>)</span><br><span class="line">                parameter = invocation.getArgs()[<span class="number">1</span>];</span><br><span class="line">            <span class="comment">// 获取到节点的 id,即 sql语句的 id</span></span><br><span class="line">            <span class="built_in">String</span> sqlId = ms.getId();</span><br><span class="line">            <span class="comment">// BoundSql就是封装 MyBatis最终产生的 sql类</span></span><br><span class="line">            BoundSql boundSql = ms.getBoundSql(parameter);</span><br><span class="line">            <span class="comment">// 获取节点的配置</span></span><br><span class="line">            Configuration configuration = ms.getConfiguration();</span><br><span class="line">            <span class="comment">// 获取到最终的 sql语句</span></span><br><span class="line">            printSql(configuration, boundSql, sqlId, time);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            logger.error(<span class="string">"sql拦截异常:&#123;&#125; "</span>, e.getMessage());</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> returnValue;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private <span class="keyword">void</span> printSql(Configuration configuration, BoundSql boundSql, <span class="built_in">String</span> sqlId, long time) &#123;</span><br><span class="line">        <span class="built_in">String</span> sql = showSql(configuration, boundSql);</span><br><span class="line">        logger.info(<span class="string">"【SQL语句Id】&gt;&gt;&gt;&gt; &#123;&#125;"</span>, sqlId);</span><br><span class="line">        logger.info(<span class="string">"【SQL语句耗时】&gt;&gt;&gt;&gt; &#123;&#125; ms"</span>, time);</span><br><span class="line">        logger.info(<span class="string">"【SQL语句】&gt;&gt;&gt;&gt; &#123;&#125;"</span>, sql);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private <span class="keyword">static</span> <span class="built_in">String</span> getParameterValue(<span class="built_in">Object</span> obj) &#123;</span><br><span class="line">        <span class="built_in">String</span> value = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">if</span> (obj instanceof <span class="built_in">String</span>) &#123;</span><br><span class="line">            value = <span class="string">"'"</span> + obj.toString() + <span class="string">"'"</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (obj instanceof Date) &#123;</span><br><span class="line">            DateFormat formatter = DateFormat.getDateTimeInstance(DateFormat.DEFAULT, DateFormat.DEFAULT, Locale.CHINA);</span><br><span class="line">            value = <span class="string">"'"</span> + formatter.format(<span class="keyword">new</span> Date()) + <span class="string">"'"</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (obj != <span class="keyword">null</span>) &#123;</span><br><span class="line">                value = obj.toString();</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                value = <span class="string">""</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> value;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private <span class="keyword">static</span> <span class="built_in">String</span> showSql(Configuration configuration, BoundSql boundSql) &#123;</span><br><span class="line">        <span class="comment">// 获取参数</span></span><br><span class="line">        <span class="built_in">Object</span> parameterObject = boundSql.getParameterObject();</span><br><span class="line">        <span class="built_in">List</span>&lt;ParameterMapping&gt; parameterMappings = boundSql.getParameterMappings();</span><br><span class="line">        <span class="comment">// sql语句中多个空格都用一个空格代替</span></span><br><span class="line">        <span class="built_in">String</span> sql = boundSql.getSql().replaceAll(<span class="string">"[\\s]+"</span>, <span class="string">" "</span>);</span><br><span class="line">        <span class="keyword">if</span> (!CollectionUtils.isEmpty(parameterMappings) &amp;&amp; parameterObject != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="comment">// 获取类型处理器注册器，类型处理器的功能是进行java类型和数据库类型的转换　　　　　　</span></span><br><span class="line">            <span class="comment">// 如果根据 parameterObject.getClass(）可以找到对应的类型，则替换</span></span><br><span class="line">            TypeHandlerRegistry typeHandlerRegistry = configuration.getTypeHandlerRegistry();</span><br><span class="line">            <span class="keyword">if</span> (typeHandlerRegistry.hasTypeHandler(parameterObject.getClass())) &#123;</span><br><span class="line">                sql = sql.replaceFirst(<span class="string">"\\?"</span>, Matcher.quoteReplacement(getParameterValue(parameterObject)));</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="comment">// MetaObject主要是封装了 originalObject对象，提供了 get和 set的方法用于获取和设置 originalObject的属性值</span></span><br><span class="line">                <span class="comment">// 主要支持对 JavaBean、Collection、Map三种类型对象的操作</span></span><br><span class="line">                MetaObject metaObject = configuration.newMetaObject(parameterObject);</span><br><span class="line">                <span class="keyword">for</span> (ParameterMapping parameterMapping : parameterMappings) &#123;</span><br><span class="line">                    <span class="built_in">String</span> propertyName = parameterMapping.getProperty();</span><br><span class="line">                    <span class="keyword">if</span> (metaObject.hasGetter(propertyName)) &#123;</span><br><span class="line">                        <span class="built_in">Object</span> obj = metaObject.getValue(propertyName);</span><br><span class="line">                        sql = sql.replaceFirst(<span class="string">"\\?"</span>, Matcher.quoteReplacement(getParameterValue(obj)));</span><br><span class="line">                    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (boundSql.hasAdditionalParameter(propertyName)) &#123;</span><br><span class="line">                        <span class="built_in">Object</span> obj = boundSql.getAdditionalParameter(propertyName);</span><br><span class="line">                        <span class="comment">// 该分支是动态 sql</span></span><br><span class="line">                        sql = sql.replaceFirst(<span class="string">"\\?"</span>, Matcher.quoteReplacement(getParameterValue(obj)));</span><br><span class="line">                    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                        sql = sql.replaceFirst(<span class="string">"\\?"</span>, <span class="string">"缺失"</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sql;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    public <span class="built_in">Object</span> plugin(<span class="built_in">Object</span> arg0) &#123;</span><br><span class="line">        <span class="keyword">return</span> Plugin.wrap(arg0, <span class="keyword">this</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    public <span class="keyword">void</span> setProperties(Properties properties) &#123;</span><br><span class="line">        <span class="comment">// do nothing</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="SqlStatementInterceptor"><a href="#SqlStatementInterceptor" class="headerlink" title="SqlStatementInterceptor"></a>SqlStatementInterceptor</h3><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br></pre></td><td class="code"><pre><span class="line">package com.yxkj.aha.MybatisConfig;</span><br><span class="line"></span><br><span class="line"><span class="comment"><span class="markdown">/**</span></span></span><br><span class="line"><span class="comment"><span class="markdown"><span class="bullet"> * </span>@Auther: zch</span></span></span><br><span class="line"><span class="comment"><span class="markdown"><span class="bullet"> * </span>@Date: 2018/12/21 15:57</span></span></span><br><span class="line"><span class="comment"><span class="markdown"><span class="bullet"> * </span>@Description:</span></span></span><br><span class="line"><span class="comment"><span class="markdown"> */</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.apache.ibatis.cache.CacheKey;</span><br><span class="line"><span class="keyword">import</span> org.apache.ibatis.executor.Executor;</span><br><span class="line"><span class="keyword">import</span> org.apache.ibatis.mapping.BoundSql;</span><br><span class="line"><span class="keyword">import</span> org.apache.ibatis.mapping.MappedStatement;</span><br><span class="line"><span class="keyword">import</span> org.apache.ibatis.mapping.ParameterMapping;</span><br><span class="line"><span class="keyword">import</span> org.apache.ibatis.plugin.*;</span><br><span class="line"><span class="keyword">import</span> org.apache.ibatis.reflection.MetaObject;</span><br><span class="line"><span class="keyword">import</span> org.apache.ibatis.session.Configuration;</span><br><span class="line"><span class="keyword">import</span> org.apache.ibatis.session.ResultHandler;</span><br><span class="line"><span class="keyword">import</span> org.apache.ibatis.session.RowBounds;</span><br><span class="line"><span class="keyword">import</span> org.apache.ibatis.type.TypeHandlerRegistry;</span><br><span class="line"><span class="keyword">import</span> org.slf4j.Logger;</span><br><span class="line"><span class="keyword">import</span> org.slf4j.LoggerFactory;</span><br><span class="line"><span class="keyword">import</span> org.springframework.util.CollectionUtils;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.text.DateFormat;</span><br><span class="line"><span class="keyword">import</span> java.util.Date;</span><br><span class="line"><span class="keyword">import</span> java.util.<span class="built_in">List</span>;</span><br><span class="line"><span class="keyword">import</span> java.util.Locale;</span><br><span class="line"><span class="keyword">import</span> java.util.Properties;</span><br><span class="line"><span class="keyword">import</span> java.util.regex.Matcher;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Intercepts</span>(value = &#123;</span><br><span class="line">        <span class="meta">@Signature</span>(type = Executor.<span class="keyword">class</span>, method = <span class="string">"update"</span>, args = &#123;MappedStatement.<span class="keyword">class</span>, <span class="built_in">Object</span>.<span class="keyword">class</span>&#125;),</span><br><span class="line">        <span class="meta">@Signature</span>(type = Executor.<span class="keyword">class</span>, method = <span class="string">"query"</span>, args = &#123;MappedStatement.<span class="keyword">class</span>, <span class="built_in">Object</span>.<span class="keyword">class</span>, RowBounds.<span class="keyword">class</span>, ResultHandler.<span class="keyword">class</span>, CacheKey.<span class="keyword">class</span>, BoundSql.<span class="keyword">class</span>&#125;),</span><br><span class="line">        <span class="meta">@Signature</span>(type = Executor.<span class="keyword">class</span>, method = <span class="string">"query"</span>, args = &#123;MappedStatement.<span class="keyword">class</span>, <span class="built_in">Object</span>.<span class="keyword">class</span>, RowBounds.<span class="keyword">class</span>, ResultHandler.<span class="keyword">class</span>&#125;)&#125;)</span><br><span class="line">public <span class="class"><span class="keyword">class</span> <span class="title">SqlStatementInterceptor</span> <span class="keyword">implements</span> <span class="title">Interceptor</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    private Logger logger = LoggerFactory.getLogger(<span class="keyword">this</span>.getClass());</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    public <span class="built_in">Object</span> intercept(Invocation invocation) throws Throwable &#123;</span><br><span class="line">        <span class="built_in">Object</span> returnValue;</span><br><span class="line">        long start = System.currentTimeMillis();</span><br><span class="line">        <span class="comment">// 执行 SQL语句</span></span><br><span class="line">        returnValue = invocation.proceed();</span><br><span class="line">        long end = System.currentTimeMillis();</span><br><span class="line">        <span class="comment">// 耗时</span></span><br><span class="line">        long time = end - start;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">final</span> <span class="built_in">Object</span>[] args = invocation.getArgs();</span><br><span class="line">            MappedStatement ms = (MappedStatement) args[<span class="number">0</span>];</span><br><span class="line">            <span class="built_in">Object</span> parameter = <span class="keyword">null</span>;</span><br><span class="line">            <span class="comment">//获取参数，if语句成立，表示sql语句有参数，参数格式是map形式</span></span><br><span class="line">            <span class="keyword">if</span> (args.length &gt; <span class="number">1</span>)</span><br><span class="line">                parameter = invocation.getArgs()[<span class="number">1</span>];</span><br><span class="line">            <span class="comment">// 获取到节点的 id,即 sql语句的 id</span></span><br><span class="line">            <span class="built_in">String</span> sqlId = ms.getId();</span><br><span class="line">            <span class="comment">// BoundSql就是封装 MyBatis最终产生的 sql类</span></span><br><span class="line">            BoundSql boundSql = ms.getBoundSql(parameter);</span><br><span class="line">            <span class="comment">// 获取节点的配置</span></span><br><span class="line">            Configuration configuration = ms.getConfiguration();</span><br><span class="line">            <span class="comment">// 获取到最终的 sql语句</span></span><br><span class="line">            printSql(configuration, boundSql, sqlId, time);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            logger.error(<span class="string">"sql拦截异常:&#123;&#125; "</span>, e.getMessage());</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> returnValue;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private <span class="keyword">void</span> printSql(Configuration configuration, BoundSql boundSql, <span class="built_in">String</span> sqlId, long time) &#123;</span><br><span class="line">        <span class="built_in">String</span> sql = showSql(configuration, boundSql);</span><br><span class="line">        logger.info(<span class="string">"【SQL语句Id】&gt;&gt;&gt;&gt; &#123;&#125;"</span>, sqlId);</span><br><span class="line">        logger.info(<span class="string">"【SQL语句耗时】&gt;&gt;&gt;&gt; &#123;&#125; ms"</span>, time);</span><br><span class="line">        logger.info(<span class="string">"【SQL语句】&gt;&gt;&gt;&gt; &#123;&#125;"</span>, sql);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private <span class="keyword">static</span> <span class="built_in">String</span> getParameterValue(<span class="built_in">Object</span> obj) &#123;</span><br><span class="line">        <span class="built_in">String</span> value = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">if</span> (obj instanceof <span class="built_in">String</span>) &#123;</span><br><span class="line">            value = <span class="string">"'"</span> + obj.toString() + <span class="string">"'"</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (obj instanceof Date) &#123;</span><br><span class="line">            DateFormat formatter = DateFormat.getDateTimeInstance(DateFormat.DEFAULT, DateFormat.DEFAULT, Locale.CHINA);</span><br><span class="line">            value = <span class="string">"'"</span> + formatter.format(<span class="keyword">new</span> Date()) + <span class="string">"'"</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (obj != <span class="keyword">null</span>) &#123;</span><br><span class="line">                value = obj.toString();</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                value = <span class="string">""</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> value;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private <span class="keyword">static</span> <span class="built_in">String</span> showSql(Configuration configuration, BoundSql boundSql) &#123;</span><br><span class="line">        <span class="comment">// 获取参数</span></span><br><span class="line">        <span class="built_in">Object</span> parameterObject = boundSql.getParameterObject();</span><br><span class="line">        <span class="built_in">List</span>&lt;ParameterMapping&gt; parameterMappings = boundSql.getParameterMappings();</span><br><span class="line">        <span class="comment">// sql语句中多个空格都用一个空格代替</span></span><br><span class="line">        <span class="built_in">String</span> sql = boundSql.getSql().replaceAll(<span class="string">"[\\s]+"</span>, <span class="string">" "</span>);</span><br><span class="line">        <span class="keyword">if</span> (!CollectionUtils.isEmpty(parameterMappings) &amp;&amp; parameterObject != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="comment">// 获取类型处理器注册器，类型处理器的功能是进行java类型和数据库类型的转换　　　　　　</span></span><br><span class="line">            <span class="comment">// 如果根据 parameterObject.getClass(）可以找到对应的类型，则替换</span></span><br><span class="line">            TypeHandlerRegistry typeHandlerRegistry = configuration.getTypeHandlerRegistry();</span><br><span class="line">            <span class="keyword">if</span> (typeHandlerRegistry.hasTypeHandler(parameterObject.getClass())) &#123;</span><br><span class="line">                sql = sql.replaceFirst(<span class="string">"\\?"</span>, Matcher.quoteReplacement(getParameterValue(parameterObject)));</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="comment">// MetaObject主要是封装了 originalObject对象，提供了 get和 set的方法用于获取和设置 originalObject的属性值</span></span><br><span class="line">                <span class="comment">// 主要支持对 JavaBean、Collection、Map三种类型对象的操作</span></span><br><span class="line">                MetaObject metaObject = configuration.newMetaObject(parameterObject);</span><br><span class="line">                <span class="keyword">for</span> (ParameterMapping parameterMapping : parameterMappings) &#123;</span><br><span class="line">                    <span class="built_in">String</span> propertyName = parameterMapping.getProperty();</span><br><span class="line">                    <span class="keyword">if</span> (metaObject.hasGetter(propertyName)) &#123;</span><br><span class="line">                        <span class="built_in">Object</span> obj = metaObject.getValue(propertyName);</span><br><span class="line">                        sql = sql.replaceFirst(<span class="string">"\\?"</span>, Matcher.quoteReplacement(getParameterValue(obj)));</span><br><span class="line">                    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (boundSql.hasAdditionalParameter(propertyName)) &#123;</span><br><span class="line">                        <span class="built_in">Object</span> obj = boundSql.getAdditionalParameter(propertyName);</span><br><span class="line">                        <span class="comment">// 该分支是动态 sql</span></span><br><span class="line">                        sql = sql.replaceFirst(<span class="string">"\\?"</span>, Matcher.quoteReplacement(getParameterValue(obj)));</span><br><span class="line">                    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                        sql = sql.replaceFirst(<span class="string">"\\?"</span>, <span class="string">"缺失"</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sql;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    public <span class="built_in">Object</span> plugin(<span class="built_in">Object</span> arg0) &#123;</span><br><span class="line">        <span class="keyword">return</span> Plugin.wrap(arg0, <span class="keyword">this</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    public <span class="keyword">void</span> setProperties(Properties properties) &#123;</span><br><span class="line">        <span class="comment">// do nothing</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2019</span><span class="bullet">-01</span><span class="bullet">-28</span> <span class="number">14</span><span class="string">:33:54.439</span>  <span class="string">INFO</span> <span class="number">31604</span> <span class="meta">---</span> <span class="string">[</span>           <span class="string">main]</span> <span class="string">c.y.a.M.SqlStatementInterceptor</span>          <span class="string">:</span> <span class="string">【SQL语句Id】&gt;&gt;&gt;&gt;</span> <span class="string">com.yxkj.aha.dao.RoleDao.findAll</span></span><br><span class="line"><span class="number">2019</span><span class="bullet">-01</span><span class="bullet">-28</span> <span class="number">14</span><span class="string">:33:54.439</span>  <span class="string">INFO</span> <span class="number">31604</span> <span class="meta">---</span> <span class="string">[</span>           <span class="string">main]</span> <span class="string">c.y.a.M.SqlStatementInterceptor</span>          <span class="string">:</span> <span class="string">【SQL语句耗时】&gt;&gt;&gt;&gt;</span> <span class="number">79</span> <span class="string">ms</span></span><br><span class="line"><span class="number">2019</span><span class="bullet">-01</span><span class="bullet">-28</span> <span class="number">14</span><span class="string">:33:54.439</span>  <span class="string">INFO</span> <span class="number">31604</span> <span class="meta">---</span> <span class="string">[</span>           <span class="string">main]</span> <span class="string">c.y.a.M.SqlStatementInterceptor</span>          <span class="string">:</span> <span class="string">【SQL语句】&gt;&gt;&gt;&gt;</span> <span class="string">SELECT</span> <span class="string">id,alias</span> <span class="string">FROM</span> <span class="string">role</span></span><br></pre></td></tr></table></figure>
 <h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="http://www.tuicool.com/articles/7bYjUn" target="_blank" rel="noopener">http://www.tuicool.com/articles/7bYjUn</a></p>
 <p><a href="http://www.cnblogs.com/xdp-gacl/p/4262895.html" target="_blank" rel="noopener">http://www.cnblogs.com/xdp-gacl/p/4262895.html</a></p>
@@ -493,14 +453,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">springBoot</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">过滤器和拦截器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">多线程</a>
               </li>
              
@@ -513,7 +465,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">启动和终止线程</a>
+                <a href="javascript:void(0)" class="js-tag color1">springBoot</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">过滤器和拦截器</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -525,23 +481,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">容器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">容器源码分析2</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">线程应用实例</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">线程间通信</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">队列同步器</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -549,23 +489,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">iwiilsay后台前端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">iwiilsay小程序</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">数据结构与算法</a>
+                <a href="javascript:void(0)" class="js-tag color3">iwiilsay后台前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">队列同步器</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">仿土巴兔小程序</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">微课堂</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -577,6 +513,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">数据结构与算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
              
@@ -585,7 +525,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">lambda</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Java基础</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">layui</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -601,59 +549,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">lambda</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">layui</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">递归处理返回数据</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">事务</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Mybatis</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">sql打印拦截器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">SpringDataJpa</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">使用Spring Cache集成Redis</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">通用Mapper与分页插件的集成</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">集成Swagger在线调试</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">轻松搞定全局异常</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">轻松搞定数据验证（一）</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -665,7 +565,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Mybatis</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">sql打印拦截器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">集成Swagger在线调试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">轻松搞定数据验证（一）</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">轻松搞定数据验证（二）</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">项目总结</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -674,6 +594,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">读书笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">项目分析</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -686,6 +614,50 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">进阶</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">启动和终止线程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">线程应用实例</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">线程间通信</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">微课堂</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">SpringDataJpa</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">使用Spring Cache集成Redis</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">通用Mapper与分页插件的集成</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">轻松搞定全局异常</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">容器</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">mybatis</a>
               </li>
             
             <div class="clearfix"></div>
@@ -784,7 +756,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">aha，&lt;br&gt;热爱Java&lt;br&gt;&lt;br&gt;热爱大海与冷笑话，&lt;br/&gt;目前是一枚后台&lt;br/&gt;&lt;br/&gt;目前挑战全栈工程师，&lt;br&gt;年轻无为，卖马为生。</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">Kaleldo，&lt;br&gt;热爱Java&lt;br&gt;&lt;br&gt;没戴眼镜：李宇春装B拉；戴上眼镜：李宁春装8折。&lt;br/&gt;目前是一枚后台&lt;br/&gt;&lt;br/&gt;目前为Java工程师，&lt;br&gt;年轻无为，卖马为生。</div>
   	  	
     	</section>
     

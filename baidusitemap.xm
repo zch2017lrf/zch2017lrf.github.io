@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>//aha.me/2019/10/14/mybatis-where-%E4%B8%AD%E9%81%87%E5%88%B0%E4%BC%A0%E5%85%A5%E9%9B%86%E5%90%88%E5%8F%82%E6%95%B0%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2019-10-14</lastmod>
+  </url>  <url>
+    <loc>//aha.me/2019/10/08/%E7%BC%96%E7%A8%8B%E6%8F%90%E5%8D%87/</loc>
+    <lastmod>2019-10-08</lastmod>
+  </url>  <url>
+    <loc>//aha.me/2019/10/08/%E9%A1%B9%E7%9B%AE%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90/</loc>
+    <lastmod>2019-10-08</lastmod>
+  </url>  <url>
+    <loc>//aha.me/2019/10/08/20191008p2p%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/</loc>
+    <lastmod>2019-10-08</lastmod>
+  </url>  <url>
     <loc>//aha.me/2019/04/17/Ajax%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82%EF%BC%8C%E5%90%8C%E6%97%B6%E4%BF%9D%E8%AF%81session%E4%B8%80%E8%87%B4/</loc>
     <lastmod>2019-04-17</lastmod>
   </url>  <url>
