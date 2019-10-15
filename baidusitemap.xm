@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>//aha.me/2019/10/15/%E5%B7%A5%E4%BD%9C%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84cat%E5%91%BD%E4%BB%A4/</loc>
+    <lastmod>2019-10-15</lastmod>
+  </url>  <url>
     <loc>//aha.me/2019/10/15/git%E5%B7%A5%E4%BD%9C%E4%B8%AD%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2019-10-15</lastmod>
   </url>  <url>

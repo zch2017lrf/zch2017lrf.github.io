@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="//aha.me/"/>
-  <updated>2019-10-15T00:38:03.532Z</updated>
+  <updated>2019-10-15T02:28:23.333Z</updated>
   <id>//aha.me/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>工作中常用的cat命令</title>
+    <link href="//aha.me/2019/10/15/%E5%B7%A5%E4%BD%9C%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84cat%E5%91%BD%E4%BB%A4/"/>
+    <id>//aha.me/2019/10/15/工作中常用的cat命令/</id>
+    <published>2019-10-15T02:26:45.000Z</published>
+    <updated>2019-10-15T02:28:23.333Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="查看日志"><a href="#查看日志" class="headerlink" title="查看日志"></a>查看日志</h2><p>线上出现了问题，登上线上的机器查日志是非常常见的操作了。我第一次登上线上机器查日志的时候，我还只记得以下的几个命令（假设现在我们的日志文件叫做service.log)：</p><a id="more"></a><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cat</span> service.<span class="built_in">log</span></span><br><span class="line">tail -<span class="keyword">f</span> service.<span class="built_in">log</span></span><br><span class="line"><span class="keyword">vim</span> serivice.<span class="built_in">log</span></span><br></pre></td></tr></table></figure><p>（明显是不够用的）<br><strong>现在日志每天产出的大小大概10GB<br>如果是小文件的话，单纯的cat命令还是可以应付的，但如果你直接用cat命令打开一个10GB的日志文件，保证卡死你（ctrl + c退出cat命令需要很久才能将cat命令停下来）。<br>面对比较大的日志文件，这我们就得配合grep来玩了，比如我们现在得知某个文件上传失败，想要看一下这个上传接口的日志是怎么样的。于是我们就可以这样搞：</strong></p><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cat</span> service.<span class="built_in">log</span> | <span class="keyword">grep</span> <span class="string">"Upload"</span></span><br></pre></td></tr></table></figure><p>或者</p><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cat</span> service.<span class="built_in">log</span> | <span class="keyword">grep</span> <span class="string">'Upload'</span> -A <span class="number">5</span></span><br><span class="line"></span><br><span class="line">意思是，在service.<span class="built_in">log</span>文件中，查找ERROR字符，并显示Upload所在行的之后<span class="number">5</span>行</span><br><span class="line"></span><br><span class="line"><span class="keyword">cat</span> service.<span class="built_in">log</span> | <span class="keyword">grep</span> <span class="string">'Upload'</span> -B <span class="number">5</span>  之前<span class="number">5</span>行</span><br><span class="line"></span><br><span class="line"><span class="keyword">cat</span> service.<span class="built_in">log</span> | <span class="keyword">grep</span> <span class="string">'Upload'</span> -C <span class="number">5</span> 前后<span class="number">5</span>行</span><br><span class="line"></span><br><span class="line"><span class="keyword">cat</span> service.<span class="built_in">log</span> | <span class="keyword">grep</span> -v <span class="string">'Upload'</span> 排除Upload所在的行</span><br></pre></td></tr></table></figure><p>或者<strong>直接从服务器拉下慢慢的研究</strong></p><p>这么一搞，就能将service.log中所有含有Upload接口的记录给搜出来，搜索的速度还是贼快的。</p><p>现在我们已经能根据关键字搜到对应的记录了，接着我想看一下那条记录的日志具体的位置,就能知道这条数据大概的执行状态了<br>首先，我们先要查出对应记录的行号，在cat 命令后面加上一个 -n 参数就好了。所以命令是:</p><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cat</span> -n service.<span class="built_in">log</span> | <span class="keyword">grep</span> <span class="string">"Upload"</span></span><br></pre></td></tr></table></figure><p>比如问题出现在行数30000</p><blockquote><p>sed -n “30000,30010p” service.log：从30000行开始检索，到30010行结束</p><p>cat -n service.log | tail -n +30000 | head -n 20:从30000行开始检索，往前推20条</p></blockquote><p>如果关键字不太准确（日志输出的记录太多了），我们可以使用more命令来浏览或者输出到文件上再分析：</p><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cat</span> service.<span class="keyword">log</span> | grep 13 |<span class="keyword">more</span> ：将查询后的结果交由<span class="keyword">more</span>输出</span><br><span class="line"></span><br><span class="line"><span class="keyword">cat</span> service.<span class="keyword">log</span> | grep 13 &gt; /home/kldo/bb.txt  将查询后的结果写到/home/kldo/bb.txt文件上</span><br></pre></td></tr></table></figure><p>这个日志输出了多少行，我们可以使用这条命令：</p><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat service.<span class="built_in">log</span> <span class="string">| wc -l</span></span><br></pre></td></tr></table></figure><p>很明显一个日志文件不足以分析周全,我们需要将上个日志与现在的日志合并后再分析</p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat -<span class="selector-tag">b</span> service<span class="selector-class">.log</span> service20191015<span class="selector-class">.log</span> &gt;&gt; all.log</span><br></pre></td></tr></table></figure><p>由于我参加工作时间比较短，所以可能会有很多命令会忽略掉了，欢迎在评论区补充常用的命令。哈哈哈哈哈哈哈哈哈</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;查看日志&quot;&gt;&lt;a href=&quot;#查看日志&quot; class=&quot;headerlink&quot; title=&quot;查看日志&quot;&gt;&lt;/a&gt;查看日志&lt;/h2&gt;&lt;p&gt;线上出现了问题，登上线上的机器查日志是非常常见的操作了。我第一次登上线上机器查日志的时候，我还只记得以下的几个命令（假设现在我们的日志文件叫做service.log)：&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="常用命令" scheme="//aha.me/categories/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    
+    
+      <category term="linux" scheme="//aha.me/tags/linux/"/>
+    
+  </entry>
   
   <entry>
     <title>git工作中常用命令</title>
