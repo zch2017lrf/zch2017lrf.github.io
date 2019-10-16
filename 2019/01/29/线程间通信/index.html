@@ -200,7 +200,7 @@
 <p><img src="/assets/img/20190129100347.png" alt="20190129100347.png"></p>
 <p>在图4-3中，WaitThread首先获取了对象的锁，然后调用对象的wait()方法，从而放弃了锁<br>并进入了对象的等待队列WaitQueue中，进入等待状态。由于WaitThread释放了对象的锁，<br>NotifyThread随后获取了对象的锁，并调用对象的notify()方法，将WaitThread从WaitQueue移到<br>SynchronizedQueue中，此时WaitThread的状态变为阻塞状态。NotifyThread释放了锁之后，<br>WaitThread再次获取到锁并从wait()方法返回继续执行。</p>
 <h3 id="等待-通知的经典范式"><a href="#等待-通知的经典范式" class="headerlink" title="等待/通知的经典范式"></a>等待/通知的经典范式</h3><p>从4.3.2节中的WaitNotify示例中可以提炼出等待/通知的经典范式，该范式分为两部分，分<br>别针对等待方（消费者）和通知方（生产者）。<br>等待方遵循如下原则。<br>1）获取对象的锁。<br>2）如果条件不满足，那么调用对象的wait()方法，被通知后仍要检查条件。<br>3）条件满足则执行对应的逻辑。<br>对应的伪代码如下。</p>
-<figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">synchronized</span>(对象) &#123;</span><br><span class="line"><span class="keyword">while</span>(条件不满足) &#123;</span><br><span class="line">对象.<span class="built_in">wait</span>();</span><br><span class="line">&#125;</span><br><span class="line">对应的处理逻辑</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">synchronized</span>(对象) &#123;</span><br><span class="line"><span class="selector-tag">while</span>(条件不满足) &#123;</span><br><span class="line">对象<span class="selector-class">.wait</span>();</span><br><span class="line">&#125;</span><br><span class="line">对应的处理逻辑</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>通知方遵循如下原则。<br>1）获得对象的锁。<br>2）改变条件。<br>3）通知所有等待在对象上的线程。<br>对应的伪代码如下。</p>
 <figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">synchronized</span>(对象) &#123;</span><br><span class="line">改变条件</span><br><span class="line">对象<span class="selector-class">.notifyAll</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="Thread-join-的使用"><a href="#Thread-join-的使用" class="headerlink" title="Thread.join()的使用"></a>Thread.join()的使用</h3><p>如果一个线程A执行了thread.join()语句，其含义是：当前线程A等待thread线程终止之后才<br>从thread.join()返回。线程Thread除了提供join()方法之外，还提供了join(long millis)和join(long<br>millis,int nanos)两个具备超时特性的方法。这两个超时方法表示，如果线程thread在给定的超时<br>时间里没有终止，那么将会从该超时方法中返回。<br>在代码清单4-13所示的例子中，创建了10个线程，编号0~9，每个线程调用前一个线程的<br>join()方法，也就是线程0结束了，线程1才能从join()方法中返回，而线程0需要等待main线程结<br>束</p>
@@ -482,14 +482,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">springBoot</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">过滤器和拦截器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">多线程</a>
               </li>
              
@@ -498,7 +490,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">springBoot</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">过滤器和拦截器</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -550,10 +550,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">spring 使用属性文件</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Java基础</a>
               </li>
              
@@ -563,6 +559,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">错误解决</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">spring 使用属性文件</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -626,11 +626,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+                <a href="javascript:void(0)" class="js-tag color2">docker</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -650,11 +646,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">平时积累</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">进阶</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
               <li class="article-tag-list-item">

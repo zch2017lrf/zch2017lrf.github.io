@@ -187,12 +187,12 @@
 <p>解析为：<br>name in (?,?)，然后利用names传入参数</p>
 <h3 id="关于参数的形式，可以是数组形式可以是List形式："><a href="#关于参数的形式，可以是数组形式可以是List形式：" class="headerlink" title="关于参数的形式，可以是数组形式可以是List形式："></a>关于参数的形式，可以是数组形式可以是List形式：</h3><p>1.当只传入names变量时，collection必须指定array或list类型：</p>
 <figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="built_in">List</span>&lt;User&gt; findInfos(<span class="built_in">String</span><span class="meta">[</span><span class="meta">]</span> names);</span><br></pre></td></tr></table></figure>
-<figure class="highlight vbnet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="keyword">select</span> id=<span class="string">"findInfos"</span> resultMap=<span class="string">"UserMap"</span>&gt;</span><br><span class="line">    <span class="keyword">SELECT</span> * <span class="keyword">FROM</span> t_user</span><br><span class="line">    <span class="keyword">WHERE</span> id <span class="keyword">IN</span></span><br><span class="line">    &lt;foreach collection=<span class="string">"array"</span> item=<span class="string">"name"</span> index=<span class="string">"index"</span> open=<span class="string">"("</span> close=<span class="string">")"</span> separator=<span class="string">","</span>&gt;</span><br><span class="line">      <span class="meta">#&#123;name&#125;</span></span><br><span class="line">    &lt;/foreach&gt;</span><br><span class="line">&lt;/<span class="keyword">select</span>&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="built_in">select</span> id=<span class="string">"findInfos"</span> resultMap=<span class="string">"UserMap"</span>&gt;</span><br><span class="line">    <span class="built_in">SELECT</span> * FROM t_user</span><br><span class="line">    <span class="built_in">WHERE</span> id IN</span><br><span class="line">    &lt;foreach collection=<span class="string">"array"</span> item=<span class="string">"name"</span> index=<span class="string">"index"</span> <span class="keyword">open</span>=<span class="string">"("</span> <span class="built_in">close</span>=<span class="string">")"</span> separator=<span class="string">","</span>&gt;</span><br><span class="line">      <span class="meta">#&#123;name&#125;</span></span><br><span class="line">    &lt;/foreach&gt;</span><br><span class="line">&lt;/<span class="built_in">select</span>&gt;</span><br></pre></td></tr></table></figure>
 <figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="built_in">List</span>&lt;User&gt; findInfos(<span class="built_in">List</span>&lt;<span class="built_in">String</span>&gt; names);</span><br></pre></td></tr></table></figure>
-<figure class="highlight vbnet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="keyword">select</span> id=<span class="string">"findInfos"</span> resultMap=<span class="string">"UserMap"</span>&gt;</span><br><span class="line">    <span class="keyword">SELECT</span> * <span class="keyword">FROM</span> t_user</span><br><span class="line">    <span class="keyword">WHERE</span> id <span class="keyword">IN</span></span><br><span class="line">    &lt;foreach collection=<span class="string">"list"</span> item=<span class="string">"name"</span> index=<span class="string">"index"</span> open=<span class="string">"("</span> close=<span class="string">")"</span> separator=<span class="string">","</span>&gt;</span><br><span class="line">      <span class="meta">#&#123;name&#125;</span></span><br><span class="line">    &lt;/foreach&gt;</span><br><span class="line">&lt;/<span class="keyword">select</span>&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="built_in">select</span> id=<span class="string">"findInfos"</span> resultMap=<span class="string">"UserMap"</span>&gt;</span><br><span class="line">    <span class="built_in">SELECT</span> * FROM t_user</span><br><span class="line">    <span class="built_in">WHERE</span> id IN</span><br><span class="line">    &lt;foreach collection=<span class="string">"list"</span> item=<span class="string">"name"</span> index=<span class="string">"index"</span> <span class="keyword">open</span>=<span class="string">"("</span> <span class="built_in">close</span>=<span class="string">")"</span> separator=<span class="string">","</span>&gt;</span><br><span class="line">      <span class="meta">#&#123;name&#125;</span></span><br><span class="line">    &lt;/foreach&gt;</span><br><span class="line">&lt;/<span class="built_in">select</span>&gt;</span><br></pre></td></tr></table></figure>
 <p> <strong>注意：array传入的时候parameterType可以是”Integer[]” ，可以是”int[]”，但不可以是”String[]”<br>报错 Could not resolve type alias ‘string[]’. Cannot find class: string[]</strong><br>2.当有其他变量时,利用map传入参数集时，可以直接将变量写在collection中</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Map</span>&lt;<span class="built_in">String</span>,<span class="built_in">Object</span>&gt; params = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">params.put(<span class="string">"class"</span>,<span class="class"><span class="keyword">class</span>)</span>;</span><br><span class="line">params.put(<span class="string">"names"</span>,names);</span><br></pre></td></tr></table></figure>
-<figure class="highlight vbnet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="keyword">select</span> id=<span class="string">"findInfos"</span> resultMap=<span class="string">"UserMap"</span>&gt;</span><br><span class="line">    <span class="keyword">SELECT</span> * <span class="keyword">FROM</span> t_user</span><br><span class="line">    <span class="keyword">WHERE</span> id <span class="keyword">IN</span></span><br><span class="line">    &lt;foreach collection=<span class="string">"names"</span> item=<span class="string">"name"</span> index=<span class="string">"index"</span> open=<span class="string">"("</span> close=<span class="string">")"</span> separator=<span class="string">","</span>&gt;</span><br><span class="line">      <span class="meta">#&#123;name&#125;</span></span><br><span class="line">    &lt;/foreach&gt;</span><br><span class="line">&lt;/<span class="keyword">select</span>&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="built_in">select</span> id=<span class="string">"findInfos"</span> resultMap=<span class="string">"UserMap"</span>&gt;</span><br><span class="line">    <span class="built_in">SELECT</span> * FROM t_user</span><br><span class="line">    <span class="built_in">WHERE</span> id IN</span><br><span class="line">    &lt;foreach collection=<span class="string">"names"</span> item=<span class="string">"name"</span> index=<span class="string">"index"</span> <span class="keyword">open</span>=<span class="string">"("</span> <span class="built_in">close</span>=<span class="string">")"</span> separator=<span class="string">","</span>&gt;</span><br><span class="line">      <span class="meta">#&#123;name&#125;</span></span><br><span class="line">    &lt;/foreach&gt;</span><br><span class="line">&lt;/<span class="built_in">select</span>&gt;</span><br></pre></td></tr></table></figure>
       
 
       
@@ -455,14 +455,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">springBoot</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">过滤器和拦截器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">多线程</a>
               </li>
              
@@ -471,7 +463,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">springBoot</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">过滤器和拦截器</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -523,10 +523,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">spring 使用属性文件</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Java基础</a>
               </li>
              
@@ -536,6 +532,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">错误解决</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">spring 使用属性文件</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -599,11 +599,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+                <a href="javascript:void(0)" class="js-tag color2">docker</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -623,11 +619,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">平时积累</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">进阶</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
               <li class="article-tag-list-item">

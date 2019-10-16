@@ -185,7 +185,7 @@
 <p>简单工厂的弊端在于每添加一个新的Repository，都必须修改RepositoryFactory中的代码</p>
 </blockquote>
 <h2 id="抽象工厂的使用"><a href="#抽象工厂的使用" class="headerlink" title="抽象工厂的使用"></a>抽象工厂的使用</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">RepositoryFactoryProvider</span> </span>&#123;</span><br><span class="line">    <span class="function">Repository <span class="title">create</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DatabaseRepositoryFactory</span> <span class="keyword">implements</span> <span class="title">RepositoryFactoryProvider</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Repository <span class="title">create</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> DatabaseRepository();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CacheRepositoryFactory</span> <span class="keyword">implements</span> <span class="title">RepositoryFactoryProvider</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Repository <span class="title">create</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> CacheRepository();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">FileRepositoryFactory</span> <span class="keyword">implements</span> <span class="title">RepositoryFactoryProvider</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Repository <span class="title">create</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> FileRepository();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="抽象工厂的测试："><a href="#抽象工厂的测试：" class="headerlink" title="抽象工厂的测试："></a>抽象工厂的测试：</h2><figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">RepositoryFactoryProvider dbProvider = <span class="keyword">new</span> <span class="type">DatabaseRepositoryFactory</span>();</span><br><span class="line">dbProvider.create().save(<span class="keyword">new</span> <span class="type">Object</span>());</span><br><span class="line">RepositoryFactoryProvider cacheProvider = <span class="keyword">new</span> <span class="type">CacheRepositoryFactory</span>();</span><br><span class="line">cacheProvider.create().save(<span class="keyword">new</span> <span class="type">Object</span>());</span><br><span class="line">RepositoryFactoryProvider fileProvider = <span class="keyword">new</span> <span class="type">FileRepositoryFactory</span>();</span><br><span class="line">fileProvider.create().save(<span class="keyword">new</span> <span class="type">Object</span>());</span><br></pre></td></tr></table></figure>
+<h2 id="抽象工厂的测试："><a href="#抽象工厂的测试：" class="headerlink" title="抽象工厂的测试："></a>抽象工厂的测试：</h2><figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">RepositoryFactoryProvider dbProvider = <span class="keyword">new</span> DatabaseRepositoryFactory();</span><br><span class="line">dbProvider.<span class="keyword">create</span>().<span class="keyword">save</span>(<span class="keyword">new</span> Object());</span><br><span class="line">RepositoryFactoryProvider cacheProvider = <span class="keyword">new</span> CacheRepositoryFactory();</span><br><span class="line">cacheProvider.<span class="keyword">create</span>().<span class="keyword">save</span>(<span class="keyword">new</span> Object());</span><br><span class="line">RepositoryFactoryProvider fileProvider = <span class="keyword">new</span> FileRepositoryFactory();</span><br><span class="line">fileProvider.<span class="keyword">create</span>().<span class="keyword">save</span>(<span class="keyword">new</span> Object());</span><br></pre></td></tr></table></figure>
 <p>抽象工厂把工厂也进行了抽象话，所以添加一个新的Repository的话，只需要新增一个RepositoryFactory即可，原有代码不需要修改。</p>
 <h2 id="装饰者模式"><a href="#装饰者模式" class="headerlink" title="装饰者模式"></a>装饰者模式</h2><p>装饰者模式的作用就在于它可以在不改变原有类的基础上动态地给类添加新的功能。之前写过一篇通过源码分析MyBatis的缓存文章，mybatis中的query就是使用了装饰者设计模式。</p>
 <p>用一段简单的代码来模拟一下mybatis中query的实现原理：</p>
@@ -463,14 +463,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">springBoot</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">过滤器和拦截器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">多线程</a>
               </li>
              
@@ -479,7 +471,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">springBoot</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">过滤器和拦截器</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -531,10 +531,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">spring 使用属性文件</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Java基础</a>
               </li>
              
@@ -544,6 +540,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">错误解决</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">spring 使用属性文件</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -607,11 +607,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+                <a href="javascript:void(0)" class="js-tag color2">docker</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -631,11 +627,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">平时积累</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">进阶</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
               <li class="article-tag-list-item">

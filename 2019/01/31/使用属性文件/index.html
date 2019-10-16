@@ -180,7 +180,7 @@
 <h3 id="便用＠Configuration-Properties-减少-Value使用"><a href="#便用＠Configuration-Properties-减少-Value使用" class="headerlink" title="便用＠Configuration Properties 减少@Value使用"></a>便用＠Configuration Properties 减少@Value使用</h3><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="meta">@ConfigurationProperties</span>(<span class="string">"febs"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DataBaseProperties</span> &#123;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">boolean</span> showsql;</span><br><span class="line">    <span class="keyword">private</span> String hello = <span class="literal">null</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Autowired</span></span><br><span class="line">    DataBaseProperties dataBaseProperties;</span><br></pre></td></tr></table></figure>
 <h3 id="减少properties文件"><a href="#减少properties文件" class="headerlink" title="减少properties文件"></a>减少properties文件</h3><p>得如果把所有的内容都配置到 application.properties ，显然这个文件将有很多内<br>容。为了更好地配置，我们可以选择使用新的属性文件 例如， 数据库的属性可以配置在 jdbc operties<br>中，于是先把代码清单 -22 中给出的配置从 application properties 中迁到jdbc.properties 中， 然后使<br>@Prope rSource 去定义对应的属性文件，把它加载到 Spring 的上下文中<br>@SpringBootApplication</p>
 <figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">@SpringBootApplication</span></span><br><span class="line"><span class="variable">@PropertySource</span>(value=&#123;<span class="string">"classpath:jdbc.properties"</span>&#125;,ignoreResourceNotFound=true)</span><br><span class="line">public class AhaApplication &#123;</span><br><span class="line"></span><br><span class="line">	<span class="selector-tag">public</span> <span class="selector-tag">static</span> <span class="selector-tag">void</span> <span class="selector-tag">main</span>(String[] args) &#123;</span><br><span class="line">		<span class="selector-tag">SpringApplication</span><span class="selector-class">.run</span>(AhaApplication.class, args);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">kk.showsql</span>=<span class="literal">true</span></span><br><span class="line"><span class="attr">kk.hello</span>=hello</span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">kk.<span class="attribute">showsql</span>=<span class="literal">true</span></span><br><span class="line">kk.<span class="attribute">hello</span>=hello</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>value可以配置多个配置文件。使用 classpath前缀 意味着去类文件路径下找到属性文件<br>ignoreResourceNotFound 则是是否忽略配置文件找不到的问题 noreResourceNotFound 的默认值为<br>false ，也就是没有找到属性文件 就会报错；这里配置为 true ，也就是找不到就忽略掉，不会报错</p>
 </blockquote>
@@ -447,14 +447,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">springBoot</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">过滤器和拦截器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">多线程</a>
               </li>
              
@@ -463,7 +455,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">springBoot</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">过滤器和拦截器</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -515,10 +515,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">spring 使用属性文件</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Java基础</a>
               </li>
              
@@ -528,6 +524,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">错误解决</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">spring 使用属性文件</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -591,11 +591,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+                <a href="javascript:void(0)" class="js-tag color2">docker</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -615,11 +611,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">平时积累</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">进阶</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
               <li class="article-tag-list-item">
