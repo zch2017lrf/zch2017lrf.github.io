@@ -5,9 +5,9 @@
   <subtitle>不要说自己为了梦想去努力吃了多少苦，总有人比你更努力，更上进。</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="//aha.me/"/>
-  <updated>2019-10-17T02:16:40.894Z</updated>
-  <id>//aha.me/</id>
+  <link href="//zch2017lrf.github.io/"/>
+  <updated>2019-10-19T02:45:49.325Z</updated>
+  <id>//zch2017lrf.github.io/</id>
   
   <author>
     <name>Kaleldo</name>
@@ -17,9 +17,31 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>常用语句</title>
+    <link href="//zch2017lrf.github.io/2019/10/19/%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD%E8%AF%AD%E5%8F%A5/"/>
+    <id>//zch2017lrf.github.io/2019/10/19/条件判断语句/</id>
+    <published>2019-10-19T01:29:08.000Z</published>
+    <updated>2019-10-19T02:45:49.325Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="v-if-v-else"><a href="#v-if-v-else" class="headerlink" title="v-if v-else"></a>v-if v-else</h2><a id="more"></a><h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">div</span> id=<span class="string">"kaldo"</span>&gt;</span><br><span class="line">    &lt;<span class="selector-tag">h1</span> v-<span class="keyword">if</span>=<span class="string">"ok"</span>&gt;YES&lt;/h1&gt;</span><br><span class="line">    &lt;<span class="selector-tag">h1</span> v-<span class="keyword">else</span>&gt;NO&lt;/h1&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure><p>js</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="actionscript">        el: <span class="string">'#kaldo'</span>,</span></span><br><span class="line"><span class="undefined">        data: &#123;</span></span><br><span class="line"><span class="actionscript">            ok: <span class="literal">true</span></span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined">    &#125;);</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure><h3 id="测试效果"><a href="#测试效果" class="headerlink" title="测试效果"></a>测试效果</h3><p>可在浏览器上运行，进入开发者模式</p><p>在控制台输入 vm.ok = false ，然后 回车，你会发现浏览器中显示的内容会直接变成 NO</p><h3 id="v-else-if本节视频条件判断语句"><a href="#v-else-if本节视频条件判断语句" class="headerlink" title="v-else-if本节视频条件判断语句"></a>v-else-if本节视频条件判断语句</h3><h3 id="HTML-1"><a href="#HTML-1" class="headerlink" title="HTML"></a>HTML</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">div</span> id=<span class="string">"kaldo"</span>&gt;</span><br><span class="line">    &lt;<span class="selector-tag">h1</span> v-<span class="keyword">if</span>=<span class="string">"name === 'tom'"</span>&gt;tom&lt;/h1&gt;</span><br><span class="line">    &lt;<span class="selector-tag">h1</span> v-<span class="keyword">else</span>-<span class="keyword">if</span>=<span class="string">"name === 'kaldo'"</span>&gt;kaldo&lt;/h1&gt;</span><br><span class="line">    &lt;<span class="selector-tag">h1</span> v-<span class="keyword">else</span>-<span class="keyword">if</span>=<span class="string">"name === 'jony'"</span>&gt;jony&lt;/h1&gt;</span><br><span class="line">    &lt;<span class="selector-tag">h1</span> v-<span class="keyword">else</span>&gt;我是谁&lt;/h1&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure><h3 id="JS"><a href="#JS" class="headerlink" title="JS"></a>JS</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="actionscript">        el: <span class="string">'#kaldo'</span>,</span></span><br><span class="line"><span class="undefined">        data: &#123;</span></span><br><span class="line"><span class="actionscript">            name: <span class="string">'tom'</span></span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined">    &#125;);</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure><h2 id="v-for-语句"><a href="#v-for-语句" class="headerlink" title="v-for 语句"></a>v-for 语句</h2><h3 id="HTML-2"><a href="#HTML-2" class="headerlink" title="HTML"></a>HTML</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">div</span> id=<span class="string">"vue"</span>&gt;</span><br><span class="line">    &lt;<span class="selector-tag">li</span> v-<span class="keyword">for</span>=<span class="string">"item in items"</span>&gt;</span><br><span class="line">        &#123;&#123; item<span class="selector-class">.message</span> &#125;&#125;</span><br><span class="line">    &lt;/li&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure><blockquote><p>items 是源数据数组并且 item 是数组元素迭代的别名。</p></blockquote><h3 id="JS-1"><a href="#JS-1" class="headerlink" title="JS"></a>JS</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="actionscript">    <span class="keyword">var</span> vm = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="actionscript">        el: <span class="string">'#vue'</span>,</span></span><br><span class="line"><span class="undefined">        data: &#123;</span></span><br><span class="line"><span class="undefined">            items: [</span></span><br><span class="line"><span class="actionscript">                &#123;message: <span class="string">'kaldo'</span>&#125;,</span></span><br><span class="line"><span class="actionscript">                &#123;message: <span class="string">'tom'</span>&#125;</span></span><br><span class="line"><span class="undefined">            ]</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined">    &#125;);</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure><p>[外链图片转存失败,源站可能有防盗链机制,建议将图片保存下来直接上传(img-F7WBjw0D-1571453098014)(<a href="https://raw.githubusercontent.com/zch2017lrf/MyImg/master/2019img/vueInfo.jpg" target="_blank" rel="noopener">https://raw.githubusercontent.com/zch2017lrf/MyImg/master/2019img/vueInfo.jpg</a>) ]</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;v-if-v-else&quot;&gt;&lt;a href=&quot;#v-if-v-else&quot; class=&quot;headerlink&quot; title=&quot;v-if v-else&quot;&gt;&lt;/a&gt;v-if v-else&lt;/h2&gt;
+    
+    </summary>
+    
+      <category term="vue学习" scheme="//zch2017lrf.github.io/categories/vue%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="vue学习" scheme="//zch2017lrf.github.io/tags/vue%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>花里胡哨的死信队列</title>
-    <link href="//aha.me/2019/10/17/%E8%8A%B1%E9%87%8C%E8%83%A1%E5%93%A8%E7%9A%84%E6%AD%BB%E4%BF%A1%E9%98%9F%E5%88%97/"/>
-    <id>//aha.me/2019/10/17/花里胡哨的死信队列/</id>
+    <link href="//zch2017lrf.github.io/2019/10/17/%E8%8A%B1%E9%87%8C%E8%83%A1%E5%93%A8%E7%9A%84%E6%AD%BB%E4%BF%A1%E9%98%9F%E5%88%97/"/>
+    <id>//zch2017lrf.github.io/2019/10/17/花里胡哨的死信队列/</id>
     <published>2019-10-17T02:16:21.000Z</published>
     <updated>2019-10-17T02:16:40.894Z</updated>
     
@@ -33,17 +55,17 @@
     
     </summary>
     
-      <category term="项目小结" scheme="//aha.me/categories/%E9%A1%B9%E7%9B%AE%E5%B0%8F%E7%BB%93/"/>
+      <category term="项目小结" scheme="//zch2017lrf.github.io/categories/%E9%A1%B9%E7%9B%AE%E5%B0%8F%E7%BB%93/"/>
     
     
-      <category term="项目总结" scheme="//aha.me/tags/%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/"/>
+      <category term="项目总结" scheme="//zch2017lrf.github.io/tags/%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
   <entry>
     <title>spring与RabbitMq的一些花里胡哨纷争</title>
-    <link href="//aha.me/2019/10/17/spring%E4%B8%8ERabbitMq%E7%9A%84%E4%B8%80%E4%BA%9B%E8%8A%B1%E9%87%8C%E8%83%A1%E5%93%A8%E7%BA%B7%E4%BA%89/"/>
-    <id>//aha.me/2019/10/17/spring与RabbitMq的一些花里胡哨纷争/</id>
+    <link href="//zch2017lrf.github.io/2019/10/17/spring%E4%B8%8ERabbitMq%E7%9A%84%E4%B8%80%E4%BA%9B%E8%8A%B1%E9%87%8C%E8%83%A1%E5%93%A8%E7%BA%B7%E4%BA%89/"/>
+    <id>//zch2017lrf.github.io/2019/10/17/spring与RabbitMq的一些花里胡哨纷争/</id>
     <published>2019-10-17T01:55:39.000Z</published>
     <updated>2019-10-17T01:56:35.685Z</updated>
     
@@ -56,17 +78,17 @@
     
     </summary>
     
-      <category term="中间件" scheme="//aha.me/categories/%E4%B8%AD%E9%97%B4%E4%BB%B6/"/>
+      <category term="中间件" scheme="//zch2017lrf.github.io/categories/%E4%B8%AD%E9%97%B4%E4%BB%B6/"/>
     
     
-      <category term="中间件" scheme="//aha.me/tags/%E4%B8%AD%E9%97%B4%E4%BB%B6/"/>
+      <category term="中间件" scheme="//zch2017lrf.github.io/tags/%E4%B8%AD%E9%97%B4%E4%BB%B6/"/>
     
   </entry>
   
   <entry>
     <title>docker花里胡哨的网络配置</title>
-    <link href="//aha.me/2019/10/16/docker%E8%8A%B1%E9%87%8C%E8%83%A1%E5%93%A8%E7%9A%84%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/"/>
-    <id>//aha.me/2019/10/16/docker花里胡哨的网络配置/</id>
+    <link href="//zch2017lrf.github.io/2019/10/16/docker%E8%8A%B1%E9%87%8C%E8%83%A1%E5%93%A8%E7%9A%84%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE/"/>
+    <id>//zch2017lrf.github.io/2019/10/16/docker花里胡哨的网络配置/</id>
     <published>2019-10-16T02:58:04.000Z</published>
     <updated>2019-10-16T02:58:48.401Z</updated>
     
@@ -80,17 +102,17 @@
     
     </summary>
     
-      <category term="docker" scheme="//aha.me/categories/docker/"/>
+      <category term="docker" scheme="//zch2017lrf.github.io/categories/docker/"/>
     
     
-      <category term="docker" scheme="//aha.me/tags/docker/"/>
+      <category term="docker" scheme="//zch2017lrf.github.io/tags/docker/"/>
     
   </entry>
   
   <entry>
     <title>工作中一些docker花里胡哨使用总结</title>
-    <link href="//aha.me/2019/10/15/%E5%B7%A5%E4%BD%9C%E4%B8%AD%E4%B8%80%E4%BA%9Bdocker%E8%8A%B1%E9%87%8C%E8%83%A1%E5%93%A8%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/"/>
-    <id>//aha.me/2019/10/15/工作中一些docker花里胡哨使用总结/</id>
+    <link href="//zch2017lrf.github.io/2019/10/15/%E5%B7%A5%E4%BD%9C%E4%B8%AD%E4%B8%80%E4%BA%9Bdocker%E8%8A%B1%E9%87%8C%E8%83%A1%E5%93%A8%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/"/>
+    <id>//zch2017lrf.github.io/2019/10/15/工作中一些docker花里胡哨使用总结/</id>
     <published>2019-10-15T07:44:06.000Z</published>
     <updated>2019-10-15T09:50:12.951Z</updated>
     
@@ -103,17 +125,17 @@
     
     </summary>
     
-      <category term="docker" scheme="//aha.me/categories/docker/"/>
+      <category term="docker" scheme="//zch2017lrf.github.io/categories/docker/"/>
     
     
-      <category term="docker" scheme="//aha.me/tags/docker/"/>
+      <category term="docker" scheme="//zch2017lrf.github.io/tags/docker/"/>
     
   </entry>
   
   <entry>
     <title>工作中常用的cat命令</title>
-    <link href="//aha.me/2019/10/15/%E5%B7%A5%E4%BD%9C%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84cat%E5%91%BD%E4%BB%A4/"/>
-    <id>//aha.me/2019/10/15/工作中常用的cat命令/</id>
+    <link href="//zch2017lrf.github.io/2019/10/15/%E5%B7%A5%E4%BD%9C%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84cat%E5%91%BD%E4%BB%A4/"/>
+    <id>//zch2017lrf.github.io/2019/10/15/工作中常用的cat命令/</id>
     <published>2019-10-15T02:26:45.000Z</published>
     <updated>2019-10-15T02:28:23.333Z</updated>
     
@@ -125,21 +147,21 @@
     
     </summary>
     
-      <category term="常用命令" scheme="//aha.me/categories/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+      <category term="常用命令" scheme="//zch2017lrf.github.io/categories/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
     
     
-      <category term="linux" scheme="//aha.me/tags/linux/"/>
+      <category term="linux" scheme="//zch2017lrf.github.io/tags/linux/"/>
     
   </entry>
   
   <entry>
     <title>git工作中常用命令</title>
-    <link href="//aha.me/2019/10/15/git%E5%B7%A5%E4%BD%9C%E4%B8%AD%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
-    <id>//aha.me/2019/10/15/git工作中常用命令/</id>
+    <link href="//zch2017lrf.github.io/2019/10/15/git%E5%B7%A5%E4%BD%9C%E4%B8%AD%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>//zch2017lrf.github.io/2019/10/15/git工作中常用命令/</id>
     <published>2019-10-15T00:36:03.000Z</published>
-    <updated>2019-10-15T00:38:03.532Z</updated>
+    <updated>2019-10-19T01:13:39.977Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="Git常用命令"><a href="#Git常用命令" class="headerlink" title="Git常用命令"></a>Git常用命令</h2><ul><li>从远端库更新内容到本地</li></ul><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">git pull</span></span><br></pre></td></tr></table></figure><p>把文件添加到缓冲区</p><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">add</span> &lt;filename&gt; <span class="comment">// 添加某文件</span></span><br><span class="line">git <span class="keyword">add</span> . <span class="comment">// 添加所有文件</span></span><br></pre></td></tr></table></figure><a id="more"></a><p>删除文件</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rm <span class="tag">&lt;<span class="name">filename</span>&gt;</span></span><br></pre></td></tr></table></figure><p>交缓冲区的所有修改到仓库</p><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">git</span> commit -m <span class="string">"提交注释"</span></span><br></pre></td></tr></table></figure><p>查看git库的状态</p><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">git status</span></span><br></pre></td></tr></table></figure><p>比较文件差异</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git diff <span class="tag">&lt;<span class="name">filename</span>&gt;</span></span><br></pre></td></tr></table></figure><p>查看提交日志</p><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br></pre></td></tr></table></figure><p>切换分支</p><figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout <span class="params">&lt;branchName&gt;</span> <span class="comment">// 切换到某分支</span></span><br><span class="line">git checkout -b <span class="params">&lt;branchName&gt;</span> <span class="comment">// 创建分支并切换到创建的分支</span></span><br></pre></td></tr></table></figure><p>合并某分支的内容到当前分支</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge <span class="tag">&lt;<span class="name">branchName</span>&gt;</span></span><br></pre></td></tr></table></figure><h2 id="Git分支管理规范"><a href="#Git分支管理规范" class="headerlink" title="Git分支管理规范"></a>Git分支管理规范</h2><h3 id="master-主分支"><a href="#master-主分支" class="headerlink" title="master 主分支"></a>master 主分支</h3><blockquote><p>作为正式环境分支（稳定版），只读，不可修改，可被merge</p><p>正式服务器应当切换为此分支</p></blockquote><h3 id="release-预发布分支"><a href="#release-预发布分支" class="headerlink" title="release 预发布分支"></a>release 预发布分支</h3><figure class="highlight cos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">作为验收环境分支，不可修改，可被<span class="keyword">merge</span></span><br><span class="line"></span><br><span class="line">验收或正式服务器上线前应当切换为此分支</span><br></pre></td></tr></table></figure><h3 id="develop-测试分支"><a href="#develop-测试分支" class="headerlink" title="develop 测试分支"></a>develop 测试分支</h3><blockquote><p>作为测试环境分支，可修改，可被merge</p><p>测试服务器应当切换为此分支</p></blockquote><h3 id="feature-开发（功能）分支"><a href="#feature-开发（功能）分支" class="headerlink" title="feature/ 开发（功能）分支"></a>feature/<name> 开发（功能）分支</name></h3><blockquote><p>作为开发环境分支，本地开发和开发服务器应当切换为此分支</p></blockquote><h3 id="hotfix-修复BUG分支"><a href="#hotfix-修复BUG分支" class="headerlink" title="hotfix/ 修复BUG分支"></a>hotfix/<name> 修复BUG分支</name></h3><blockquote><p>作为修复BUG分支，应从线上或测试分支拉取一个hotfix分支，BUG解决后merge到测试或线上分支</p></blockquote><h2 id="前端项目上线流程规范"><a href="#前端项目上线流程规范" class="headerlink" title="前端项目上线流程规范"></a>前端项目上线流程规范</h2><h3 id="测试环境"><a href="#测试环境" class="headerlink" title="测试环境"></a>测试环境</h3><figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-<span class="ruby"> feature/&lt;name&gt; <span class="regexp">//</span> 本地提交、推送</span></span><br><span class="line"><span class="ruby">- git checkout develop /<span class="regexp">/ 本地切换到develop分支</span></span></span><br><span class="line"><span class="ruby">- git merge feature/&lt;name&gt; <span class="regexp">//</span> 合并开发分支</span></span><br><span class="line"><span class="ruby">- git push</span></span><br></pre></td></tr></table></figure><p>服务器</p><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">- </span>git pull</span><br><span class="line"><span class="bullet">- </span>npm run build</span><br></pre></td></tr></table></figure><h3 id="正式-验收环境"><a href="#正式-验收环境" class="headerlink" title="正式/验收环境"></a>正式/验收环境</h3><figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-<span class="ruby"> feature/&lt;name&gt; <span class="regexp">//</span> 本地提交、推送</span></span><br><span class="line"><span class="ruby">- git checkout develop</span></span><br><span class="line"><span class="ruby">- git merge feature/&lt;name&gt;</span></span><br><span class="line"><span class="ruby">- git checkout master或release/&lt;name&gt;</span></span><br><span class="line"><span class="ruby">- git merge develop</span></span><br><span class="line"><span class="ruby">- git push</span></span><br></pre></td></tr></table></figure><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">服务器</span><br><span class="line"><span class="bullet">- </span>git pull</span><br><span class="line"><span class="bullet">- </span>npm run build</span><br></pre></td></tr></table></figure><h3 id="热修复流程"><a href="#热修复流程" class="headerlink" title="热修复流程"></a>热修复流程</h3><figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">-<span class="ruby"> git checkout master</span></span><br><span class="line"><span class="ruby">- git checkout -b hotfix/&lt;name&gt;</span></span><br><span class="line"><span class="ruby">- git push origin hotfix/&lt;name&gt;<span class="symbol">:hotfix/&lt;name&gt;</span> /<span class="regexp">/ 将分支推送到远程仓库</span></span></span><br><span class="line"><span class="ruby">- hotfix/&lt;name&gt; <span class="regexp">//</span> 本地提交、推送</span></span><br><span class="line"><span class="ruby">- git checkout master</span></span><br><span class="line"><span class="ruby">- git merge hotfix/&lt;name&gt;</span></span><br><span class="line"><span class="ruby">- git push</span></span><br></pre></td></tr></table></figure><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">服务器</span><br><span class="line"><span class="bullet">- </span>git pull</span><br><span class="line"><span class="bullet">- </span>npm run build</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h2 id="Git常用命令"><a href="#Git常用命令" class="headerlink" title="Git常用命令"></a>Git常用命令</h2><ul><li>从远端库更新内容到本地</li></ul><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">git pull</span></span><br></pre></td></tr></table></figure><p>把文件添加到缓冲区</p><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">add</span> &lt;filename&gt; <span class="comment">// 添加某文件</span></span><br><span class="line">git <span class="keyword">add</span> . <span class="comment">// 添加所有文件</span></span><br></pre></td></tr></table></figure><a id="more"></a><p>删除文件</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rm <span class="tag">&lt;<span class="name">filename</span>&gt;</span></span><br></pre></td></tr></table></figure><p>交缓冲区的所有修改到仓库</p><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">git</span> commit -m <span class="string">"提交注释"</span></span><br></pre></td></tr></table></figure><p>查看git库的状态</p><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">git status</span></span><br></pre></td></tr></table></figure><p>比较文件差异</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git diff <span class="tag">&lt;<span class="name">filename</span>&gt;</span></span><br></pre></td></tr></table></figure><p>查看提交日志</p><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br></pre></td></tr></table></figure><p>切换分支</p><figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout <span class="params">&lt;branchName&gt;</span> <span class="comment">// 切换到某分支</span></span><br><span class="line">git checkout -b <span class="params">&lt;branchName&gt;</span> <span class="comment">// 创建分支并切换到创建的分支</span></span><br></pre></td></tr></table></figure><p>合并某分支的内容到当前分支</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge <span class="tag">&lt;<span class="name">branchName</span>&gt;</span></span><br></pre></td></tr></table></figure><h2 id="Git分支管理规范"><a href="#Git分支管理规范" class="headerlink" title="Git分支管理规范"></a>Git分支管理规范</h2><h3 id="master-主分支"><a href="#master-主分支" class="headerlink" title="master 主分支"></a>master 主分支</h3><blockquote><p>作为正式环境分支（稳定版），只读，不可修改，可被merge</p><p>正式服务器应当切换为此分支</p></blockquote><h3 id="release-预发布分支"><a href="#release-预发布分支" class="headerlink" title="release 预发布分支"></a>release 预发布分支</h3><figure class="highlight cos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">作为验收环境分支，不可修改，可被<span class="keyword">merge</span></span><br><span class="line"></span><br><span class="line">验收或正式服务器上线前应当切换为此分支</span><br></pre></td></tr></table></figure><h3 id="develop-测试分支"><a href="#develop-测试分支" class="headerlink" title="develop 测试分支"></a>develop 测试分支</h3><blockquote><p>作为测试环境分支，可修改，可被merge</p><p>测试服务器应当切换为此分支</p></blockquote><h3 id="feature-开发（功能）分支"><a href="#feature-开发（功能）分支" class="headerlink" title="feature/ 开发（功能）分支"></a>feature/<name> 开发（功能）分支</name></h3><blockquote><p>作为开发环境分支，本地开发和开发服务器应当切换为此分支</p></blockquote><h3 id="hotfix-修复BUG分支"><a href="#hotfix-修复BUG分支" class="headerlink" title="hotfix/ 修复BUG分支"></a>hotfix/<name> 修复BUG分支</name></h3><blockquote><p>作为修复BUG分支，应从线上或测试分支拉取一个hotfix分支，BUG解决后merge到测试或线上分支</p></blockquote><h2 id="前端项目上线流程规范"><a href="#前端项目上线流程规范" class="headerlink" title="前端项目上线流程规范"></a>前端项目上线流程规范</h2><h3 id="测试环境"><a href="#测试环境" class="headerlink" title="测试环境"></a>测试环境</h3><figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-<span class="ruby"> feature/&lt;name&gt; <span class="regexp">//</span> 本地提交、推送</span></span><br><span class="line"><span class="ruby">- git checkout develop /<span class="regexp">/ 本地切换到develop分支</span></span></span><br><span class="line"><span class="ruby">- git merge feature/&lt;name&gt; <span class="regexp">//</span> 合并开发分支</span></span><br><span class="line"><span class="ruby">- git push</span></span><br></pre></td></tr></table></figure><p>服务器</p><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">- </span>git pull</span><br><span class="line"><span class="bullet">- </span>npm run build</span><br></pre></td></tr></table></figure><h3 id="正式-验收环境"><a href="#正式-验收环境" class="headerlink" title="正式/验收环境"></a>正式/验收环境</h3><figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-<span class="ruby"> feature/&lt;name&gt; <span class="regexp">//</span> 本地提交、推送</span></span><br><span class="line"><span class="ruby">- git checkout develop</span></span><br><span class="line"><span class="ruby">- git merge feature/&lt;name&gt;</span></span><br><span class="line"><span class="ruby">- git checkout master或release/&lt;name&gt;</span></span><br><span class="line"><span class="ruby">- git merge develop</span></span><br><span class="line"><span class="ruby">- git push</span></span><br></pre></td></tr></table></figure><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">服务器</span><br><span class="line"><span class="bullet">- </span>git pull</span><br><span class="line"><span class="bullet">- </span>npm run build</span><br></pre></td></tr></table></figure><h3 id="热修复流程"><a href="#热修复流程" class="headerlink" title="热修复流程"></a>热修复流程</h3><figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">-<span class="ruby"> git checkout master</span></span><br><span class="line"><span class="ruby">- git checkout -b hotfix/&lt;name&gt;</span></span><br><span class="line"><span class="ruby">- git push origin hotfix/&lt;name&gt;<span class="symbol">:hotfix/&lt;name&gt;</span> /<span class="regexp">/ 将分支推送到远程仓库</span></span></span><br><span class="line"><span class="ruby">- hotfix/&lt;name&gt; <span class="regexp">//</span> 本地提交、推送</span></span><br><span class="line"><span class="ruby">- git checkout master</span></span><br><span class="line"><span class="ruby">- git merge hotfix/&lt;name&gt;</span></span><br><span class="line"><span class="ruby">- git push</span></span><br></pre></td></tr></table></figure><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">服务器</span><br><span class="line"><span class="bullet">- </span>git pull</span><br><span class="line"><span class="bullet">- </span>npm run build</span><br></pre></td></tr></table></figure><h2 id="后端项目上线流程规范"><a href="#后端项目上线流程规范" class="headerlink" title="后端项目上线流程规范"></a>后端项目上线流程规范</h2><p>确定下版本和标签命名规则</p><h3 id="一、版本号命名规则"><a href="#一、版本号命名规则" class="headerlink" title="一、版本号命名规则"></a>一、版本号命名规则</h3><p>由三段数字组成，vx.xx.xx；<br>1、第一段1位数字，从1开始递增，表示重大版本；<br>2、第二段2位数字，从01开始递增，表示大的需求；<br>3、第三段2位数字，从01开始递增，表示基于需求版本的修复或者补丁</p><h3 id="二、发布包约定"><a href="#二、发布包约定" class="headerlink" title="二、发布包约定"></a>二、发布包约定</h3><p>1、普通版本发布包<br>包名：v2.22<br>打包类型：全量包</p><p>2、修复版本发布包<br>包名：v2.22.01-fix<br>打包类型：增量包</p><p>3、补丁版本发布包<br>包名：v2.22.01-patch<br>打包类型：原则上打增量包，具体视情况而定</p><h3 id="三、其它"><a href="#三、其它" class="headerlink" title="三、其它"></a>三、其它</h3><p>git发布分支以版本名称命名<br>git标签名称命名，tag_+版本名称<br>修复 紧急 拉master<br>其他 拉dev<br>特殊 拉测试版本里的分支</p>]]></content>
     
     <summary type="html">
     
@@ -152,17 +174,17 @@
     
     </summary>
     
-      <category term="工作总结" scheme="//aha.me/categories/%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93/"/>
+      <category term="工作总结" scheme="//zch2017lrf.github.io/categories/%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93/"/>
     
     
-      <category term="git" scheme="//aha.me/tags/git/"/>
+      <category term="git" scheme="//zch2017lrf.github.io/tags/git/"/>
     
   </entry>
   
   <entry>
     <title>mybatis where 中遇到传入集合参数问题</title>
-    <link href="//aha.me/2019/10/14/mybatis-where-%E4%B8%AD%E9%81%87%E5%88%B0%E4%BC%A0%E5%85%A5%E9%9B%86%E5%90%88%E5%8F%82%E6%95%B0%E9%97%AE%E9%A2%98/"/>
-    <id>//aha.me/2019/10/14/mybatis-where-中遇到传入集合参数问题/</id>
+    <link href="//zch2017lrf.github.io/2019/10/14/mybatis-where-%E4%B8%AD%E9%81%87%E5%88%B0%E4%BC%A0%E5%85%A5%E9%9B%86%E5%90%88%E5%8F%82%E6%95%B0%E9%97%AE%E9%A2%98/"/>
+    <id>//zch2017lrf.github.io/2019/10/14/mybatis-where-中遇到传入集合参数问题/</id>
     <published>2019-10-14T01:31:44.000Z</published>
     <updated>2019-10-14T01:34:15.479Z</updated>
     
@@ -182,17 +204,17 @@
     
     </summary>
     
-      <category term="mybatis" scheme="//aha.me/categories/mybatis/"/>
+      <category term="mybatis" scheme="//zch2017lrf.github.io/categories/mybatis/"/>
     
     
-      <category term="mybatis" scheme="//aha.me/tags/mybatis/"/>
+      <category term="mybatis" scheme="//zch2017lrf.github.io/tags/mybatis/"/>
     
   </entry>
   
   <entry>
     <title>编程提升</title>
-    <link href="//aha.me/2019/10/08/%E7%BC%96%E7%A8%8B%E6%8F%90%E5%8D%87/"/>
-    <id>//aha.me/2019/10/08/编程提升/</id>
+    <link href="//zch2017lrf.github.io/2019/10/08/%E7%BC%96%E7%A8%8B%E6%8F%90%E5%8D%87/"/>
+    <id>//zch2017lrf.github.io/2019/10/08/编程提升/</id>
     <published>2019-10-08T07:11:05.000Z</published>
     <updated>2019-10-08T07:11:30.517Z</updated>
     
@@ -204,17 +226,17 @@
     
     </summary>
     
-      <category term="项目小结" scheme="//aha.me/categories/%E9%A1%B9%E7%9B%AE%E5%B0%8F%E7%BB%93/"/>
+      <category term="项目小结" scheme="//zch2017lrf.github.io/categories/%E9%A1%B9%E7%9B%AE%E5%B0%8F%E7%BB%93/"/>
     
     
-      <category term="项目总结" scheme="//aha.me/tags/%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/"/>
+      <category term="项目总结" scheme="//zch2017lrf.github.io/tags/%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
   <entry>
     <title>项目需求分析(付费会员,超级领主)</title>
-    <link href="//aha.me/2019/10/08/%E9%A1%B9%E7%9B%AE%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90/"/>
-    <id>//aha.me/2019/10/08/项目需求分析/</id>
+    <link href="//zch2017lrf.github.io/2019/10/08/%E9%A1%B9%E7%9B%AE%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90/"/>
+    <id>//zch2017lrf.github.io/2019/10/08/项目需求分析/</id>
     <published>2019-10-08T06:33:47.000Z</published>
     <updated>2019-10-08T06:55:40.280Z</updated>
     
@@ -226,19 +248,19 @@
     
     </summary>
     
-      <category term="付费会员,超级领主" scheme="//aha.me/categories/%E4%BB%98%E8%B4%B9%E4%BC%9A%E5%91%98-%E8%B6%85%E7%BA%A7%E9%A2%86%E4%B8%BB/"/>
+      <category term="付费会员,超级领主" scheme="//zch2017lrf.github.io/categories/%E4%BB%98%E8%B4%B9%E4%BC%9A%E5%91%98-%E8%B6%85%E7%BA%A7%E9%A2%86%E4%B8%BB/"/>
     
-      <category term="项目总结" scheme="//aha.me/categories/%E4%BB%98%E8%B4%B9%E4%BC%9A%E5%91%98-%E8%B6%85%E7%BA%A7%E9%A2%86%E4%B8%BB/%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/"/>
+      <category term="项目总结" scheme="//zch2017lrf.github.io/categories/%E4%BB%98%E8%B4%B9%E4%BC%9A%E5%91%98-%E8%B6%85%E7%BA%A7%E9%A2%86%E4%B8%BB/%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/"/>
     
     
-      <category term="项目分析" scheme="//aha.me/tags/%E9%A1%B9%E7%9B%AE%E5%88%86%E6%9E%90/"/>
+      <category term="项目分析" scheme="//zch2017lrf.github.io/tags/%E9%A1%B9%E7%9B%AE%E5%88%86%E6%9E%90/"/>
     
   </entry>
   
   <entry>
     <title>Centos7部署yapi</title>
-    <link href="//aha.me/2019/10/08/20191008p2p%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/"/>
-    <id>//aha.me/2019/10/08/20191008p2p项目总结/</id>
+    <link href="//zch2017lrf.github.io/2019/10/08/20191008p2p%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/"/>
+    <id>//zch2017lrf.github.io/2019/10/08/20191008p2p项目总结/</id>
     <published>2019-10-08T01:42:23.000Z</published>
     <updated>2019-10-08T06:31:16.365Z</updated>
     
@@ -255,23 +277,23 @@
     
     </summary>
     
-      <category term="Centos7" scheme="//aha.me/categories/Centos7/"/>
+      <category term="Centos7" scheme="//zch2017lrf.github.io/categories/Centos7/"/>
     
-      <category term="文档" scheme="//aha.me/categories/Centos7/%E6%96%87%E6%A1%A3/"/>
+      <category term="文档" scheme="//zch2017lrf.github.io/categories/Centos7/%E6%96%87%E6%A1%A3/"/>
     
-      <category term="接口" scheme="//aha.me/categories/Centos7/%E6%96%87%E6%A1%A3/%E6%8E%A5%E5%8F%A3/"/>
+      <category term="接口" scheme="//zch2017lrf.github.io/categories/Centos7/%E6%96%87%E6%A1%A3/%E6%8E%A5%E5%8F%A3/"/>
     
-      <category term="node" scheme="//aha.me/categories/Centos7/%E6%96%87%E6%A1%A3/%E6%8E%A5%E5%8F%A3/node/"/>
+      <category term="node" scheme="//zch2017lrf.github.io/categories/Centos7/%E6%96%87%E6%A1%A3/%E6%8E%A5%E5%8F%A3/node/"/>
     
     
-      <category term="项目总结" scheme="//aha.me/tags/%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/"/>
+      <category term="项目总结" scheme="//zch2017lrf.github.io/tags/%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
   <entry>
     <title>Ajax跨域请求，同时保证session一致</title>
-    <link href="//aha.me/2019/04/17/Ajax%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82%EF%BC%8C%E5%90%8C%E6%97%B6%E4%BF%9D%E8%AF%81session%E4%B8%80%E8%87%B4/"/>
-    <id>//aha.me/2019/04/17/Ajax跨域请求，同时保证session一致/</id>
+    <link href="//zch2017lrf.github.io/2019/04/17/Ajax%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82%EF%BC%8C%E5%90%8C%E6%97%B6%E4%BF%9D%E8%AF%81session%E4%B8%80%E8%87%B4/"/>
+    <id>//zch2017lrf.github.io/2019/04/17/Ajax跨域请求，同时保证session一致/</id>
     <published>2019-04-17T02:13:24.000Z</published>
     <updated>2019-04-17T02:17:11.036Z</updated>
     
@@ -285,17 +307,17 @@
     
     </summary>
     
-      <category term="springBoot" scheme="//aha.me/categories/springBoot/"/>
+      <category term="springBoot" scheme="//zch2017lrf.github.io/categories/springBoot/"/>
     
     
-      <category term="springBoot" scheme="//aha.me/tags/springBoot/"/>
+      <category term="springBoot" scheme="//zch2017lrf.github.io/tags/springBoot/"/>
     
   </entry>
   
   <entry>
     <title>轻松搞定数据验证（二）</title>
-    <link href="//aha.me/2019/02/19/%E8%BD%BB%E6%9D%BE%E6%90%9E%E5%AE%9A%E6%95%B0%E6%8D%AE%E9%AA%8C%E8%AF%81%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
-    <id>//aha.me/2019/02/19/轻松搞定数据验证（二）/</id>
+    <link href="//zch2017lrf.github.io/2019/02/19/%E8%BD%BB%E6%9D%BE%E6%90%9E%E5%AE%9A%E6%95%B0%E6%8D%AE%E9%AA%8C%E8%AF%81%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
+    <id>//zch2017lrf.github.io/2019/02/19/轻松搞定数据验证（二）/</id>
     <published>2019-02-19T14:19:38.000Z</published>
     <updated>2019-02-19T14:23:22.646Z</updated>
     
@@ -307,21 +329,21 @@
     
     </summary>
     
-      <category term="springBoot" scheme="//aha.me/categories/springBoot/"/>
+      <category term="springBoot" scheme="//zch2017lrf.github.io/categories/springBoot/"/>
     
-      <category term="轻松搞定数据验证（二）" scheme="//aha.me/categories/springBoot/%E8%BD%BB%E6%9D%BE%E6%90%9E%E5%AE%9A%E6%95%B0%E6%8D%AE%E9%AA%8C%E8%AF%81%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
+      <category term="轻松搞定数据验证（二）" scheme="//zch2017lrf.github.io/categories/springBoot/%E8%BD%BB%E6%9D%BE%E6%90%9E%E5%AE%9A%E6%95%B0%E6%8D%AE%E9%AA%8C%E8%AF%81%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
     
     
-      <category term="springBoot" scheme="//aha.me/tags/springBoot/"/>
+      <category term="springBoot" scheme="//zch2017lrf.github.io/tags/springBoot/"/>
     
-      <category term="轻松搞定数据验证（二）" scheme="//aha.me/tags/%E8%BD%BB%E6%9D%BE%E6%90%9E%E5%AE%9A%E6%95%B0%E6%8D%AE%E9%AA%8C%E8%AF%81%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
+      <category term="轻松搞定数据验证（二）" scheme="//zch2017lrf.github.io/tags/%E8%BD%BB%E6%9D%BE%E6%90%9E%E5%AE%9A%E6%95%B0%E6%8D%AE%E9%AA%8C%E8%AF%81%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
     
   </entry>
   
   <entry>
     <title>轻松搞定数据验证（一）</title>
-    <link href="//aha.me/2019/02/19/%E8%BD%BB%E6%9D%BE%E6%90%9E%E5%AE%9A%E6%95%B0%E6%8D%AE%E9%AA%8C%E8%AF%81%EF%BC%88%E4%B8%80%EF%BC%89/"/>
-    <id>//aha.me/2019/02/19/轻松搞定数据验证（一）/</id>
+    <link href="//zch2017lrf.github.io/2019/02/19/%E8%BD%BB%E6%9D%BE%E6%90%9E%E5%AE%9A%E6%95%B0%E6%8D%AE%E9%AA%8C%E8%AF%81%EF%BC%88%E4%B8%80%EF%BC%89/"/>
+    <id>//zch2017lrf.github.io/2019/02/19/轻松搞定数据验证（一）/</id>
     <published>2019-02-19T13:48:23.000Z</published>
     <updated>2019-02-19T14:01:56.928Z</updated>
     
@@ -333,21 +355,21 @@
     
     </summary>
     
-      <category term="springBoot" scheme="//aha.me/categories/springBoot/"/>
+      <category term="springBoot" scheme="//zch2017lrf.github.io/categories/springBoot/"/>
     
-      <category term="轻松搞定数据验证（一）" scheme="//aha.me/categories/springBoot/%E8%BD%BB%E6%9D%BE%E6%90%9E%E5%AE%9A%E6%95%B0%E6%8D%AE%E9%AA%8C%E8%AF%81%EF%BC%88%E4%B8%80%EF%BC%89/"/>
+      <category term="轻松搞定数据验证（一）" scheme="//zch2017lrf.github.io/categories/springBoot/%E8%BD%BB%E6%9D%BE%E6%90%9E%E5%AE%9A%E6%95%B0%E6%8D%AE%E9%AA%8C%E8%AF%81%EF%BC%88%E4%B8%80%EF%BC%89/"/>
     
     
-      <category term="springBoot" scheme="//aha.me/tags/springBoot/"/>
+      <category term="springBoot" scheme="//zch2017lrf.github.io/tags/springBoot/"/>
     
-      <category term="轻松搞定数据验证（一）" scheme="//aha.me/tags/%E8%BD%BB%E6%9D%BE%E6%90%9E%E5%AE%9A%E6%95%B0%E6%8D%AE%E9%AA%8C%E8%AF%81%EF%BC%88%E4%B8%80%EF%BC%89/"/>
+      <category term="轻松搞定数据验证（一）" scheme="//zch2017lrf.github.io/tags/%E8%BD%BB%E6%9D%BE%E6%90%9E%E5%AE%9A%E6%95%B0%E6%8D%AE%E9%AA%8C%E8%AF%81%EF%BC%88%E4%B8%80%EF%BC%89/"/>
     
   </entry>
   
   <entry>
     <title>轻松搞定全局异常</title>
-    <link href="//aha.me/2019/02/19/%E8%BD%BB%E6%9D%BE%E6%90%9E%E5%AE%9A%E5%85%A8%E5%B1%80%E5%BC%82%E5%B8%B8/"/>
-    <id>//aha.me/2019/02/19/轻松搞定全局异常/</id>
+    <link href="//zch2017lrf.github.io/2019/02/19/%E8%BD%BB%E6%9D%BE%E6%90%9E%E5%AE%9A%E5%85%A8%E5%B1%80%E5%BC%82%E5%B8%B8/"/>
+    <id>//zch2017lrf.github.io/2019/02/19/轻松搞定全局异常/</id>
     <published>2019-02-19T13:30:31.000Z</published>
     <updated>2019-02-19T13:37:26.831Z</updated>
     
@@ -359,21 +381,21 @@
     
     </summary>
     
-      <category term="springBoot" scheme="//aha.me/categories/springBoot/"/>
+      <category term="springBoot" scheme="//zch2017lrf.github.io/categories/springBoot/"/>
     
-      <category term="轻松搞定全局异常" scheme="//aha.me/categories/springBoot/%E8%BD%BB%E6%9D%BE%E6%90%9E%E5%AE%9A%E5%85%A8%E5%B1%80%E5%BC%82%E5%B8%B8/"/>
+      <category term="轻松搞定全局异常" scheme="//zch2017lrf.github.io/categories/springBoot/%E8%BD%BB%E6%9D%BE%E6%90%9E%E5%AE%9A%E5%85%A8%E5%B1%80%E5%BC%82%E5%B8%B8/"/>
     
     
-      <category term="springBoot" scheme="//aha.me/tags/springBoot/"/>
+      <category term="springBoot" scheme="//zch2017lrf.github.io/tags/springBoot/"/>
     
-      <category term="轻松搞定全局异常" scheme="//aha.me/tags/%E8%BD%BB%E6%9D%BE%E6%90%9E%E5%AE%9A%E5%85%A8%E5%B1%80%E5%BC%82%E5%B8%B8/"/>
+      <category term="轻松搞定全局异常" scheme="//zch2017lrf.github.io/tags/%E8%BD%BB%E6%9D%BE%E6%90%9E%E5%AE%9A%E5%85%A8%E5%B1%80%E5%BC%82%E5%B8%B8/"/>
     
   </entry>
   
   <entry>
     <title>定时任务详解</title>
-    <link href="//aha.me/2019/02/19/%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1%E8%AF%A6%E8%A7%A3/"/>
-    <id>//aha.me/2019/02/19/定时任务详解/</id>
+    <link href="//zch2017lrf.github.io/2019/02/19/%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1%E8%AF%A6%E8%A7%A3/"/>
+    <id>//zch2017lrf.github.io/2019/02/19/定时任务详解/</id>
     <published>2019-02-19T05:36:49.000Z</published>
     <updated>2019-02-19T05:40:27.851Z</updated>
     
@@ -385,17 +407,17 @@
     
     </summary>
     
-      <category term="springBoot" scheme="//aha.me/categories/springBoot/"/>
+      <category term="springBoot" scheme="//zch2017lrf.github.io/categories/springBoot/"/>
     
     
-      <category term="springBoot" scheme="//aha.me/tags/springBoot/"/>
+      <category term="springBoot" scheme="//zch2017lrf.github.io/tags/springBoot/"/>
     
   </entry>
   
   <entry>
     <title>集成Swagger在线调试</title>
-    <link href="//aha.me/2019/02/18/%E9%9B%86%E6%88%90Swagger%E5%9C%A8%E7%BA%BF%E8%B0%83%E8%AF%95/"/>
-    <id>//aha.me/2019/02/18/集成Swagger在线调试/</id>
+    <link href="//zch2017lrf.github.io/2019/02/18/%E9%9B%86%E6%88%90Swagger%E5%9C%A8%E7%BA%BF%E8%B0%83%E8%AF%95/"/>
+    <id>//zch2017lrf.github.io/2019/02/18/集成Swagger在线调试/</id>
     <published>2019-02-18T13:47:32.000Z</published>
     <updated>2019-02-18T13:51:06.223Z</updated>
     
@@ -408,21 +430,21 @@
     
     </summary>
     
-      <category term="springBoot" scheme="//aha.me/categories/springBoot/"/>
+      <category term="springBoot" scheme="//zch2017lrf.github.io/categories/springBoot/"/>
     
-      <category term="集成Swagger在线调试" scheme="//aha.me/categories/springBoot/%E9%9B%86%E6%88%90Swagger%E5%9C%A8%E7%BA%BF%E8%B0%83%E8%AF%95/"/>
+      <category term="集成Swagger在线调试" scheme="//zch2017lrf.github.io/categories/springBoot/%E9%9B%86%E6%88%90Swagger%E5%9C%A8%E7%BA%BF%E8%B0%83%E8%AF%95/"/>
     
     
-      <category term="springBoot" scheme="//aha.me/tags/springBoot/"/>
+      <category term="springBoot" scheme="//zch2017lrf.github.io/tags/springBoot/"/>
     
-      <category term="集成Swagger在线调试" scheme="//aha.me/tags/%E9%9B%86%E6%88%90Swagger%E5%9C%A8%E7%BA%BF%E8%B0%83%E8%AF%95/"/>
+      <category term="集成Swagger在线调试" scheme="//zch2017lrf.github.io/tags/%E9%9B%86%E6%88%90Swagger%E5%9C%A8%E7%BA%BF%E8%B0%83%E8%AF%95/"/>
     
   </entry>
   
   <entry>
     <title>使用Spring Cache集成Redis</title>
-    <link href="//aha.me/2019/02/18/%E4%BD%BF%E7%94%A8Spring-Cache%E9%9B%86%E6%88%90Redis/"/>
-    <id>//aha.me/2019/02/18/使用Spring-Cache集成Redis/</id>
+    <link href="//zch2017lrf.github.io/2019/02/18/%E4%BD%BF%E7%94%A8Spring-Cache%E9%9B%86%E6%88%90Redis/"/>
+    <id>//zch2017lrf.github.io/2019/02/18/使用Spring-Cache集成Redis/</id>
     <published>2019-02-18T11:09:26.000Z</published>
     <updated>2019-02-18T11:17:06.927Z</updated>
     
@@ -434,21 +456,21 @@
     
     </summary>
     
-      <category term="springBoot" scheme="//aha.me/categories/springBoot/"/>
+      <category term="springBoot" scheme="//zch2017lrf.github.io/categories/springBoot/"/>
     
-      <category term="使用Spring Cache集成Redis" scheme="//aha.me/categories/springBoot/%E4%BD%BF%E7%94%A8Spring-Cache%E9%9B%86%E6%88%90Redis/"/>
+      <category term="使用Spring Cache集成Redis" scheme="//zch2017lrf.github.io/categories/springBoot/%E4%BD%BF%E7%94%A8Spring-Cache%E9%9B%86%E6%88%90Redis/"/>
     
     
-      <category term="springBoot" scheme="//aha.me/tags/springBoot/"/>
+      <category term="springBoot" scheme="//zch2017lrf.github.io/tags/springBoot/"/>
     
-      <category term="使用Spring Cache集成Redis" scheme="//aha.me/tags/%E4%BD%BF%E7%94%A8Spring-Cache%E9%9B%86%E6%88%90Redis/"/>
+      <category term="使用Spring Cache集成Redis" scheme="//zch2017lrf.github.io/tags/%E4%BD%BF%E7%94%A8Spring-Cache%E9%9B%86%E6%88%90Redis/"/>
     
   </entry>
   
   <entry>
     <title>整合Lettuce Redis</title>
-    <link href="//aha.me/2019/02/18/%E6%95%B4%E5%90%88Lettuce-Redis/"/>
-    <id>//aha.me/2019/02/18/整合Lettuce-Redis/</id>
+    <link href="//zch2017lrf.github.io/2019/02/18/%E6%95%B4%E5%90%88Lettuce-Redis/"/>
+    <id>//zch2017lrf.github.io/2019/02/18/整合Lettuce-Redis/</id>
     <published>2019-02-18T10:53:07.000Z</published>
     <updated>2019-02-18T10:56:57.195Z</updated>
     
@@ -460,17 +482,17 @@
     
     </summary>
     
-      <category term="springBoot" scheme="//aha.me/categories/springBoot/"/>
+      <category term="springBoot" scheme="//zch2017lrf.github.io/categories/springBoot/"/>
     
     
-      <category term="springBoot" scheme="//aha.me/tags/springBoot/"/>
+      <category term="springBoot" scheme="//zch2017lrf.github.io/tags/springBoot/"/>
     
   </entry>
   
   <entry>
     <title>通用Mapper与分页插件的集成</title>
-    <link href="//aha.me/2019/02/18/%E9%80%9A%E7%94%A8Mapper%E4%B8%8E%E5%88%86%E9%A1%B5%E6%8F%92%E4%BB%B6%E7%9A%84%E9%9B%86%E6%88%90/"/>
-    <id>//aha.me/2019/02/18/通用Mapper与分页插件的集成/</id>
+    <link href="//zch2017lrf.github.io/2019/02/18/%E9%80%9A%E7%94%A8Mapper%E4%B8%8E%E5%88%86%E9%A1%B5%E6%8F%92%E4%BB%B6%E7%9A%84%E9%9B%86%E6%88%90/"/>
+    <id>//zch2017lrf.github.io/2019/02/18/通用Mapper与分页插件的集成/</id>
     <published>2019-02-18T05:15:35.000Z</published>
     <updated>2019-02-18T10:19:51.840Z</updated>
     
@@ -482,21 +504,21 @@
     
     </summary>
     
-      <category term="springBoot" scheme="//aha.me/categories/springBoot/"/>
+      <category term="springBoot" scheme="//zch2017lrf.github.io/categories/springBoot/"/>
     
-      <category term="通用Mapper与分页插件的集成" scheme="//aha.me/categories/springBoot/%E9%80%9A%E7%94%A8Mapper%E4%B8%8E%E5%88%86%E9%A1%B5%E6%8F%92%E4%BB%B6%E7%9A%84%E9%9B%86%E6%88%90/"/>
+      <category term="通用Mapper与分页插件的集成" scheme="//zch2017lrf.github.io/categories/springBoot/%E9%80%9A%E7%94%A8Mapper%E4%B8%8E%E5%88%86%E9%A1%B5%E6%8F%92%E4%BB%B6%E7%9A%84%E9%9B%86%E6%88%90/"/>
     
     
-      <category term="springBoot" scheme="//aha.me/tags/springBoot/"/>
+      <category term="springBoot" scheme="//zch2017lrf.github.io/tags/springBoot/"/>
     
-      <category term="通用Mapper与分页插件的集成" scheme="//aha.me/tags/%E9%80%9A%E7%94%A8Mapper%E4%B8%8E%E5%88%86%E9%A1%B5%E6%8F%92%E4%BB%B6%E7%9A%84%E9%9B%86%E6%88%90/"/>
+      <category term="通用Mapper与分页插件的集成" scheme="//zch2017lrf.github.io/tags/%E9%80%9A%E7%94%A8Mapper%E4%B8%8E%E5%88%86%E9%A1%B5%E6%8F%92%E4%BB%B6%E7%9A%84%E9%9B%86%E6%88%90/"/>
     
   </entry>
   
   <entry>
     <title>整合SpringDataJpa</title>
-    <link href="//aha.me/2019/02/17/%E6%95%B4%E5%90%88SpringDataJpa/"/>
-    <id>//aha.me/2019/02/17/整合SpringDataJpa/</id>
+    <link href="//zch2017lrf.github.io/2019/02/17/%E6%95%B4%E5%90%88SpringDataJpa/"/>
+    <id>//zch2017lrf.github.io/2019/02/17/整合SpringDataJpa/</id>
     <published>2019-02-17T14:35:51.000Z</published>
     <updated>2019-02-17T14:41:33.921Z</updated>
     
@@ -508,21 +530,21 @@
     
     </summary>
     
-      <category term="springBoot" scheme="//aha.me/categories/springBoot/"/>
+      <category term="springBoot" scheme="//zch2017lrf.github.io/categories/springBoot/"/>
     
-      <category term="SpringDataJpa" scheme="//aha.me/categories/springBoot/SpringDataJpa/"/>
+      <category term="SpringDataJpa" scheme="//zch2017lrf.github.io/categories/springBoot/SpringDataJpa/"/>
     
     
-      <category term="springBoot" scheme="//aha.me/tags/springBoot/"/>
+      <category term="springBoot" scheme="//zch2017lrf.github.io/tags/springBoot/"/>
     
-      <category term="SpringDataJpa" scheme="//aha.me/tags/SpringDataJpa/"/>
+      <category term="SpringDataJpa" scheme="//zch2017lrf.github.io/tags/SpringDataJpa/"/>
     
   </entry>
   
   <entry>
     <title>JSON.stringify出现Converting circular structure to JSON</title>
-    <link href="//aha.me/2019/02/16/JSON-stringify%E5%87%BA%E7%8E%B0Converting-circular-structure-to-JSON/"/>
-    <id>//aha.me/2019/02/16/JSON-stringify出现Converting-circular-structure-to-JSON/</id>
+    <link href="//zch2017lrf.github.io/2019/02/16/JSON-stringify%E5%87%BA%E7%8E%B0Converting-circular-structure-to-JSON/"/>
+    <id>//zch2017lrf.github.io/2019/02/16/JSON-stringify出现Converting-circular-structure-to-JSON/</id>
     <published>2019-02-16T15:10:36.000Z</published>
     <updated>2019-02-16T15:11:37.670Z</updated>
     
@@ -538,19 +560,19 @@
     
     </summary>
     
-      <category term="JSON" scheme="//aha.me/categories/JSON/"/>
+      <category term="JSON" scheme="//zch2017lrf.github.io/categories/JSON/"/>
     
     
-      <category term="JSON" scheme="//aha.me/tags/JSON/"/>
+      <category term="JSON" scheme="//zch2017lrf.github.io/tags/JSON/"/>
     
-      <category term="错误解决" scheme="//aha.me/tags/%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3/"/>
+      <category term="错误解决" scheme="//zch2017lrf.github.io/tags/%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3/"/>
     
   </entry>
   
   <entry>
     <title>菜单管理 解决表单回显</title>
-    <link href="//aha.me/2019/02/16/%E8%8F%9C%E5%8D%95%E7%AE%A1%E7%90%86-%E8%A7%A3%E5%86%B3%E8%A1%A8%E5%8D%95%E5%9B%9E%E6%98%BE/"/>
-    <id>//aha.me/2019/02/16/菜单管理-解决表单回显/</id>
+    <link href="//zch2017lrf.github.io/2019/02/16/%E8%8F%9C%E5%8D%95%E7%AE%A1%E7%90%86-%E8%A7%A3%E5%86%B3%E8%A1%A8%E5%8D%95%E5%9B%9E%E6%98%BE/"/>
+    <id>//zch2017lrf.github.io/2019/02/16/菜单管理-解决表单回显/</id>
     <published>2019-02-16T15:06:59.000Z</published>
     <updated>2019-02-16T15:08:41.617Z</updated>
     
@@ -562,17 +584,17 @@
     
     </summary>
     
-      <category term="springBoot" scheme="//aha.me/categories/springBoot/"/>
+      <category term="springBoot" scheme="//zch2017lrf.github.io/categories/springBoot/"/>
     
     
-      <category term="springBoot" scheme="//aha.me/tags/springBoot/"/>
+      <category term="springBoot" scheme="//zch2017lrf.github.io/tags/springBoot/"/>
     
   </entry>
   
   <entry>
     <title>layui 使用弹窗功能及树控件</title>
-    <link href="//aha.me/2019/02/16/layui-%E4%BD%BF%E7%94%A8%E5%BC%B9%E7%AA%97%E5%8A%9F%E8%83%BD%E5%8F%8A%E6%A0%91%E6%8E%A7%E4%BB%B6/"/>
-    <id>//aha.me/2019/02/16/layui-使用弹窗功能及树控件/</id>
+    <link href="//zch2017lrf.github.io/2019/02/16/layui-%E4%BD%BF%E7%94%A8%E5%BC%B9%E7%AA%97%E5%8A%9F%E8%83%BD%E5%8F%8A%E6%A0%91%E6%8E%A7%E4%BB%B6/"/>
+    <id>//zch2017lrf.github.io/2019/02/16/layui-使用弹窗功能及树控件/</id>
     <published>2019-02-16T15:04:36.000Z</published>
     <updated>2019-02-16T15:05:56.421Z</updated>
     
@@ -584,17 +606,17 @@
     
     </summary>
     
-      <category term="layui" scheme="//aha.me/categories/layui/"/>
+      <category term="layui" scheme="//zch2017lrf.github.io/categories/layui/"/>
     
     
-      <category term="layui" scheme="//aha.me/tags/layui/"/>
+      <category term="layui" scheme="//zch2017lrf.github.io/tags/layui/"/>
     
   </entry>
   
   <entry>
     <title>layui 引入插件</title>
-    <link href="//aha.me/2019/02/16/layui-%E5%BC%95%E5%85%A5%E6%8F%92%E4%BB%B6/"/>
-    <id>//aha.me/2019/02/16/layui-引入插件/</id>
+    <link href="//zch2017lrf.github.io/2019/02/16/layui-%E5%BC%95%E5%85%A5%E6%8F%92%E4%BB%B6/"/>
+    <id>//zch2017lrf.github.io/2019/02/16/layui-引入插件/</id>
     <published>2019-02-16T15:02:26.000Z</published>
     <updated>2019-02-16T15:03:33.263Z</updated>
     
@@ -606,17 +628,17 @@
     
     </summary>
     
-      <category term="layui" scheme="//aha.me/categories/layui/"/>
+      <category term="layui" scheme="//zch2017lrf.github.io/categories/layui/"/>
     
     
-      <category term="layui" scheme="//aha.me/tags/layui/"/>
+      <category term="layui" scheme="//zch2017lrf.github.io/tags/layui/"/>
     
   </entry>
   
   <entry>
     <title>layui 使用layui 扩展组件 dtree</title>
-    <link href="//aha.me/2019/02/16/layui-%E4%BD%BF%E7%94%A8layui-%E6%89%A9%E5%B1%95%E7%BB%84%E4%BB%B6-dtree/"/>
-    <id>//aha.me/2019/02/16/layui-使用layui-扩展组件-dtree/</id>
+    <link href="//zch2017lrf.github.io/2019/02/16/layui-%E4%BD%BF%E7%94%A8layui-%E6%89%A9%E5%B1%95%E7%BB%84%E4%BB%B6-dtree/"/>
+    <id>//zch2017lrf.github.io/2019/02/16/layui-使用layui-扩展组件-dtree/</id>
     <published>2019-02-16T14:56:14.000Z</published>
     <updated>2019-02-16T15:00:09.168Z</updated>
     
@@ -628,17 +650,17 @@
     
     </summary>
     
-      <category term="layui" scheme="//aha.me/categories/layui/"/>
+      <category term="layui" scheme="//zch2017lrf.github.io/categories/layui/"/>
     
     
-      <category term="layui" scheme="//aha.me/tags/layui/"/>
+      <category term="layui" scheme="//zch2017lrf.github.io/tags/layui/"/>
     
   </entry>
   
   <entry>
     <title>layui dtree 树形组件 elem和obj的区别 目的解决了弹窗关闭后再打开出现空白树</title>
-    <link href="//aha.me/2019/02/16/layui-dtree-%E6%A0%91%E5%BD%A2%E7%BB%84%E4%BB%B6-elem%E5%92%8Cobj%E7%9A%84%E5%8C%BA%E5%88%AB-%E7%9B%AE%E7%9A%84%E8%A7%A3%E5%86%B3%E4%BA%86%E5%BC%B9%E7%AA%97%E5%85%B3%E9%97%AD%E5%90%8E%E5%86%8D%E6%89%93%E5%BC%80%E5%87%BA%E7%8E%B0%E7%A9%BA%E7%99%BD%E6%A0%91/"/>
-    <id>//aha.me/2019/02/16/layui-dtree-树形组件-elem和obj的区别-目的解决了弹窗关闭后再打开出现空白树/</id>
+    <link href="//zch2017lrf.github.io/2019/02/16/layui-dtree-%E6%A0%91%E5%BD%A2%E7%BB%84%E4%BB%B6-elem%E5%92%8Cobj%E7%9A%84%E5%8C%BA%E5%88%AB-%E7%9B%AE%E7%9A%84%E8%A7%A3%E5%86%B3%E4%BA%86%E5%BC%B9%E7%AA%97%E5%85%B3%E9%97%AD%E5%90%8E%E5%86%8D%E6%89%93%E5%BC%80%E5%87%BA%E7%8E%B0%E7%A9%BA%E7%99%BD%E6%A0%91/"/>
+    <id>//zch2017lrf.github.io/2019/02/16/layui-dtree-树形组件-elem和obj的区别-目的解决了弹窗关闭后再打开出现空白树/</id>
     <published>2019-02-16T14:53:45.000Z</published>
     <updated>2019-02-16T14:55:07.415Z</updated>
     
@@ -651,17 +673,17 @@
     
     </summary>
     
-      <category term="layui" scheme="//aha.me/categories/layui/"/>
+      <category term="layui" scheme="//zch2017lrf.github.io/categories/layui/"/>
     
     
-      <category term="layui" scheme="//aha.me/tags/layui/"/>
+      <category term="layui" scheme="//zch2017lrf.github.io/tags/layui/"/>
     
   </entry>
   
   <entry>
     <title>layui dtree 树形组件使用递归处理返回数据</title>
-    <link href="//aha.me/2019/02/16/layui-dtree-%E6%A0%91%E5%BD%A2%E7%BB%84%E4%BB%B6%E4%BD%BF%E7%94%A8%E9%80%92%E5%BD%92%E5%A4%84%E7%90%86%E8%BF%94%E5%9B%9E%E6%95%B0%E6%8D%AE/"/>
-    <id>//aha.me/2019/02/16/layui-dtree-树形组件使用递归处理返回数据/</id>
+    <link href="//zch2017lrf.github.io/2019/02/16/layui-dtree-%E6%A0%91%E5%BD%A2%E7%BB%84%E4%BB%B6%E4%BD%BF%E7%94%A8%E9%80%92%E5%BD%92%E5%A4%84%E7%90%86%E8%BF%94%E5%9B%9E%E6%95%B0%E6%8D%AE/"/>
+    <id>//zch2017lrf.github.io/2019/02/16/layui-dtree-树形组件使用递归处理返回数据/</id>
     <published>2019-02-16T14:49:24.000Z</published>
     <updated>2019-02-16T14:52:53.299Z</updated>
     
@@ -673,19 +695,19 @@
     
     </summary>
     
-      <category term="layui" scheme="//aha.me/categories/layui/"/>
+      <category term="layui" scheme="//zch2017lrf.github.io/categories/layui/"/>
     
     
-      <category term="layui" scheme="//aha.me/tags/layui/"/>
+      <category term="layui" scheme="//zch2017lrf.github.io/tags/layui/"/>
     
-      <category term="递归处理返回数据" scheme="//aha.me/tags/%E9%80%92%E5%BD%92%E5%A4%84%E7%90%86%E8%BF%94%E5%9B%9E%E6%95%B0%E6%8D%AE/"/>
+      <category term="递归处理返回数据" scheme="//zch2017lrf.github.io/tags/%E9%80%92%E5%BD%92%E5%A4%84%E7%90%86%E8%BF%94%E5%9B%9E%E6%95%B0%E6%8D%AE/"/>
     
   </entry>
   
   <entry>
     <title>JAVA中分为基本数据类型及引用数据类型</title>
-    <link href="//aha.me/2019/02/16/JAVA%E4%B8%AD%E5%88%86%E4%B8%BA%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%8F%8A%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
-    <id>//aha.me/2019/02/16/JAVA中分为基本数据类型及引用数据类型/</id>
+    <link href="//zch2017lrf.github.io/2019/02/16/JAVA%E4%B8%AD%E5%88%86%E4%B8%BA%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%8F%8A%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    <id>//zch2017lrf.github.io/2019/02/16/JAVA中分为基本数据类型及引用数据类型/</id>
     <published>2019-02-16T14:45:49.000Z</published>
     <updated>2019-02-16T14:48:48.241Z</updated>
     
@@ -697,17 +719,17 @@
     
     </summary>
     
-      <category term="Java基础" scheme="//aha.me/categories/Java%E5%9F%BA%E7%A1%80/"/>
+      <category term="Java基础" scheme="//zch2017lrf.github.io/categories/Java%E5%9F%BA%E7%A1%80/"/>
     
     
-      <category term="Java基础" scheme="//aha.me/tags/Java%E5%9F%BA%E7%A1%80/"/>
+      <category term="Java基础" scheme="//zch2017lrf.github.io/tags/Java%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
   <entry>
     <title>layui 弹出层复选框反选数据</title>
-    <link href="//aha.me/2019/02/16/layui-%E5%BC%B9%E5%87%BA%E5%B1%82%E5%A4%8D%E9%80%89%E6%A1%86%E5%8F%8D%E9%80%89%E6%95%B0%E6%8D%AE/"/>
-    <id>//aha.me/2019/02/16/layui-弹出层复选框反选数据/</id>
+    <link href="//zch2017lrf.github.io/2019/02/16/layui-%E5%BC%B9%E5%87%BA%E5%B1%82%E5%A4%8D%E9%80%89%E6%A1%86%E5%8F%8D%E9%80%89%E6%95%B0%E6%8D%AE/"/>
+    <id>//zch2017lrf.github.io/2019/02/16/layui-弹出层复选框反选数据/</id>
     <published>2019-02-16T14:41:28.000Z</published>
     <updated>2019-02-16T14:44:08.615Z</updated>
     
@@ -719,17 +741,17 @@
     
     </summary>
     
-      <category term="layui" scheme="//aha.me/categories/layui/"/>
+      <category term="layui" scheme="//zch2017lrf.github.io/categories/layui/"/>
     
     
-      <category term="layui" scheme="//aha.me/tags/layui/"/>
+      <category term="layui" scheme="//zch2017lrf.github.io/tags/layui/"/>
     
   </entry>
   
   <entry>
     <title>treegrid.js BootstrapTable进行封装</title>
-    <link href="//aha.me/2019/02/16/treegrid-js-BootstrapTable%E8%BF%9B%E8%A1%8C%E5%B0%81%E8%A3%85/"/>
-    <id>//aha.me/2019/02/16/treegrid-js-BootstrapTable进行封装/</id>
+    <link href="//zch2017lrf.github.io/2019/02/16/treegrid-js-BootstrapTable%E8%BF%9B%E8%A1%8C%E5%B0%81%E8%A3%85/"/>
+    <id>//zch2017lrf.github.io/2019/02/16/treegrid-js-BootstrapTable进行封装/</id>
     <published>2019-02-16T14:39:05.000Z</published>
     <updated>2019-02-16T14:40:31.946Z</updated>
     
@@ -741,17 +763,17 @@
     
     </summary>
     
-      <category term="前端" scheme="//aha.me/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="//zch2017lrf.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="前端" scheme="//aha.me/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="//zch2017lrf.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
   <entry>
     <title>java提高篇（一）—–理解java的三大特性之封装</title>
-    <link href="//aha.me/2019/02/16/java%E6%8F%90%E9%AB%98%E7%AF%87%EF%BC%88%E4%B8%80%EF%BC%89%E2%80%94%E2%80%93%E7%90%86%E8%A7%A3java%E7%9A%84%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7%E4%B9%8B%E5%B0%81%E8%A3%85/"/>
-    <id>//aha.me/2019/02/16/java提高篇（一）—–理解java的三大特性之封装/</id>
+    <link href="//zch2017lrf.github.io/2019/02/16/java%E6%8F%90%E9%AB%98%E7%AF%87%EF%BC%88%E4%B8%80%EF%BC%89%E2%80%94%E2%80%93%E7%90%86%E8%A7%A3java%E7%9A%84%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7%E4%B9%8B%E5%B0%81%E8%A3%85/"/>
+    <id>//zch2017lrf.github.io/2019/02/16/java提高篇（一）—–理解java的三大特性之封装/</id>
     <published>2019-02-16T14:34:18.000Z</published>
     <updated>2019-02-16T14:38:27.431Z</updated>
     
@@ -763,17 +785,17 @@
     
     </summary>
     
-      <category term="java提高" scheme="//aha.me/categories/java%E6%8F%90%E9%AB%98/"/>
+      <category term="java提高" scheme="//zch2017lrf.github.io/categories/java%E6%8F%90%E9%AB%98/"/>
     
     
-      <category term="java提高" scheme="//aha.me/tags/java%E6%8F%90%E9%AB%98/"/>
+      <category term="java提高" scheme="//zch2017lrf.github.io/tags/java%E6%8F%90%E9%AB%98/"/>
     
   </entry>
   
   <entry>
     <title>使用Ajax向服务端传送form表单数据 文件上传</title>
-    <link href="//aha.me/2019/02/16/%E4%BD%BF%E7%94%A8Ajax%E5%90%91%E6%9C%8D%E5%8A%A1%E7%AB%AF%E4%BC%A0%E9%80%81form%E8%A1%A8%E5%8D%95%E6%95%B0%E6%8D%AE-%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/"/>
-    <id>//aha.me/2019/02/16/使用Ajax向服务端传送form表单数据-文件上传/</id>
+    <link href="//zch2017lrf.github.io/2019/02/16/%E4%BD%BF%E7%94%A8Ajax%E5%90%91%E6%9C%8D%E5%8A%A1%E7%AB%AF%E4%BC%A0%E9%80%81form%E8%A1%A8%E5%8D%95%E6%95%B0%E6%8D%AE-%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/"/>
+    <id>//zch2017lrf.github.io/2019/02/16/使用Ajax向服务端传送form表单数据-文件上传/</id>
     <published>2019-02-16T14:30:04.000Z</published>
     <updated>2019-02-16T14:33:24.700Z</updated>
     
@@ -786,19 +808,19 @@
     
     </summary>
     
-      <category term="文件上传" scheme="//aha.me/categories/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/"/>
+      <category term="文件上传" scheme="//zch2017lrf.github.io/categories/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/"/>
     
     
-      <category term="AJAX" scheme="//aha.me/tags/AJAX/"/>
+      <category term="AJAX" scheme="//zch2017lrf.github.io/tags/AJAX/"/>
     
-      <category term="文件上传" scheme="//aha.me/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/"/>
+      <category term="文件上传" scheme="//zch2017lrf.github.io/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/"/>
     
   </entry>
   
   <entry>
     <title>layero是什么意思 虚拟dom 解决弹出框虚拟dom找不到，树无法加载</title>
-    <link href="//aha.me/2019/02/16/layero%E6%98%AF%E4%BB%80%E4%B9%88%E6%84%8F%E6%80%9D-%E8%99%9A%E6%8B%9Fdom-%E8%A7%A3%E5%86%B3%E5%BC%B9%E5%87%BA%E6%A1%86%E8%99%9A%E6%8B%9Fdom%E6%89%BE%E4%B8%8D%E5%88%B0%EF%BC%8C%E6%A0%91%E6%97%A0%E6%B3%95%E5%8A%A0%E8%BD%BD/"/>
-    <id>//aha.me/2019/02/16/layero是什么意思-虚拟dom-解决弹出框虚拟dom找不到，树无法加载/</id>
+    <link href="//zch2017lrf.github.io/2019/02/16/layero%E6%98%AF%E4%BB%80%E4%B9%88%E6%84%8F%E6%80%9D-%E8%99%9A%E6%8B%9Fdom-%E8%A7%A3%E5%86%B3%E5%BC%B9%E5%87%BA%E6%A1%86%E8%99%9A%E6%8B%9Fdom%E6%89%BE%E4%B8%8D%E5%88%B0%EF%BC%8C%E6%A0%91%E6%97%A0%E6%B3%95%E5%8A%A0%E8%BD%BD/"/>
+    <id>//zch2017lrf.github.io/2019/02/16/layero是什么意思-虚拟dom-解决弹出框虚拟dom找不到，树无法加载/</id>
     <published>2019-02-16T14:28:01.000Z</published>
     <updated>2019-02-16T14:29:33.350Z</updated>
     
@@ -811,17 +833,17 @@
     
     </summary>
     
-      <category term="错误解决" scheme="//aha.me/categories/%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3/"/>
+      <category term="错误解决" scheme="//zch2017lrf.github.io/categories/%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3/"/>
     
     
-      <category term="错误解决" scheme="//aha.me/tags/%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3/"/>
+      <category term="错误解决" scheme="//zch2017lrf.github.io/tags/%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3/"/>
     
   </entry>
   
   <entry>
     <title>使用Bootstrap modal（模态窗）关闭后layui无法渲染表单</title>
-    <link href="//aha.me/2019/02/16/%E4%BD%BF%E7%94%A8Bootstrap-modal%EF%BC%88%E6%A8%A1%E6%80%81%E7%AA%97%EF%BC%89%E5%85%B3%E9%97%AD%E5%90%8Elayui%E6%97%A0%E6%B3%95%E6%B8%B2%E6%9F%93%E8%A1%A8%E5%8D%95/"/>
-    <id>//aha.me/2019/02/16/使用Bootstrap-modal（模态窗）关闭后layui无法渲染表单/</id>
+    <link href="//zch2017lrf.github.io/2019/02/16/%E4%BD%BF%E7%94%A8Bootstrap-modal%EF%BC%88%E6%A8%A1%E6%80%81%E7%AA%97%EF%BC%89%E5%85%B3%E9%97%AD%E5%90%8Elayui%E6%97%A0%E6%B3%95%E6%B8%B2%E6%9F%93%E8%A1%A8%E5%8D%95/"/>
+    <id>//zch2017lrf.github.io/2019/02/16/使用Bootstrap-modal（模态窗）关闭后layui无法渲染表单/</id>
     <published>2019-02-16T14:26:03.000Z</published>
     <updated>2019-02-16T14:26:42.770Z</updated>
     
@@ -833,17 +855,17 @@
     
     </summary>
     
-      <category term="错误解决" scheme="//aha.me/categories/%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3/"/>
+      <category term="错误解决" scheme="//zch2017lrf.github.io/categories/%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3/"/>
     
     
-      <category term="错误解决" scheme="//aha.me/tags/%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3/"/>
+      <category term="错误解决" scheme="//zch2017lrf.github.io/tags/%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3/"/>
     
   </entry>
   
   <entry>
     <title>记录自己理解的一些设计模式</title>
-    <link href="//aha.me/2019/02/16/%E8%AE%B0%E5%BD%95%E8%87%AA%E5%B7%B1%E7%90%86%E8%A7%A3%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    <id>//aha.me/2019/02/16/记录自己理解的一些设计模式/</id>
+    <link href="//zch2017lrf.github.io/2019/02/16/%E8%AE%B0%E5%BD%95%E8%87%AA%E5%B7%B1%E7%90%86%E8%A7%A3%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    <id>//zch2017lrf.github.io/2019/02/16/记录自己理解的一些设计模式/</id>
     <published>2019-02-16T14:23:38.000Z</published>
     <updated>2019-02-16T14:24:27.288Z</updated>
     
@@ -855,17 +877,17 @@
     
     </summary>
     
-      <category term="设计模式" scheme="//aha.me/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+      <category term="设计模式" scheme="//zch2017lrf.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
     
-      <category term="设计模式" scheme="//aha.me/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+      <category term="设计模式" scheme="//zch2017lrf.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
   <entry>
     <title>配置 sql打印拦截器</title>
-    <link href="//aha.me/2019/02/16/%E9%85%8D%E7%BD%AE-sql%E6%89%93%E5%8D%B0%E6%8B%A6%E6%88%AA%E5%99%A8/"/>
-    <id>//aha.me/2019/02/16/配置-sql打印拦截器/</id>
+    <link href="//zch2017lrf.github.io/2019/02/16/%E9%85%8D%E7%BD%AE-sql%E6%89%93%E5%8D%B0%E6%8B%A6%E6%88%AA%E5%99%A8/"/>
+    <id>//zch2017lrf.github.io/2019/02/16/配置-sql打印拦截器/</id>
     <published>2019-02-16T14:11:24.000Z</published>
     <updated>2019-02-16T14:12:41.333Z</updated>
     
@@ -877,19 +899,19 @@
     
     </summary>
     
-      <category term="Mybatis" scheme="//aha.me/categories/Mybatis/"/>
+      <category term="Mybatis" scheme="//zch2017lrf.github.io/categories/Mybatis/"/>
     
     
-      <category term="Mybatis" scheme="//aha.me/tags/Mybatis/"/>
+      <category term="Mybatis" scheme="//zch2017lrf.github.io/tags/Mybatis/"/>
     
-      <category term="sql打印拦截器" scheme="//aha.me/tags/sql%E6%89%93%E5%8D%B0%E6%8B%A6%E6%88%AA%E5%99%A8/"/>
+      <category term="sql打印拦截器" scheme="//zch2017lrf.github.io/tags/sql%E6%89%93%E5%8D%B0%E6%8B%A6%E6%88%AA%E5%99%A8/"/>
     
   </entry>
   
   <entry>
     <title>layui 表单验证</title>
-    <link href="//aha.me/2019/02/16/layui-%E8%A1%A8%E5%8D%95%E9%AA%8C%E8%AF%81/"/>
-    <id>//aha.me/2019/02/16/layui-表单验证/</id>
+    <link href="//zch2017lrf.github.io/2019/02/16/layui-%E8%A1%A8%E5%8D%95%E9%AA%8C%E8%AF%81/"/>
+    <id>//zch2017lrf.github.io/2019/02/16/layui-表单验证/</id>
     <published>2019-02-16T14:03:20.000Z</published>
     <updated>2019-02-16T14:05:46.508Z</updated>
     
@@ -901,17 +923,17 @@
     
     </summary>
     
-      <category term="layui" scheme="//aha.me/categories/layui/"/>
+      <category term="layui" scheme="//zch2017lrf.github.io/categories/layui/"/>
     
     
-      <category term="layui" scheme="//aha.me/tags/layui/"/>
+      <category term="layui" scheme="//zch2017lrf.github.io/tags/layui/"/>
     
   </entry>
   
   <entry>
     <title>layui 表单验证 2 验证判重</title>
-    <link href="//aha.me/2019/02/16/layui-%E8%A1%A8%E5%8D%95%E9%AA%8C%E8%AF%81-2-%E9%AA%8C%E8%AF%81%E5%88%A4%E9%87%8D/"/>
-    <id>//aha.me/2019/02/16/layui-表单验证-2-验证判重/</id>
+    <link href="//zch2017lrf.github.io/2019/02/16/layui-%E8%A1%A8%E5%8D%95%E9%AA%8C%E8%AF%81-2-%E9%AA%8C%E8%AF%81%E5%88%A4%E9%87%8D/"/>
+    <id>//zch2017lrf.github.io/2019/02/16/layui-表单验证-2-验证判重/</id>
     <published>2019-02-16T14:01:10.000Z</published>
     <updated>2019-02-16T14:01:52.039Z</updated>
     
@@ -923,21 +945,21 @@
     
     </summary>
     
-      <category term="springBoot" scheme="//aha.me/categories/springBoot/"/>
+      <category term="springBoot" scheme="//zch2017lrf.github.io/categories/springBoot/"/>
     
-      <category term="前端" scheme="//aha.me/categories/springBoot/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="//zch2017lrf.github.io/categories/springBoot/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="springBoot" scheme="//aha.me/tags/springBoot/"/>
+      <category term="springBoot" scheme="//zch2017lrf.github.io/tags/springBoot/"/>
     
-      <category term="layui" scheme="//aha.me/tags/layui/"/>
+      <category term="layui" scheme="//zch2017lrf.github.io/tags/layui/"/>
     
   </entry>
   
   <entry>
     <title>lambda表达式 解决ids删除</title>
-    <link href="//aha.me/2019/02/16/lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F-%E8%A7%A3%E5%86%B3ids%E5%88%A0%E9%99%A4/"/>
-    <id>//aha.me/2019/02/16/lambda表达式-解决ids删除/</id>
+    <link href="//zch2017lrf.github.io/2019/02/16/lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F-%E8%A7%A3%E5%86%B3ids%E5%88%A0%E9%99%A4/"/>
+    <id>//zch2017lrf.github.io/2019/02/16/lambda表达式-解决ids删除/</id>
     <published>2019-02-16T13:57:58.000Z</published>
     <updated>2019-02-16T13:58:54.881Z</updated>
     
@@ -949,19 +971,19 @@
     
     </summary>
     
-      <category term="springBoot" scheme="//aha.me/categories/springBoot/"/>
+      <category term="springBoot" scheme="//zch2017lrf.github.io/categories/springBoot/"/>
     
     
-      <category term="springBoot" scheme="//aha.me/tags/springBoot/"/>
+      <category term="springBoot" scheme="//zch2017lrf.github.io/tags/springBoot/"/>
     
-      <category term="lambda" scheme="//aha.me/tags/lambda/"/>
+      <category term="lambda" scheme="//zch2017lrf.github.io/tags/lambda/"/>
     
   </entry>
   
   <entry>
     <title>对事务进行开启</title>
-    <link href="//aha.me/2019/02/16/%E5%AF%B9%E4%BA%8B%E5%8A%A1%E8%BF%9B%E8%A1%8C%E5%BC%80%E5%90%AF/"/>
-    <id>//aha.me/2019/02/16/对事务进行开启/</id>
+    <link href="//zch2017lrf.github.io/2019/02/16/%E5%AF%B9%E4%BA%8B%E5%8A%A1%E8%BF%9B%E8%A1%8C%E5%BC%80%E5%90%AF/"/>
+    <id>//zch2017lrf.github.io/2019/02/16/对事务进行开启/</id>
     <published>2019-02-16T13:47:25.000Z</published>
     <updated>2019-02-16T13:51:06.875Z</updated>
     
@@ -973,19 +995,19 @@
     
     </summary>
     
-      <category term="springBoot" scheme="//aha.me/categories/springBoot/"/>
+      <category term="springBoot" scheme="//zch2017lrf.github.io/categories/springBoot/"/>
     
     
-      <category term="springBoot" scheme="//aha.me/tags/springBoot/"/>
+      <category term="springBoot" scheme="//zch2017lrf.github.io/tags/springBoot/"/>
     
-      <category term="事务" scheme="//aha.me/tags/%E4%BA%8B%E5%8A%A1/"/>
+      <category term="事务" scheme="//zch2017lrf.github.io/tags/%E4%BA%8B%E5%8A%A1/"/>
     
   </entry>
   
   <entry>
     <title>使用属性文件</title>
-    <link href="//aha.me/2019/01/31/%E4%BD%BF%E7%94%A8%E5%B1%9E%E6%80%A7%E6%96%87%E4%BB%B6/"/>
-    <id>//aha.me/2019/01/31/使用属性文件/</id>
+    <link href="//zch2017lrf.github.io/2019/01/31/%E4%BD%BF%E7%94%A8%E5%B1%9E%E6%80%A7%E6%96%87%E4%BB%B6/"/>
+    <id>//zch2017lrf.github.io/2019/01/31/使用属性文件/</id>
     <published>2019-01-31T06:44:48.000Z</published>
     <updated>2019-02-16T12:14:27.427Z</updated>
     
@@ -997,17 +1019,17 @@
     
     </summary>
     
-      <category term="spring 使用属性文件" scheme="//aha.me/categories/spring-%E4%BD%BF%E7%94%A8%E5%B1%9E%E6%80%A7%E6%96%87%E4%BB%B6/"/>
+      <category term="spring 使用属性文件" scheme="//zch2017lrf.github.io/categories/spring-%E4%BD%BF%E7%94%A8%E5%B1%9E%E6%80%A7%E6%96%87%E4%BB%B6/"/>
     
     
-      <category term="spring 使用属性文件" scheme="//aha.me/tags/spring-%E4%BD%BF%E7%94%A8%E5%B1%9E%E6%80%A7%E6%96%87%E4%BB%B6/"/>
+      <category term="spring 使用属性文件" scheme="//zch2017lrf.github.io/tags/spring-%E4%BD%BF%E7%94%A8%E5%B1%9E%E6%80%A7%E6%96%87%E4%BB%B6/"/>
     
   </entry>
   
   <entry>
     <title>【Linux 从入门到精通】</title>
-    <link href="//aha.me/2019/01/31/%E3%80%90Linux-%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A%E3%80%91/"/>
-    <id>//aha.me/2019/01/31/【Linux-从入门到精通】/</id>
+    <link href="//zch2017lrf.github.io/2019/01/31/%E3%80%90Linux-%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A%E3%80%91/"/>
+    <id>//zch2017lrf.github.io/2019/01/31/【Linux-从入门到精通】/</id>
     <published>2019-01-31T03:08:41.000Z</published>
     <updated>2019-02-16T12:14:27.426Z</updated>
     
@@ -1020,17 +1042,17 @@
     
     </summary>
     
-      <category term="Linux" scheme="//aha.me/categories/Linux/"/>
+      <category term="Linux" scheme="//zch2017lrf.github.io/categories/Linux/"/>
     
     
-      <category term="Linux" scheme="//aha.me/tags/Linux/"/>
+      <category term="Linux" scheme="//zch2017lrf.github.io/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>微课堂网页在线编程助手</title>
-    <link href="//aha.me/2019/01/30/%E5%BE%AE%E8%AF%BE%E5%A0%82%E7%BD%91%E9%A1%B5%E5%9C%A8%E7%BA%BF%E7%BC%96%E7%A8%8B%E5%8A%A9%E6%89%8B/"/>
-    <id>//aha.me/2019/01/30/微课堂网页在线编程助手/</id>
+    <link href="//zch2017lrf.github.io/2019/01/30/%E5%BE%AE%E8%AF%BE%E5%A0%82%E7%BD%91%E9%A1%B5%E5%9C%A8%E7%BA%BF%E7%BC%96%E7%A8%8B%E5%8A%A9%E6%89%8B/"/>
+    <id>//zch2017lrf.github.io/2019/01/30/微课堂网页在线编程助手/</id>
     <published>2019-01-30T06:58:45.000Z</published>
     <updated>2019-02-16T12:14:27.423Z</updated>
     
@@ -1042,21 +1064,21 @@
     
     </summary>
     
-      <category term="个人作品" scheme="//aha.me/categories/%E4%B8%AA%E4%BA%BA%E4%BD%9C%E5%93%81/"/>
+      <category term="个人作品" scheme="//zch2017lrf.github.io/categories/%E4%B8%AA%E4%BA%BA%E4%BD%9C%E5%93%81/"/>
     
-      <category term="微课堂" scheme="//aha.me/categories/%E4%B8%AA%E4%BA%BA%E4%BD%9C%E5%93%81/%E5%BE%AE%E8%AF%BE%E5%A0%82/"/>
+      <category term="微课堂" scheme="//zch2017lrf.github.io/categories/%E4%B8%AA%E4%BA%BA%E4%BD%9C%E5%93%81/%E5%BE%AE%E8%AF%BE%E5%A0%82/"/>
     
     
-      <category term="个人作品" scheme="//aha.me/tags/%E4%B8%AA%E4%BA%BA%E4%BD%9C%E5%93%81/"/>
+      <category term="个人作品" scheme="//zch2017lrf.github.io/tags/%E4%B8%AA%E4%BA%BA%E4%BD%9C%E5%93%81/"/>
     
-      <category term="微课堂" scheme="//aha.me/tags/%E5%BE%AE%E8%AF%BE%E5%A0%82/"/>
+      <category term="微课堂" scheme="//zch2017lrf.github.io/tags/%E5%BE%AE%E8%AF%BE%E5%A0%82/"/>
     
   </entry>
   
   <entry>
     <title>iwiilsay后台前端</title>
-    <link href="//aha.me/2019/01/30/iwiilsay%E5%90%8E%E5%8F%B0%E5%89%8D%E7%AB%AF-%E5%9F%BA%E4%BA%8Evue-vue-router-element-ui/"/>
-    <id>//aha.me/2019/01/30/iwiilsay后台前端-基于vue-vue-router-element-ui/</id>
+    <link href="//zch2017lrf.github.io/2019/01/30/iwiilsay%E5%90%8E%E5%8F%B0%E5%89%8D%E7%AB%AF-%E5%9F%BA%E4%BA%8Evue-vue-router-element-ui/"/>
+    <id>//zch2017lrf.github.io/2019/01/30/iwiilsay后台前端-基于vue-vue-router-element-ui/</id>
     <published>2019-01-30T06:53:42.000Z</published>
     <updated>2019-02-16T12:14:27.417Z</updated>
     
@@ -1068,21 +1090,21 @@
     
     </summary>
     
-      <category term="个人作品" scheme="//aha.me/categories/%E4%B8%AA%E4%BA%BA%E4%BD%9C%E5%93%81/"/>
+      <category term="个人作品" scheme="//zch2017lrf.github.io/categories/%E4%B8%AA%E4%BA%BA%E4%BD%9C%E5%93%81/"/>
     
-      <category term="iwiilsay后台前端" scheme="//aha.me/categories/%E4%B8%AA%E4%BA%BA%E4%BD%9C%E5%93%81/iwiilsay%E5%90%8E%E5%8F%B0%E5%89%8D%E7%AB%AF/"/>
+      <category term="iwiilsay后台前端" scheme="//zch2017lrf.github.io/categories/%E4%B8%AA%E4%BA%BA%E4%BD%9C%E5%93%81/iwiilsay%E5%90%8E%E5%8F%B0%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="个人作品" scheme="//aha.me/tags/%E4%B8%AA%E4%BA%BA%E4%BD%9C%E5%93%81/"/>
+      <category term="个人作品" scheme="//zch2017lrf.github.io/tags/%E4%B8%AA%E4%BA%BA%E4%BD%9C%E5%93%81/"/>
     
-      <category term="iwiilsay后台前端" scheme="//aha.me/tags/iwiilsay%E5%90%8E%E5%8F%B0%E5%89%8D%E7%AB%AF/"/>
+      <category term="iwiilsay后台前端" scheme="//zch2017lrf.github.io/tags/iwiilsay%E5%90%8E%E5%8F%B0%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
   <entry>
     <title>iwiilsay小程序</title>
-    <link href="//aha.me/2019/01/30/iwiilsay%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
-    <id>//aha.me/2019/01/30/iwiilsay小程序/</id>
+    <link href="//zch2017lrf.github.io/2019/01/30/iwiilsay%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    <id>//zch2017lrf.github.io/2019/01/30/iwiilsay小程序/</id>
     <published>2019-01-30T06:45:58.000Z</published>
     <updated>2019-02-16T12:14:27.418Z</updated>
     
@@ -1094,21 +1116,21 @@
     
     </summary>
     
-      <category term="个人作品" scheme="//aha.me/categories/%E4%B8%AA%E4%BA%BA%E4%BD%9C%E5%93%81/"/>
+      <category term="个人作品" scheme="//zch2017lrf.github.io/categories/%E4%B8%AA%E4%BA%BA%E4%BD%9C%E5%93%81/"/>
     
-      <category term="iwiilsay小程序" scheme="//aha.me/categories/%E4%B8%AA%E4%BA%BA%E4%BD%9C%E5%93%81/iwiilsay%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+      <category term="iwiilsay小程序" scheme="//zch2017lrf.github.io/categories/%E4%B8%AA%E4%BA%BA%E4%BD%9C%E5%93%81/iwiilsay%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
     
-      <category term="个人作品" scheme="//aha.me/tags/%E4%B8%AA%E4%BA%BA%E4%BD%9C%E5%93%81/"/>
+      <category term="个人作品" scheme="//zch2017lrf.github.io/tags/%E4%B8%AA%E4%BA%BA%E4%BD%9C%E5%93%81/"/>
     
-      <category term="iwiilsay小程序" scheme="//aha.me/tags/iwiilsay%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+      <category term="iwiilsay小程序" scheme="//zch2017lrf.github.io/tags/iwiilsay%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
   </entry>
   
   <entry>
     <title>仿土巴兔小程序</title>
-    <link href="//aha.me/2019/01/30/%E4%BB%BF%E5%9C%9F%E5%B7%B4%E5%85%94%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
-    <id>//aha.me/2019/01/30/仿土巴兔小程序/</id>
+    <link href="//zch2017lrf.github.io/2019/01/30/%E4%BB%BF%E5%9C%9F%E5%B7%B4%E5%85%94%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    <id>//zch2017lrf.github.io/2019/01/30/仿土巴兔小程序/</id>
     <published>2019-01-30T06:39:06.000Z</published>
     <updated>2019-02-16T12:14:27.421Z</updated>
     
@@ -1120,21 +1142,21 @@
     
     </summary>
     
-      <category term="个人作品" scheme="//aha.me/categories/%E4%B8%AA%E4%BA%BA%E4%BD%9C%E5%93%81/"/>
+      <category term="个人作品" scheme="//zch2017lrf.github.io/categories/%E4%B8%AA%E4%BA%BA%E4%BD%9C%E5%93%81/"/>
     
-      <category term="仿土巴兔小程序" scheme="//aha.me/categories/%E4%B8%AA%E4%BA%BA%E4%BD%9C%E5%93%81/%E4%BB%BF%E5%9C%9F%E5%B7%B4%E5%85%94%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+      <category term="仿土巴兔小程序" scheme="//zch2017lrf.github.io/categories/%E4%B8%AA%E4%BA%BA%E4%BD%9C%E5%93%81/%E4%BB%BF%E5%9C%9F%E5%B7%B4%E5%85%94%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
     
-      <category term="个人作品" scheme="//aha.me/tags/%E4%B8%AA%E4%BA%BA%E4%BD%9C%E5%93%81/"/>
+      <category term="个人作品" scheme="//zch2017lrf.github.io/tags/%E4%B8%AA%E4%BA%BA%E4%BD%9C%E5%93%81/"/>
     
-      <category term="仿土巴兔小程序" scheme="//aha.me/tags/%E4%BB%BF%E5%9C%9F%E5%B7%B4%E5%85%94%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+      <category term="仿土巴兔小程序" scheme="//zch2017lrf.github.io/tags/%E4%BB%BF%E5%9C%9F%E5%B7%B4%E5%85%94%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
   </entry>
   
   <entry>
     <title>『数据结构与算法』—— 复杂度</title>
-    <link href="//aha.me/2019/01/30/%E3%80%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E3%80%8F%E2%80%94%E2%80%94-%E5%A4%8D%E6%9D%82%E5%BA%A6/"/>
-    <id>//aha.me/2019/01/30/『数据结构与算法』——-复杂度/</id>
+    <link href="//zch2017lrf.github.io/2019/01/30/%E3%80%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E3%80%8F%E2%80%94%E2%80%94-%E5%A4%8D%E6%9D%82%E5%BA%A6/"/>
+    <id>//zch2017lrf.github.io/2019/01/30/『数据结构与算法』——-复杂度/</id>
     <published>2019-01-30T03:47:04.000Z</published>
     <updated>2019-02-16T12:14:27.420Z</updated>
     
@@ -1149,17 +1171,17 @@
     
     </summary>
     
-      <category term="数据结构与算法" scheme="//aha.me/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+      <category term="数据结构与算法" scheme="//zch2017lrf.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
     
     
-      <category term="数据结构与算法" scheme="//aha.me/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+      <category term="数据结构与算法" scheme="//zch2017lrf.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
   <entry>
     <title>模运算优化</title>
-    <link href="//aha.me/2019/01/30/%E6%A8%A1%E8%BF%90%E7%AE%97%E4%BC%98%E5%8C%96/"/>
-    <id>//aha.me/2019/01/30/模运算优化/</id>
+    <link href="//zch2017lrf.github.io/2019/01/30/%E6%A8%A1%E8%BF%90%E7%AE%97%E4%BC%98%E5%8C%96/"/>
+    <id>//zch2017lrf.github.io/2019/01/30/模运算优化/</id>
     <published>2019-01-30T00:47:42.000Z</published>
     <updated>2019-02-16T12:14:27.424Z</updated>
     
@@ -1172,21 +1194,21 @@
     
     </summary>
     
-      <category term="模运算优化" scheme="//aha.me/categories/%E6%A8%A1%E8%BF%90%E7%AE%97%E4%BC%98%E5%8C%96/"/>
+      <category term="模运算优化" scheme="//zch2017lrf.github.io/categories/%E6%A8%A1%E8%BF%90%E7%AE%97%E4%BC%98%E5%8C%96/"/>
     
-      <category term="Java性能优化" scheme="//aha.me/categories/%E6%A8%A1%E8%BF%90%E7%AE%97%E4%BC%98%E5%8C%96/Java%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+      <category term="Java性能优化" scheme="//zch2017lrf.github.io/categories/%E6%A8%A1%E8%BF%90%E7%AE%97%E4%BC%98%E5%8C%96/Java%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
     
     
-      <category term="模运算优化" scheme="//aha.me/tags/%E6%A8%A1%E8%BF%90%E7%AE%97%E4%BC%98%E5%8C%96/"/>
+      <category term="模运算优化" scheme="//zch2017lrf.github.io/tags/%E6%A8%A1%E8%BF%90%E7%AE%97%E4%BC%98%E5%8C%96/"/>
     
-      <category term="Java性能优化" scheme="//aha.me/tags/Java%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+      <category term="Java性能优化" scheme="//zch2017lrf.github.io/tags/Java%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
     
   </entry>
   
   <entry>
     <title>容器源码分析2</title>
-    <link href="//aha.me/2019/01/29/%E5%AE%B9%E5%99%A8%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%902/"/>
-    <id>//aha.me/2019/01/29/容器源码分析2/</id>
+    <link href="//zch2017lrf.github.io/2019/01/29/%E5%AE%B9%E5%99%A8%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%902/"/>
+    <id>//zch2017lrf.github.io/2019/01/29/容器源码分析2/</id>
     <published>2019-01-29T08:48:18.000Z</published>
     <updated>2019-02-16T12:14:27.395Z</updated>
     
@@ -1198,17 +1220,17 @@
     
     </summary>
     
-      <category term="容器源码分析2" scheme="//aha.me/categories/%E5%AE%B9%E5%99%A8%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%902/"/>
+      <category term="容器源码分析2" scheme="//zch2017lrf.github.io/categories/%E5%AE%B9%E5%99%A8%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%902/"/>
     
     
-      <category term="容器源码分析2" scheme="//aha.me/tags/%E5%AE%B9%E5%99%A8%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%902/"/>
+      <category term="容器源码分析2" scheme="//zch2017lrf.github.io/tags/%E5%AE%B9%E5%99%A8%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%902/"/>
     
   </entry>
   
   <entry>
     <title>容器源码分析</title>
-    <link href="//aha.me/2019/01/29/%E5%AE%B9%E5%99%A8%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/"/>
-    <id>//aha.me/2019/01/29/容器源码分析/</id>
+    <link href="//zch2017lrf.github.io/2019/01/29/%E5%AE%B9%E5%99%A8%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/"/>
+    <id>//zch2017lrf.github.io/2019/01/29/容器源码分析/</id>
     <published>2019-01-29T06:27:29.000Z</published>
     <updated>2019-02-16T12:14:27.394Z</updated>
     
@@ -1221,17 +1243,17 @@
     
     </summary>
     
-      <category term="集合" scheme="//aha.me/categories/%E9%9B%86%E5%90%88/"/>
+      <category term="集合" scheme="//zch2017lrf.github.io/categories/%E9%9B%86%E5%90%88/"/>
     
     
-      <category term="容器" scheme="//aha.me/tags/%E5%AE%B9%E5%99%A8/"/>
+      <category term="容器" scheme="//zch2017lrf.github.io/tags/%E5%AE%B9%E5%99%A8/"/>
     
   </entry>
   
   <entry>
     <title>队列同步器</title>
-    <link href="//aha.me/2019/01/29/%E9%98%9F%E5%88%97%E5%90%8C%E6%AD%A5%E5%99%A8/"/>
-    <id>//aha.me/2019/01/29/队列同步器/</id>
+    <link href="//zch2017lrf.github.io/2019/01/29/%E9%98%9F%E5%88%97%E5%90%8C%E6%AD%A5%E5%99%A8/"/>
+    <id>//zch2017lrf.github.io/2019/01/29/队列同步器/</id>
     <published>2019-01-29T03:38:30.000Z</published>
     <updated>2019-02-16T12:14:27.415Z</updated>
     
@@ -1243,21 +1265,21 @@
     
     </summary>
     
-      <category term="多线程" scheme="//aha.me/categories/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+      <category term="多线程" scheme="//zch2017lrf.github.io/categories/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
     
-      <category term="队列同步器" scheme="//aha.me/categories/%E5%A4%9A%E7%BA%BF%E7%A8%8B/%E9%98%9F%E5%88%97%E5%90%8C%E6%AD%A5%E5%99%A8/"/>
+      <category term="队列同步器" scheme="//zch2017lrf.github.io/categories/%E5%A4%9A%E7%BA%BF%E7%A8%8B/%E9%98%9F%E5%88%97%E5%90%8C%E6%AD%A5%E5%99%A8/"/>
     
     
-      <category term="Java中的锁" scheme="//aha.me/tags/Java%E4%B8%AD%E7%9A%84%E9%94%81/"/>
+      <category term="Java中的锁" scheme="//zch2017lrf.github.io/tags/Java%E4%B8%AD%E7%9A%84%E9%94%81/"/>
     
-      <category term="队列同步器" scheme="//aha.me/tags/%E9%98%9F%E5%88%97%E5%90%8C%E6%AD%A5%E5%99%A8/"/>
+      <category term="队列同步器" scheme="//zch2017lrf.github.io/tags/%E9%98%9F%E5%88%97%E5%90%8C%E6%AD%A5%E5%99%A8/"/>
     
   </entry>
   
   <entry>
     <title>Lock接口</title>
-    <link href="//aha.me/2019/01/29/Lock%E6%8E%A5%E5%8F%A3/"/>
-    <id>//aha.me/2019/01/29/Lock接口/</id>
+    <link href="//zch2017lrf.github.io/2019/01/29/Lock%E6%8E%A5%E5%8F%A3/"/>
+    <id>//zch2017lrf.github.io/2019/01/29/Lock接口/</id>
     <published>2019-01-29T03:28:45.000Z</published>
     <updated>2019-02-16T12:14:27.392Z</updated>
     
@@ -1269,19 +1291,19 @@
     
     </summary>
     
-      <category term="多线程" scheme="//aha.me/categories/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+      <category term="多线程" scheme="//zch2017lrf.github.io/categories/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
     
     
-      <category term="Java中的锁" scheme="//aha.me/tags/Java%E4%B8%AD%E7%9A%84%E9%94%81/"/>
+      <category term="Java中的锁" scheme="//zch2017lrf.github.io/tags/Java%E4%B8%AD%E7%9A%84%E9%94%81/"/>
     
-      <category term="Lock接口" scheme="//aha.me/tags/Lock%E6%8E%A5%E5%8F%A3/"/>
+      <category term="Lock接口" scheme="//zch2017lrf.github.io/tags/Lock%E6%8E%A5%E5%8F%A3/"/>
     
   </entry>
   
   <entry>
     <title>线程应用实例</title>
-    <link href="//aha.me/2019/01/29/%E7%BA%BF%E7%A8%8B%E5%BA%94%E7%94%A8%E5%AE%9E%E4%BE%8B/"/>
-    <id>//aha.me/2019/01/29/线程应用实例/</id>
+    <link href="//zch2017lrf.github.io/2019/01/29/%E7%BA%BF%E7%A8%8B%E5%BA%94%E7%94%A8%E5%AE%9E%E4%BE%8B/"/>
+    <id>//zch2017lrf.github.io/2019/01/29/线程应用实例/</id>
     <published>2019-01-29T02:45:31.000Z</published>
     <updated>2019-02-16T12:14:27.412Z</updated>
     
@@ -1293,21 +1315,21 @@
     
     </summary>
     
-      <category term="多线程" scheme="//aha.me/categories/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+      <category term="多线程" scheme="//zch2017lrf.github.io/categories/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
     
-      <category term="线程应用实例" scheme="//aha.me/categories/%E5%A4%9A%E7%BA%BF%E7%A8%8B/%E7%BA%BF%E7%A8%8B%E5%BA%94%E7%94%A8%E5%AE%9E%E4%BE%8B/"/>
+      <category term="线程应用实例" scheme="//zch2017lrf.github.io/categories/%E5%A4%9A%E7%BA%BF%E7%A8%8B/%E7%BA%BF%E7%A8%8B%E5%BA%94%E7%94%A8%E5%AE%9E%E4%BE%8B/"/>
     
     
-      <category term="多线程" scheme="//aha.me/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+      <category term="多线程" scheme="//zch2017lrf.github.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
     
-      <category term="线程应用实例" scheme="//aha.me/tags/%E7%BA%BF%E7%A8%8B%E5%BA%94%E7%94%A8%E5%AE%9E%E4%BE%8B/"/>
+      <category term="线程应用实例" scheme="//zch2017lrf.github.io/tags/%E7%BA%BF%E7%A8%8B%E5%BA%94%E7%94%A8%E5%AE%9E%E4%BE%8B/"/>
     
   </entry>
   
   <entry>
     <title>线程间通信</title>
-    <link href="//aha.me/2019/01/29/%E7%BA%BF%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1/"/>
-    <id>//aha.me/2019/01/29/线程间通信/</id>
+    <link href="//zch2017lrf.github.io/2019/01/29/%E7%BA%BF%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1/"/>
+    <id>//zch2017lrf.github.io/2019/01/29/线程间通信/</id>
     <published>2019-01-29T00:24:01.000Z</published>
     <updated>2019-02-16T12:14:27.414Z</updated>
     
@@ -1321,21 +1343,21 @@
     
     </summary>
     
-      <category term="多线程" scheme="//aha.me/categories/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+      <category term="多线程" scheme="//zch2017lrf.github.io/categories/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
     
-      <category term="线程间通信" scheme="//aha.me/categories/%E5%A4%9A%E7%BA%BF%E7%A8%8B/%E7%BA%BF%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1/"/>
+      <category term="线程间通信" scheme="//zch2017lrf.github.io/categories/%E5%A4%9A%E7%BA%BF%E7%A8%8B/%E7%BA%BF%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1/"/>
     
     
-      <category term="多线程" scheme="//aha.me/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+      <category term="多线程" scheme="//zch2017lrf.github.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
     
-      <category term="线程间通信" scheme="//aha.me/tags/%E7%BA%BF%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1/"/>
+      <category term="线程间通信" scheme="//zch2017lrf.github.io/tags/%E7%BA%BF%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1/"/>
     
   </entry>
   
   <entry>
     <title>启动和终止线程</title>
-    <link href="//aha.me/2019/01/28/%E5%90%AF%E5%8A%A8%E5%92%8C%E7%BB%88%E6%AD%A2%E7%BA%BF%E7%A8%8B/"/>
-    <id>//aha.me/2019/01/28/启动和终止线程/</id>
+    <link href="//zch2017lrf.github.io/2019/01/28/%E5%90%AF%E5%8A%A8%E5%92%8C%E7%BB%88%E6%AD%A2%E7%BA%BF%E7%A8%8B/"/>
+    <id>//zch2017lrf.github.io/2019/01/28/启动和终止线程/</id>
     <published>2019-01-28T09:29:00.000Z</published>
     <updated>2019-02-16T12:14:27.388Z</updated>
     
@@ -1347,21 +1369,21 @@
     
     </summary>
     
-      <category term="多线程" scheme="//aha.me/categories/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+      <category term="多线程" scheme="//zch2017lrf.github.io/categories/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
     
-      <category term="启动和终止线程" scheme="//aha.me/categories/%E5%A4%9A%E7%BA%BF%E7%A8%8B/%E5%90%AF%E5%8A%A8%E5%92%8C%E7%BB%88%E6%AD%A2%E7%BA%BF%E7%A8%8B/"/>
+      <category term="启动和终止线程" scheme="//zch2017lrf.github.io/categories/%E5%A4%9A%E7%BA%BF%E7%A8%8B/%E5%90%AF%E5%8A%A8%E5%92%8C%E7%BB%88%E6%AD%A2%E7%BA%BF%E7%A8%8B/"/>
     
     
-      <category term="多线程" scheme="//aha.me/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+      <category term="多线程" scheme="//zch2017lrf.github.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
     
-      <category term="启动和终止线程" scheme="//aha.me/tags/%E5%90%AF%E5%8A%A8%E5%92%8C%E7%BB%88%E6%AD%A2%E7%BA%BF%E7%A8%8B/"/>
+      <category term="启动和终止线程" scheme="//zch2017lrf.github.io/tags/%E5%90%AF%E5%8A%A8%E5%92%8C%E7%BB%88%E6%AD%A2%E7%BA%BF%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>Daemon线程</title>
-    <link href="//aha.me/2019/01/28/Daemon%E7%BA%BF%E7%A8%8B/"/>
-    <id>//aha.me/2019/01/28/Daemon线程/</id>
+    <link href="//zch2017lrf.github.io/2019/01/28/Daemon%E7%BA%BF%E7%A8%8B/"/>
+    <id>//zch2017lrf.github.io/2019/01/28/Daemon线程/</id>
     <published>2019-01-28T09:24:05.000Z</published>
     <updated>2019-02-16T12:14:27.378Z</updated>
     
@@ -1373,19 +1395,19 @@
     
     </summary>
     
-      <category term="多线程" scheme="//aha.me/categories/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+      <category term="多线程" scheme="//zch2017lrf.github.io/categories/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
     
     
-      <category term="多线程" scheme="//aha.me/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+      <category term="多线程" scheme="//zch2017lrf.github.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
     
-      <category term="多线程基础" scheme="//aha.me/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%9F%BA%E7%A1%80/"/>
+      <category term="多线程基础" scheme="//zch2017lrf.github.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
   <entry>
     <title>线程的状态</title>
-    <link href="//aha.me/2019/01/28/%E7%BA%BF%E7%A8%8B%E7%9A%84%E7%8A%B6%E6%80%81/"/>
-    <id>//aha.me/2019/01/28/线程的状态/</id>
+    <link href="//zch2017lrf.github.io/2019/01/28/%E7%BA%BF%E7%A8%8B%E7%9A%84%E7%8A%B6%E6%80%81/"/>
+    <id>//zch2017lrf.github.io/2019/01/28/线程的状态/</id>
     <published>2019-01-28T09:17:47.000Z</published>
     <updated>2019-02-16T12:14:27.391Z</updated>
     
@@ -1397,19 +1419,19 @@
     
     </summary>
     
-      <category term="多线程" scheme="//aha.me/categories/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+      <category term="多线程" scheme="//zch2017lrf.github.io/categories/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
     
     
-      <category term="多线程" scheme="//aha.me/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+      <category term="多线程" scheme="//zch2017lrf.github.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
     
-      <category term="多线程基础" scheme="//aha.me/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%9F%BA%E7%A1%80/"/>
+      <category term="多线程基础" scheme="//zch2017lrf.github.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
   <entry>
     <title>线程优先级</title>
-    <link href="//aha.me/2019/01/28/%E7%BA%BF%E7%A8%8B%E4%BC%98%E5%85%88%E7%BA%A7/"/>
-    <id>//aha.me/2019/01/28/线程优先级/</id>
+    <link href="//zch2017lrf.github.io/2019/01/28/%E7%BA%BF%E7%A8%8B%E4%BC%98%E5%85%88%E7%BA%A7/"/>
+    <id>//zch2017lrf.github.io/2019/01/28/线程优先级/</id>
     <published>2019-01-28T09:10:48.000Z</published>
     <updated>2019-02-16T12:14:27.389Z</updated>
     
@@ -1421,19 +1443,19 @@
     
     </summary>
     
-      <category term="多线程" scheme="//aha.me/categories/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+      <category term="多线程" scheme="//zch2017lrf.github.io/categories/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
     
     
-      <category term="多线程" scheme="//aha.me/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+      <category term="多线程" scheme="//zch2017lrf.github.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
     
-      <category term="多线程基础" scheme="//aha.me/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%9F%BA%E7%A1%80/"/>
+      <category term="多线程基础" scheme="//zch2017lrf.github.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
   <entry>
     <title>双重检查锁定与延迟初始化</title>
-    <link href="//aha.me/2019/01/28/%E5%8F%8C%E9%87%8D%E6%A3%80%E6%9F%A5%E9%94%81%E5%AE%9A%E4%B8%8E%E5%BB%B6%E8%BF%9F%E5%88%9D%E5%A7%8B%E5%8C%96/"/>
-    <id>//aha.me/2019/01/28/双重检查锁定与延迟初始化/</id>
+    <link href="//zch2017lrf.github.io/2019/01/28/%E5%8F%8C%E9%87%8D%E6%A3%80%E6%9F%A5%E9%94%81%E5%AE%9A%E4%B8%8E%E5%BB%B6%E8%BF%9F%E5%88%9D%E5%A7%8B%E5%8C%96/"/>
+    <id>//zch2017lrf.github.io/2019/01/28/双重检查锁定与延迟初始化/</id>
     <published>2019-01-28T08:37:02.000Z</published>
     <updated>2019-02-16T12:14:27.386Z</updated>
     
@@ -1447,17 +1469,17 @@
     
     </summary>
     
-      <category term="多线程" scheme="//aha.me/categories/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+      <category term="多线程" scheme="//zch2017lrf.github.io/categories/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
     
     
-      <category term="多线程" scheme="//aha.me/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+      <category term="多线程" scheme="//zch2017lrf.github.io/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>初始化vue项目指令</title>
-    <link href="//aha.me/2019/01/28/%E5%88%9D%E5%A7%8B%E5%8C%96vue%E9%A1%B9%E7%9B%AE%E6%8C%87%E4%BB%A4/"/>
-    <id>//aha.me/2019/01/28/初始化vue项目指令/</id>
+    <link href="//zch2017lrf.github.io/2019/01/28/%E5%88%9D%E5%A7%8B%E5%8C%96vue%E9%A1%B9%E7%9B%AE%E6%8C%87%E4%BB%A4/"/>
+    <id>//zch2017lrf.github.io/2019/01/28/初始化vue项目指令/</id>
     <published>2019-01-28T07:29:32.000Z</published>
     <updated>2019-02-16T12:14:27.385Z</updated>
     
@@ -1469,17 +1491,17 @@
     
     </summary>
     
-      <category term="vue" scheme="//aha.me/categories/vue/"/>
+      <category term="vue" scheme="//zch2017lrf.github.io/categories/vue/"/>
     
     
-      <category term="vue" scheme="//aha.me/tags/vue/"/>
+      <category term="vue" scheme="//zch2017lrf.github.io/tags/vue/"/>
     
   </entry>
   
   <entry>
     <title>mybatis使用拦截器打印sql</title>
-    <link href="//aha.me/2019/01/28/mybatis%E4%BD%BF%E7%94%A8%E6%8B%A6%E6%88%AA%E5%99%A8%E6%89%93%E5%8D%B0sql/"/>
-    <id>//aha.me/2019/01/28/mybatis使用拦截器打印sql/</id>
+    <link href="//zch2017lrf.github.io/2019/01/28/mybatis%E4%BD%BF%E7%94%A8%E6%8B%A6%E6%88%AA%E5%99%A8%E6%89%93%E5%8D%B0sql/"/>
+    <id>//zch2017lrf.github.io/2019/01/28/mybatis使用拦截器打印sql/</id>
     <published>2019-01-28T07:19:04.000Z</published>
     <updated>2019-02-16T12:14:27.383Z</updated>
     
@@ -1491,19 +1513,19 @@
     
     </summary>
     
-      <category term="springBoot" scheme="//aha.me/categories/springBoot/"/>
+      <category term="springBoot" scheme="//zch2017lrf.github.io/categories/springBoot/"/>
     
-      <category term="mybatis" scheme="//aha.me/categories/springBoot/mybatis/"/>
+      <category term="mybatis" scheme="//zch2017lrf.github.io/categories/springBoot/mybatis/"/>
     
     
-      <category term="springBoot" scheme="//aha.me/tags/springBoot/"/>
+      <category term="springBoot" scheme="//zch2017lrf.github.io/tags/springBoot/"/>
     
   </entry>
   
   <entry>
     <title>springBoot整合mybatis及poi注解导出控制台输出sql语句</title>
-    <link href="//aha.me/2019/01/28/springBoot%E6%95%B4%E5%90%88mybatis%E5%8F%8Apoi%E6%B3%A8%E8%A7%A3%E5%AF%BC%E5%87%BA%EF%BC%8C%E6%8E%A7%E5%88%B6%E5%8F%B0%E8%BE%93%E5%87%BAsql%E8%AF%AD%E5%8F%A5/"/>
-    <id>//aha.me/2019/01/28/springBoot整合mybatis及poi注解导出，控制台输出sql语句/</id>
+    <link href="//zch2017lrf.github.io/2019/01/28/springBoot%E6%95%B4%E5%90%88mybatis%E5%8F%8Apoi%E6%B3%A8%E8%A7%A3%E5%AF%BC%E5%87%BA%EF%BC%8C%E6%8E%A7%E5%88%B6%E5%8F%B0%E8%BE%93%E5%87%BAsql%E8%AF%AD%E5%8F%A5/"/>
+    <id>//zch2017lrf.github.io/2019/01/28/springBoot整合mybatis及poi注解导出，控制台输出sql语句/</id>
     <published>2019-01-28T07:04:21.000Z</published>
     <updated>2019-02-16T12:14:27.384Z</updated>
     
@@ -1515,19 +1537,19 @@
     
     </summary>
     
-      <category term="springBoot" scheme="//aha.me/categories/springBoot/"/>
+      <category term="springBoot" scheme="//zch2017lrf.github.io/categories/springBoot/"/>
     
-      <category term="mybatis" scheme="//aha.me/categories/springBoot/mybatis/"/>
+      <category term="mybatis" scheme="//zch2017lrf.github.io/categories/springBoot/mybatis/"/>
     
     
-      <category term="springBoot" scheme="//aha.me/tags/springBoot/"/>
+      <category term="springBoot" scheme="//zch2017lrf.github.io/tags/springBoot/"/>
     
   </entry>
   
   <entry>
     <title>Spring Boot中使用过滤器和拦截器</title>
-    <link href="//aha.me/2019/01/28/Spring-Boot%E4%B8%AD%E4%BD%BF%E7%94%A8%E8%BF%87%E6%BB%A4%E5%99%A8%E5%92%8C%E6%8B%A6%E6%88%AA%E5%99%A8/"/>
-    <id>//aha.me/2019/01/28/Spring-Boot中使用过滤器和拦截器/</id>
+    <link href="//zch2017lrf.github.io/2019/01/28/Spring-Boot%E4%B8%AD%E4%BD%BF%E7%94%A8%E8%BF%87%E6%BB%A4%E5%99%A8%E5%92%8C%E6%8B%A6%E6%88%AA%E5%99%A8/"/>
+    <id>//zch2017lrf.github.io/2019/01/28/Spring-Boot中使用过滤器和拦截器/</id>
     <published>2019-01-28T02:10:00.000Z</published>
     <updated>2019-02-16T12:14:27.380Z</updated>
     
@@ -1542,19 +1564,19 @@
     
     </summary>
     
-      <category term="springBoot" scheme="//aha.me/categories/springBoot/"/>
+      <category term="springBoot" scheme="//zch2017lrf.github.io/categories/springBoot/"/>
     
     
-      <category term="springBoot" scheme="//aha.me/tags/springBoot/"/>
+      <category term="springBoot" scheme="//zch2017lrf.github.io/tags/springBoot/"/>
     
-      <category term="过滤器和拦截器" scheme="//aha.me/tags/%E8%BF%87%E6%BB%A4%E5%99%A8%E5%92%8C%E6%8B%A6%E6%88%AA%E5%99%A8/"/>
+      <category term="过滤器和拦截器" scheme="//zch2017lrf.github.io/tags/%E8%BF%87%E6%BB%A4%E5%99%A8%E5%92%8C%E6%8B%A6%E6%88%AA%E5%99%A8/"/>
     
   </entry>
   
   <entry>
     <title>反击爬虫，前端工程师的脑洞可以有多大？</title>
-    <link href="//aha.me/2019/01/25/test/"/>
-    <id>//aha.me/2019/01/25/test/</id>
+    <link href="//zch2017lrf.github.io/2019/01/25/test/"/>
+    <id>//zch2017lrf.github.io/2019/01/25/test/</id>
     <published>2019-01-25T02:36:00.000Z</published>
     <updated>2019-02-16T12:14:27.458Z</updated>
     
@@ -1569,19 +1591,19 @@
     
     </summary>
     
-      <category term="cate" scheme="//aha.me/categories/cate/"/>
+      <category term="cate" scheme="//zch2017lrf.github.io/categories/cate/"/>
     
     
-      <category term="前端" scheme="//aha.me/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="//zch2017lrf.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="安全" scheme="//aha.me/tags/%E5%AE%89%E5%85%A8/"/>
+      <category term="安全" scheme="//zch2017lrf.github.io/tags/%E5%AE%89%E5%85%A8/"/>
     
   </entry>
   
   <entry>
     <title>『数据结构与算法』—— 排序-冒泡&amp;选择&amp;插入</title>
-    <link href="//aha.me/2018/12/01/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E6%8E%92%E5%BA%8F-%E5%86%92%E6%B3%A1-%E9%80%89%E6%8B%A9-%E6%8F%92%E5%85%A5/"/>
-    <id>//aha.me/2018/12/01/数据结构与算法-排序-冒泡-选择-插入/</id>
+    <link href="//zch2017lrf.github.io/2018/12/01/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E6%8E%92%E5%BA%8F-%E5%86%92%E6%B3%A1-%E9%80%89%E6%8B%A9-%E6%8F%92%E5%85%A5/"/>
+    <id>//zch2017lrf.github.io/2018/12/01/数据结构与算法-排序-冒泡-选择-插入/</id>
     <published>2018-12-01T07:10:00.000Z</published>
     <updated>2019-02-16T12:14:27.461Z</updated>
     
@@ -1593,21 +1615,21 @@
     
     </summary>
     
-      <category term="数据结构与算法" scheme="//aha.me/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+      <category term="数据结构与算法" scheme="//zch2017lrf.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
     
     
-      <category term="数据结构与算法" scheme="//aha.me/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+      <category term="数据结构与算法" scheme="//zch2017lrf.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
     
-      <category term="平时积累" scheme="//aha.me/tags/%E5%B9%B3%E6%97%B6%E7%A7%AF%E7%B4%AF/"/>
+      <category term="平时积累" scheme="//zch2017lrf.github.io/tags/%E5%B9%B3%E6%97%B6%E7%A7%AF%E7%B4%AF/"/>
     
-      <category term="进阶" scheme="//aha.me/tags/%E8%BF%9B%E9%98%B6/"/>
+      <category term="进阶" scheme="//zch2017lrf.github.io/tags/%E8%BF%9B%E9%98%B6/"/>
     
   </entry>
   
   <entry>
     <title>『数据结构与算法』—— 递归</title>
-    <link href="//aha.me/2018/11/21/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E9%80%92%E5%BD%92/"/>
-    <id>//aha.me/2018/11/21/数据结构与算法-递归/</id>
+    <link href="//zch2017lrf.github.io/2018/11/21/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E9%80%92%E5%BD%92/"/>
+    <id>//zch2017lrf.github.io/2018/11/21/数据结构与算法-递归/</id>
     <published>2018-11-21T07:10:00.000Z</published>
     <updated>2019-02-16T12:14:27.466Z</updated>
     
@@ -1619,21 +1641,21 @@
     
     </summary>
     
-      <category term="数据结构与算法" scheme="//aha.me/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+      <category term="数据结构与算法" scheme="//zch2017lrf.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
     
     
-      <category term="数据结构与算法" scheme="//aha.me/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+      <category term="数据结构与算法" scheme="//zch2017lrf.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
     
-      <category term="平时积累" scheme="//aha.me/tags/%E5%B9%B3%E6%97%B6%E7%A7%AF%E7%B4%AF/"/>
+      <category term="平时积累" scheme="//zch2017lrf.github.io/tags/%E5%B9%B3%E6%97%B6%E7%A7%AF%E7%B4%AF/"/>
     
-      <category term="进阶" scheme="//aha.me/tags/%E8%BF%9B%E9%98%B6/"/>
+      <category term="进阶" scheme="//zch2017lrf.github.io/tags/%E8%BF%9B%E9%98%B6/"/>
     
   </entry>
   
   <entry>
     <title>『数据结构与算法』—— 队列</title>
-    <link href="//aha.me/2018/11/06/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E9%98%9F%E5%88%97/"/>
-    <id>//aha.me/2018/11/06/数据结构与算法-队列/</id>
+    <link href="//zch2017lrf.github.io/2018/11/06/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E9%98%9F%E5%88%97/"/>
+    <id>//zch2017lrf.github.io/2018/11/06/数据结构与算法-队列/</id>
     <published>2018-11-06T07:10:00.000Z</published>
     <updated>2019-02-16T12:14:27.469Z</updated>
     
@@ -1646,21 +1668,21 @@
     
     </summary>
     
-      <category term="数据结构与算法" scheme="//aha.me/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+      <category term="数据结构与算法" scheme="//zch2017lrf.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
     
     
-      <category term="数据结构与算法" scheme="//aha.me/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+      <category term="数据结构与算法" scheme="//zch2017lrf.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
     
-      <category term="平时积累" scheme="//aha.me/tags/%E5%B9%B3%E6%97%B6%E7%A7%AF%E7%B4%AF/"/>
+      <category term="平时积累" scheme="//zch2017lrf.github.io/tags/%E5%B9%B3%E6%97%B6%E7%A7%AF%E7%B4%AF/"/>
     
-      <category term="进阶" scheme="//aha.me/tags/%E8%BF%9B%E9%98%B6/"/>
+      <category term="进阶" scheme="//zch2017lrf.github.io/tags/%E8%BF%9B%E9%98%B6/"/>
     
   </entry>
   
   <entry>
     <title>『数据结构与算法』—— 栈</title>
-    <link href="//aha.me/2018/10/15/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E6%A0%88/"/>
-    <id>//aha.me/2018/10/15/数据结构与算法-栈/</id>
+    <link href="//zch2017lrf.github.io/2018/10/15/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E6%A0%88/"/>
+    <id>//zch2017lrf.github.io/2018/10/15/数据结构与算法-栈/</id>
     <published>2018-10-15T07:10:00.000Z</published>
     <updated>2019-02-16T12:14:27.464Z</updated>
     
@@ -1674,21 +1696,21 @@
     
     </summary>
     
-      <category term="数据结构与算法" scheme="//aha.me/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+      <category term="数据结构与算法" scheme="//zch2017lrf.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
     
     
-      <category term="数据结构与算法" scheme="//aha.me/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+      <category term="数据结构与算法" scheme="//zch2017lrf.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
     
-      <category term="平时积累" scheme="//aha.me/tags/%E5%B9%B3%E6%97%B6%E7%A7%AF%E7%B4%AF/"/>
+      <category term="平时积累" scheme="//zch2017lrf.github.io/tags/%E5%B9%B3%E6%97%B6%E7%A7%AF%E7%B4%AF/"/>
     
-      <category term="进阶" scheme="//aha.me/tags/%E8%BF%9B%E9%98%B6/"/>
+      <category term="进阶" scheme="//zch2017lrf.github.io/tags/%E8%BF%9B%E9%98%B6/"/>
     
   </entry>
   
   <entry>
     <title>『数据结构与算法』—— 链表</title>
-    <link href="//aha.me/2018/10/03/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E9%93%BE%E8%A1%A8/"/>
-    <id>//aha.me/2018/10/03/数据结构与算法-链表/</id>
+    <link href="//zch2017lrf.github.io/2018/10/03/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E9%93%BE%E8%A1%A8/"/>
+    <id>//zch2017lrf.github.io/2018/10/03/数据结构与算法-链表/</id>
     <published>2018-10-03T07:10:00.000Z</published>
     <updated>2019-02-16T12:14:27.468Z</updated>
     
@@ -1701,21 +1723,21 @@
     
     </summary>
     
-      <category term="数据结构与算法" scheme="//aha.me/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+      <category term="数据结构与算法" scheme="//zch2017lrf.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
     
     
-      <category term="数据结构与算法" scheme="//aha.me/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+      <category term="数据结构与算法" scheme="//zch2017lrf.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
     
-      <category term="平时积累" scheme="//aha.me/tags/%E5%B9%B3%E6%97%B6%E7%A7%AF%E7%B4%AF/"/>
+      <category term="平时积累" scheme="//zch2017lrf.github.io/tags/%E5%B9%B3%E6%97%B6%E7%A7%AF%E7%B4%AF/"/>
     
-      <category term="进阶" scheme="//aha.me/tags/%E8%BF%9B%E9%98%B6/"/>
+      <category term="进阶" scheme="//zch2017lrf.github.io/tags/%E8%BF%9B%E9%98%B6/"/>
     
   </entry>
   
   <entry>
     <title>『数据结构与算法』—— 数组</title>
-    <link href="//aha.me/2018/09/25/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E6%95%B0%E7%BB%84/"/>
-    <id>//aha.me/2018/09/25/数据结构与算法-数组/</id>
+    <link href="//zch2017lrf.github.io/2018/09/25/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E6%95%B0%E7%BB%84/"/>
+    <id>//zch2017lrf.github.io/2018/09/25/数据结构与算法-数组/</id>
     <published>2018-09-25T07:10:00.000Z</published>
     <updated>2019-02-16T12:14:27.462Z</updated>
     
@@ -1729,21 +1751,21 @@
     
     </summary>
     
-      <category term="数据结构与算法" scheme="//aha.me/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+      <category term="数据结构与算法" scheme="//zch2017lrf.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
     
     
-      <category term="数据结构与算法" scheme="//aha.me/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+      <category term="数据结构与算法" scheme="//zch2017lrf.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
     
-      <category term="平时积累" scheme="//aha.me/tags/%E5%B9%B3%E6%97%B6%E7%A7%AF%E7%B4%AF/"/>
+      <category term="平时积累" scheme="//zch2017lrf.github.io/tags/%E5%B9%B3%E6%97%B6%E7%A7%AF%E7%B4%AF/"/>
     
-      <category term="进阶" scheme="//aha.me/tags/%E8%BF%9B%E9%98%B6/"/>
+      <category term="进阶" scheme="//zch2017lrf.github.io/tags/%E8%BF%9B%E9%98%B6/"/>
     
   </entry>
   
   <entry>
     <title>『数据结构与算法』—— 复杂度</title>
-    <link href="//aha.me/2018/09/01/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E5%A4%8D%E6%9D%82%E5%BA%A6/"/>
-    <id>//aha.me/2018/09/01/数据结构与算法-复杂度/</id>
+    <link href="//zch2017lrf.github.io/2018/09/01/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E5%A4%8D%E6%9D%82%E5%BA%A6/"/>
+    <id>//zch2017lrf.github.io/2018/09/01/数据结构与算法-复杂度/</id>
     <published>2018-09-01T07:10:00.000Z</published>
     <updated>2019-02-16T12:14:27.459Z</updated>
     
@@ -1762,21 +1784,21 @@
     
     </summary>
     
-      <category term="数据结构与算法" scheme="//aha.me/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+      <category term="数据结构与算法" scheme="//zch2017lrf.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
     
     
-      <category term="数据结构与算法" scheme="//aha.me/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
+      <category term="数据结构与算法" scheme="//zch2017lrf.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
     
-      <category term="平时积累" scheme="//aha.me/tags/%E5%B9%B3%E6%97%B6%E7%A7%AF%E7%B4%AF/"/>
+      <category term="平时积累" scheme="//zch2017lrf.github.io/tags/%E5%B9%B3%E6%97%B6%E7%A7%AF%E7%B4%AF/"/>
     
-      <category term="进阶" scheme="//aha.me/tags/%E8%BF%9B%E9%98%B6/"/>
+      <category term="进阶" scheme="//zch2017lrf.github.io/tags/%E8%BF%9B%E9%98%B6/"/>
     
   </entry>
   
   <entry>
     <title>反击爬虫，前端工程师的脑洞可以有多大？</title>
-    <link href="//aha.me/2017/07/09/prevent-spiders/"/>
-    <id>//aha.me/2017/07/09/prevent-spiders/</id>
+    <link href="//zch2017lrf.github.io/2017/07/09/prevent-spiders/"/>
+    <id>//zch2017lrf.github.io/2017/07/09/prevent-spiders/</id>
     <published>2017-07-09T02:36:00.000Z</published>
     <updated>2019-02-16T12:14:27.456Z</updated>
     
@@ -1791,19 +1813,19 @@
     
     </summary>
     
-      <category term="cate" scheme="//aha.me/categories/cate/"/>
+      <category term="cate" scheme="//zch2017lrf.github.io/categories/cate/"/>
     
     
-      <category term="前端" scheme="//aha.me/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="//zch2017lrf.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="安全" scheme="//aha.me/tags/%E5%AE%89%E5%85%A8/"/>
+      <category term="安全" scheme="//zch2017lrf.github.io/tags/%E5%AE%89%E5%85%A8/"/>
     
   </entry>
   
   <entry>
     <title>『Thinking in Java 读书笔记』—— 15-泛型</title>
-    <link href="//aha.me/1994/04/15/Thinking-in-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-15-%E6%B3%9B%E5%9E%8B/"/>
-    <id>//aha.me/1994/04/15/Thinking-in-Java-读书笔记-15-泛型/</id>
+    <link href="//zch2017lrf.github.io/1994/04/15/Thinking-in-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-15-%E6%B3%9B%E5%9E%8B/"/>
+    <id>//zch2017lrf.github.io/1994/04/15/Thinking-in-Java-读书笔记-15-泛型/</id>
     <published>1994-04-15T09:13:33.000Z</published>
     <updated>2019-02-16T12:14:27.440Z</updated>
     
@@ -1817,19 +1839,19 @@
     
     </summary>
     
-      <category term="Thinking In Java 读书笔记" scheme="//aha.me/categories/Thinking-In-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+      <category term="Thinking In Java 读书笔记" scheme="//zch2017lrf.github.io/categories/Thinking-In-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="Thinking In Java" scheme="//aha.me/tags/Thinking-In-Java/"/>
+      <category term="Thinking In Java" scheme="//zch2017lrf.github.io/tags/Thinking-In-Java/"/>
     
-      <category term="读书笔记" scheme="//aha.me/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+      <category term="读书笔记" scheme="//zch2017lrf.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>『Thinking in Java 读书笔记』—— 14-类型信息</title>
-    <link href="//aha.me/1994/04/15/Thinking-in-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-14-%E7%B1%BB%E5%9E%8B%E4%BF%A1%E6%81%AF/"/>
-    <id>//aha.me/1994/04/15/Thinking-in-Java-读书笔记-14-类型信息/</id>
+    <link href="//zch2017lrf.github.io/1994/04/15/Thinking-in-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-14-%E7%B1%BB%E5%9E%8B%E4%BF%A1%E6%81%AF/"/>
+    <id>//zch2017lrf.github.io/1994/04/15/Thinking-in-Java-读书笔记-14-类型信息/</id>
     <published>1994-04-15T08:13:33.000Z</published>
     <updated>2019-02-16T12:14:27.438Z</updated>
     
@@ -1846,19 +1868,19 @@
     
     </summary>
     
-      <category term="Thinking In Java 读书笔记" scheme="//aha.me/categories/Thinking-In-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+      <category term="Thinking In Java 读书笔记" scheme="//zch2017lrf.github.io/categories/Thinking-In-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="Thinking In Java" scheme="//aha.me/tags/Thinking-In-Java/"/>
+      <category term="Thinking In Java" scheme="//zch2017lrf.github.io/tags/Thinking-In-Java/"/>
     
-      <category term="读书笔记" scheme="//aha.me/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+      <category term="读书笔记" scheme="//zch2017lrf.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>『Thinking in Java 读书笔记』—— 13-字符串</title>
-    <link href="//aha.me/1994/04/15/Thinking-in-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-13-%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
-    <id>//aha.me/1994/04/15/Thinking-in-Java-读书笔记-13-字符串/</id>
+    <link href="//zch2017lrf.github.io/1994/04/15/Thinking-in-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-13-%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    <id>//zch2017lrf.github.io/1994/04/15/Thinking-in-Java-读书笔记-13-字符串/</id>
     <published>1994-04-15T07:13:33.000Z</published>
     <updated>2019-02-16T12:14:27.436Z</updated>
     
@@ -1874,19 +1896,19 @@
     
     </summary>
     
-      <category term="Thinking In Java 读书笔记" scheme="//aha.me/categories/Thinking-In-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+      <category term="Thinking In Java 读书笔记" scheme="//zch2017lrf.github.io/categories/Thinking-In-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="Thinking In Java" scheme="//aha.me/tags/Thinking-In-Java/"/>
+      <category term="Thinking In Java" scheme="//zch2017lrf.github.io/tags/Thinking-In-Java/"/>
     
-      <category term="读书笔记" scheme="//aha.me/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+      <category term="读书笔记" scheme="//zch2017lrf.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>『Thinking in Java 读书笔记』—— 12-通过异常处理错误</title>
-    <link href="//aha.me/1994/03/11/Thinking-in-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-12-%E9%80%9A%E8%BF%87%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E9%94%99%E8%AF%AF/"/>
-    <id>//aha.me/1994/03/11/Thinking-in-Java-读书笔记-12-通过异常处理错误/</id>
+    <link href="//zch2017lrf.github.io/1994/03/11/Thinking-in-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-12-%E9%80%9A%E8%BF%87%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E9%94%99%E8%AF%AF/"/>
+    <id>//zch2017lrf.github.io/1994/03/11/Thinking-in-Java-读书笔记-12-通过异常处理错误/</id>
     <published>1994-03-11T07:13:33.000Z</published>
     <updated>2019-02-16T12:14:27.435Z</updated>
     
@@ -1902,19 +1924,19 @@
     
     </summary>
     
-      <category term="Thinking In Java 读书笔记" scheme="//aha.me/categories/Thinking-In-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+      <category term="Thinking In Java 读书笔记" scheme="//zch2017lrf.github.io/categories/Thinking-In-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="Thinking In Java" scheme="//aha.me/tags/Thinking-In-Java/"/>
+      <category term="Thinking In Java" scheme="//zch2017lrf.github.io/tags/Thinking-In-Java/"/>
     
-      <category term="读书笔记" scheme="//aha.me/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+      <category term="读书笔记" scheme="//zch2017lrf.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>『Thinking in Java 读书笔记』—— 11-持有对象</title>
-    <link href="//aha.me/1994/03/10/Thinking-in-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-11-%E6%8C%81%E6%9C%89%E5%AF%B9%E8%B1%A1/"/>
-    <id>//aha.me/1994/03/10/Thinking-in-Java-读书笔记-11-持有对象/</id>
+    <link href="//zch2017lrf.github.io/1994/03/10/Thinking-in-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-11-%E6%8C%81%E6%9C%89%E5%AF%B9%E8%B1%A1/"/>
+    <id>//zch2017lrf.github.io/1994/03/10/Thinking-in-Java-读书笔记-11-持有对象/</id>
     <published>1994-03-10T07:13:33.000Z</published>
     <updated>2019-02-16T12:14:27.432Z</updated>
     
@@ -1930,19 +1952,19 @@
     
     </summary>
     
-      <category term="Thinking In Java 读书笔记" scheme="//aha.me/categories/Thinking-In-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+      <category term="Thinking In Java 读书笔记" scheme="//zch2017lrf.github.io/categories/Thinking-In-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="Thinking In Java" scheme="//aha.me/tags/Thinking-In-Java/"/>
+      <category term="Thinking In Java" scheme="//zch2017lrf.github.io/tags/Thinking-In-Java/"/>
     
-      <category term="读书笔记" scheme="//aha.me/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+      <category term="读书笔记" scheme="//zch2017lrf.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>『Thinking in Java 读书笔记』—— 10-内部类</title>
-    <link href="//aha.me/1994/03/09/Thinking-in-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-10-%E5%86%85%E9%83%A8%E7%B1%BB/"/>
-    <id>//aha.me/1994/03/09/Thinking-in-Java-读书笔记-10-内部类/</id>
+    <link href="//zch2017lrf.github.io/1994/03/09/Thinking-in-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-10-%E5%86%85%E9%83%A8%E7%B1%BB/"/>
+    <id>//zch2017lrf.github.io/1994/03/09/Thinking-in-Java-读书笔记-10-内部类/</id>
     <published>1994-03-09T07:13:33.000Z</published>
     <updated>2019-02-16T12:14:27.431Z</updated>
     
@@ -1958,19 +1980,19 @@
     
     </summary>
     
-      <category term="Thinking In Java 读书笔记" scheme="//aha.me/categories/Thinking-In-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+      <category term="Thinking In Java 读书笔记" scheme="//zch2017lrf.github.io/categories/Thinking-In-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="Thinking In Java" scheme="//aha.me/tags/Thinking-In-Java/"/>
+      <category term="Thinking In Java" scheme="//zch2017lrf.github.io/tags/Thinking-In-Java/"/>
     
-      <category term="读书笔记" scheme="//aha.me/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+      <category term="读书笔记" scheme="//zch2017lrf.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>『Thinking in Java 读书笔记』—— 9-接口</title>
-    <link href="//aha.me/1994/03/08/Thinking-in-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-9-%E6%8E%A5%E5%8F%A3/"/>
-    <id>//aha.me/1994/03/08/Thinking-in-Java-读书笔记-9-接口/</id>
+    <link href="//zch2017lrf.github.io/1994/03/08/Thinking-in-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-9-%E6%8E%A5%E5%8F%A3/"/>
+    <id>//zch2017lrf.github.io/1994/03/08/Thinking-in-Java-读书笔记-9-接口/</id>
     <published>1994-03-08T07:13:33.000Z</published>
     <updated>2019-02-16T12:14:27.455Z</updated>
     
@@ -1987,19 +2009,19 @@
     
     </summary>
     
-      <category term="Thinking In Java 读书笔记" scheme="//aha.me/categories/Thinking-In-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+      <category term="Thinking In Java 读书笔记" scheme="//zch2017lrf.github.io/categories/Thinking-In-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="Thinking In Java" scheme="//aha.me/tags/Thinking-In-Java/"/>
+      <category term="Thinking In Java" scheme="//zch2017lrf.github.io/tags/Thinking-In-Java/"/>
     
-      <category term="读书笔记" scheme="//aha.me/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+      <category term="读书笔记" scheme="//zch2017lrf.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>『Thinking in Java 读书笔记』—— 8-多态</title>
-    <link href="//aha.me/1994/03/07/Thinking-in-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-8-%E5%A4%9A%E6%80%81/"/>
-    <id>//aha.me/1994/03/07/Thinking-in-Java-读书笔记-8-多态/</id>
+    <link href="//zch2017lrf.github.io/1994/03/07/Thinking-in-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-8-%E5%A4%9A%E6%80%81/"/>
+    <id>//zch2017lrf.github.io/1994/03/07/Thinking-in-Java-读书笔记-8-多态/</id>
     <published>1994-03-07T07:13:33.000Z</published>
     <updated>2019-02-16T12:14:27.453Z</updated>
     
@@ -2014,19 +2036,19 @@
     
     </summary>
     
-      <category term="Thinking In Java 读书笔记" scheme="//aha.me/categories/Thinking-In-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+      <category term="Thinking In Java 读书笔记" scheme="//zch2017lrf.github.io/categories/Thinking-In-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="Thinking In Java" scheme="//aha.me/tags/Thinking-In-Java/"/>
+      <category term="Thinking In Java" scheme="//zch2017lrf.github.io/tags/Thinking-In-Java/"/>
     
-      <category term="读书笔记" scheme="//aha.me/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+      <category term="读书笔记" scheme="//zch2017lrf.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>『Thinking in Java 读书笔记』—— 7-复用类</title>
-    <link href="//aha.me/1994/03/06/Thinking-in-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-7-%E5%A4%8D%E7%94%A8%E7%B1%BB/"/>
-    <id>//aha.me/1994/03/06/Thinking-in-Java-读书笔记-7-复用类/</id>
+    <link href="//zch2017lrf.github.io/1994/03/06/Thinking-in-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-7-%E5%A4%8D%E7%94%A8%E7%B1%BB/"/>
+    <id>//zch2017lrf.github.io/1994/03/06/Thinking-in-Java-读书笔记-7-复用类/</id>
     <published>1994-03-06T07:13:33.000Z</published>
     <updated>2019-02-16T12:14:27.451Z</updated>
     
@@ -2042,19 +2064,19 @@
     
     </summary>
     
-      <category term="Thinking In Java 读书笔记" scheme="//aha.me/categories/Thinking-In-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+      <category term="Thinking In Java 读书笔记" scheme="//zch2017lrf.github.io/categories/Thinking-In-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="Thinking In Java" scheme="//aha.me/tags/Thinking-In-Java/"/>
+      <category term="Thinking In Java" scheme="//zch2017lrf.github.io/tags/Thinking-In-Java/"/>
     
-      <category term="读书笔记" scheme="//aha.me/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+      <category term="读书笔记" scheme="//zch2017lrf.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>『Thinking in Java 读书笔记』—— 6-访问权限控制</title>
-    <link href="//aha.me/1994/03/05/Thinking-in-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-6-%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90%E6%8E%A7%E5%88%B6/"/>
-    <id>//aha.me/1994/03/05/Thinking-in-Java-读书笔记-6-访问权限控制/</id>
+    <link href="//zch2017lrf.github.io/1994/03/05/Thinking-in-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-6-%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90%E6%8E%A7%E5%88%B6/"/>
+    <id>//zch2017lrf.github.io/1994/03/05/Thinking-in-Java-读书笔记-6-访问权限控制/</id>
     <published>1994-03-05T02:12:00.000Z</published>
     <updated>2019-02-16T12:14:27.450Z</updated>
     
@@ -2076,19 +2098,19 @@
     
     </summary>
     
-      <category term="Thinking In Java 读书笔记" scheme="//aha.me/categories/Thinking-In-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+      <category term="Thinking In Java 读书笔记" scheme="//zch2017lrf.github.io/categories/Thinking-In-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="Thinking In Java" scheme="//aha.me/tags/Thinking-In-Java/"/>
+      <category term="Thinking In Java" scheme="//zch2017lrf.github.io/tags/Thinking-In-Java/"/>
     
-      <category term="读书笔记" scheme="//aha.me/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+      <category term="读书笔记" scheme="//zch2017lrf.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>『Thinking in Java 读书笔记』—— 5-初始化与清理</title>
-    <link href="//aha.me/1994/03/02/Thinking-in-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-5-%E5%88%9D%E5%A7%8B%E5%8C%96%E4%B8%8E%E6%B8%85%E7%90%86/"/>
-    <id>//aha.me/1994/03/02/Thinking-in-Java-读书笔记-5-初始化与清理/</id>
+    <link href="//zch2017lrf.github.io/1994/03/02/Thinking-in-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-5-%E5%88%9D%E5%A7%8B%E5%8C%96%E4%B8%8E%E6%B8%85%E7%90%86/"/>
+    <id>//zch2017lrf.github.io/1994/03/02/Thinking-in-Java-读书笔记-5-初始化与清理/</id>
     <published>1994-03-02T08:25:00.000Z</published>
     <updated>2019-02-16T12:14:27.448Z</updated>
     
@@ -2104,19 +2126,19 @@
     
     </summary>
     
-      <category term="Thinking In Java 读书笔记" scheme="//aha.me/categories/Thinking-In-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+      <category term="Thinking In Java 读书笔记" scheme="//zch2017lrf.github.io/categories/Thinking-In-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="Thinking In Java" scheme="//aha.me/tags/Thinking-In-Java/"/>
+      <category term="Thinking In Java" scheme="//zch2017lrf.github.io/tags/Thinking-In-Java/"/>
     
-      <category term="读书笔记" scheme="//aha.me/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+      <category term="读书笔记" scheme="//zch2017lrf.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>『Thinking in Java 读书笔记』—— 4-控制执行流程</title>
-    <link href="//aha.me/1994/02/28/Thinking-in-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-4-%E6%8E%A7%E5%88%B6%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/"/>
-    <id>//aha.me/1994/02/28/Thinking-in-Java-读书笔记-4-控制执行流程/</id>
+    <link href="//zch2017lrf.github.io/1994/02/28/Thinking-in-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-4-%E6%8E%A7%E5%88%B6%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B/"/>
+    <id>//zch2017lrf.github.io/1994/02/28/Thinking-in-Java-读书笔记-4-控制执行流程/</id>
     <published>1994-02-28T10:27:25.000Z</published>
     <updated>2019-02-16T12:14:27.445Z</updated>
     
@@ -2130,19 +2152,19 @@
     
     </summary>
     
-      <category term="Thinking In Java 读书笔记" scheme="//aha.me/categories/Thinking-In-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+      <category term="Thinking In Java 读书笔记" scheme="//zch2017lrf.github.io/categories/Thinking-In-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="Thinking In Java" scheme="//aha.me/tags/Thinking-In-Java/"/>
+      <category term="Thinking In Java" scheme="//zch2017lrf.github.io/tags/Thinking-In-Java/"/>
     
-      <category term="读书笔记" scheme="//aha.me/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+      <category term="读书笔记" scheme="//zch2017lrf.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>『Thinking in Java 读书笔记』—— 3-操作符</title>
-    <link href="//aha.me/1994/02/26/Thinking-in-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-3-%E6%93%8D%E4%BD%9C%E7%AC%A6/"/>
-    <id>//aha.me/1994/02/26/Thinking-in-Java-读书笔记-3-操作符/</id>
+    <link href="//zch2017lrf.github.io/1994/02/26/Thinking-in-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-3-%E6%93%8D%E4%BD%9C%E7%AC%A6/"/>
+    <id>//zch2017lrf.github.io/1994/02/26/Thinking-in-Java-读书笔记-3-操作符/</id>
     <published>1994-02-26T12:46:25.000Z</published>
     <updated>2019-02-16T12:14:27.443Z</updated>
     
@@ -2156,19 +2178,19 @@
     
     </summary>
     
-      <category term="Thinking In Java 读书笔记" scheme="//aha.me/categories/Thinking-In-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+      <category term="Thinking In Java 读书笔记" scheme="//zch2017lrf.github.io/categories/Thinking-In-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="Thinking In Java" scheme="//aha.me/tags/Thinking-In-Java/"/>
+      <category term="Thinking In Java" scheme="//zch2017lrf.github.io/tags/Thinking-In-Java/"/>
     
-      <category term="读书笔记" scheme="//aha.me/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+      <category term="读书笔记" scheme="//zch2017lrf.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>『Thinking in Java 读书笔记』—— 2-一切都是对象</title>
-    <link href="//aha.me/1994/02/25/Thinking-in-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-2-%E4%B8%80%E5%88%87%E9%83%BD%E6%98%AF%E5%AF%B9%E8%B1%A1/"/>
-    <id>//aha.me/1994/02/25/Thinking-in-Java-读书笔记-2-一切都是对象/</id>
+    <link href="//zch2017lrf.github.io/1994/02/25/Thinking-in-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-2-%E4%B8%80%E5%88%87%E9%83%BD%E6%98%AF%E5%AF%B9%E8%B1%A1/"/>
+    <id>//zch2017lrf.github.io/1994/02/25/Thinking-in-Java-读书笔记-2-一切都是对象/</id>
     <published>1994-02-25T12:46:25.000Z</published>
     <updated>2019-02-16T12:14:27.442Z</updated>
     
@@ -2184,19 +2206,19 @@
     
     </summary>
     
-      <category term="Thinking In Java 读书笔记" scheme="//aha.me/categories/Thinking-In-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+      <category term="Thinking In Java 读书笔记" scheme="//zch2017lrf.github.io/categories/Thinking-In-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="Thinking In Java" scheme="//aha.me/tags/Thinking-In-Java/"/>
+      <category term="Thinking In Java" scheme="//zch2017lrf.github.io/tags/Thinking-In-Java/"/>
     
-      <category term="读书笔记" scheme="//aha.me/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+      <category term="读书笔记" scheme="//zch2017lrf.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>『Thinking in Java 读书笔记』—— 1-对象导论</title>
-    <link href="//aha.me/1994/02/24/Thinking-in-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-1-%E5%AF%B9%E8%B1%A1%E5%AF%BC%E8%AE%BA/"/>
-    <id>//aha.me/1994/02/24/Thinking-in-Java-读书笔记-1-对象导论/</id>
+    <link href="//zch2017lrf.github.io/1994/02/24/Thinking-in-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-1-%E5%AF%B9%E8%B1%A1%E5%AF%BC%E8%AE%BA/"/>
+    <id>//zch2017lrf.github.io/1994/02/24/Thinking-in-Java-读书笔记-1-对象导论/</id>
     <published>1994-02-24T12:46:25.000Z</published>
     <updated>2019-02-16T12:14:27.429Z</updated>
     
@@ -2209,12 +2231,12 @@
     
     </summary>
     
-      <category term="Thinking In Java 读书笔记" scheme="//aha.me/categories/Thinking-In-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+      <category term="Thinking In Java 读书笔记" scheme="//zch2017lrf.github.io/categories/Thinking-In-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="Thinking In Java" scheme="//aha.me/tags/Thinking-In-Java/"/>
+      <category term="Thinking In Java" scheme="//zch2017lrf.github.io/tags/Thinking-In-Java/"/>
     
-      <category term="读书笔记" scheme="//aha.me/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+      <category term="读书笔记" scheme="//zch2017lrf.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   

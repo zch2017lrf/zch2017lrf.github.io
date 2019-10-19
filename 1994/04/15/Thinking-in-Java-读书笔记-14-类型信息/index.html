@@ -5,14 +5,14 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="//aha.me">
+  <link rel="dns-prefetch" href="//zch2017lrf.github.io">
   <title>『Thinking in Java 读书笔记』—— 14-类型信息 | 神经漫游者</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Thinking in java 读书笔记  运行时类型信息使得你可以在程序运行时发现和使用类型信息。 Java 通过两种方式在运行时识别对象和类信息的，一种是 传统的RTTI，(RunTime Type Identification 运行时类型定义)，假定我们在编译时已经知道了所有的类型。第二种是 反射机制，它允许在运行时发现和使用类信息。  为什么需要 RTTI啥叫多态，父类方法在子类可能会被">
 <meta name="keywords" content="Thinking In Java,读书笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="『Thinking in Java 读书笔记』—— 14-类型信息">
-<meta property="og:url" content="//aha.me/1994/04/15/Thinking-in-Java-读书笔记-14-类型信息/index.html">
+<meta property="og:url" content="//zch2017lrf.github.io/1994/04/15/Thinking-in-Java-读书笔记-14-类型信息/index.html">
 <meta property="og:site_name" content="神经漫游者">
 <meta property="og:description" content="Thinking in java 读书笔记  运行时类型信息使得你可以在程序运行时发现和使用类型信息。 Java 通过两种方式在运行时识别对象和类信息的，一种是 传统的RTTI，(RunTime Type Identification 运行时类型定义)，假定我们在编译时已经知道了所有的类型。第二种是 反射机制，它允许在运行时发现和使用类信息。  为什么需要 RTTI啥叫多态，父类方法在子类可能会被">
 <meta property="og:locale" content="default">
@@ -383,7 +383,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACsUlEQVR42u3aQW4jMQwEwPz/087VgONxNyUZE6DmZGQnXpUOItPiz0/8PJ6e55+8vvPu/eSd/F83P3h4eHgLS3992neuvznBJ9+frAcPDw/vNO/diXr9uT2Nr9+freeDBQ8PD+9mvLzxzdvxvOHGw8PD+1+8699qMUlggYeHh3c33iwIOFdgWvaGrAUPDw8v5uW3SPf5fOR+Dw8PD2/5Vr29DGuP7PxYf4wePDw8vBO82YVWOxyQjxe0I1zROvHw8PC+wlu58s8P9zzSbeMGPDw8vNO8/Goqh+3C5C11nang4eHhjXh5rNCOBbThRV5aijEFPDw8vGO8NpLIhwByZLueqIDh4eHhHeDlx25+ZK8HByuXbW/xeHh4eFt51//B9UGcxw17Rw2KbcXDw8P7Iq8NT/NNyRvoHFMXBjw8PLwF3ix6aJFtMZj9BA8PD++bvDZabY/y/Lpr10bg4eHhneatNMFJaJtvUxsWD2sdHh4e3og3u86fvX/N3hAuvEtZ8PDw8Lby8kW0i5tdm+WFpyhReHh4eFt5uy7yZ718MsiVb98f7+Dh4eEd47WRwS7qyqZEQ114eHh4x3htADE7vq+/Jw+RizKDh4eHd4zXXoatFIaVfLVtrPHw8PBO8PKjv25nT4QL69UPDw8Pbysvv5KfLW5l+/KyVM+R4eHh4S3w8gCibbvzMGI2cFBMluHh4eFt5eWNbF4Y2iKxElVsqGl4eHh4o2C0Xcps6fn120rkgYeHh3eCt/eMbTG7Ps/iFTw8PLwVXtsuJxHGyvBB2+5/AOPh4eEd4yUhRbLEWUnIhwPaeAUPDw/vnry88V0ZQZgVDDw8PLz78No2Og9b20u4pkrg4eHh7eQlYUQ7KtqOWM3ihg+bi4eHh3eA1/55nxzZSavdtukb5svw8PDwVnm/vRWccWu49gAAAAAASUVORK5CYII=" alt="微信分享二维码">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAADMUlEQVR42u3awY7iMBAEUP7/p1lpb6tVMlVtIxHPywkBSvzMoekuv17x9f57Xb1//+n9969e///9/CnbLmxsbOyHsN+31/2CksUlW5bcf7aSyy3DxsbGPo59XxjuF5ds1tWn9++3Za8octjY2Ni/kp00KjlspTTmhRYbGxsbe73Y5LzZkAgbGxsbOx8qtW1GW+RWytsHZ2nY2NjYX89eKRLf9vqD+TY2Njb2V7Lf5dUex9kbNqys/J+7YWNjYx/ETv7uJ++vD/rbEdUsEi6Wi42NjX0QOx/N5MttB1Wz5/7QomBjY2MfwW5LV9uQzNqVXYcssbGxsX8DO1lufvCxLWO7yttsyIWNjY19Nnvv4CkZJ30ufv5hzdjY2NgPZ7eBbj4AyoOBWQlMnnh5B2xsbOzj2HlIsGs8lG/rCjuapWFjY2MfxG7/7q8MmHJMO/SPjm9iY2NjH8Rum422DcjH+rNCNdt6bGxs7JPYs1h379bMRvzJdbkp2NjY2Mex20g1b0vy8Hi9QNYFDBsbG/sg9t4hTl5+ZtvXFt3horGxsbEfwm4ZbXFauVsCm/1I2NjY2KeyZ0ucDY/aYz3rDdLm0oWNjY39NexZCzErYHuD2zaiiIJebGxs7Aey8xslpahtM1Zi47YJebXzLWxsbOxHsYt+JQ5r20/b9bQhcZSTYGNjYz+cnQeuK8Ft+04bGw/zEGxsbOzHspO/+/nW5GP6vM3ID+IUbQ82Njb2Qew2ys0ftr70/CnDJ2JjY2MfxG4fPAtcZ2Oj/EjQyugKGxsb+7nstj3IeflAaiXNGP4Y2NjY2AexW0Y7uG+PBCUjoaSMRW0MNjY29hHs/JF5vNoWldmIapZpY2NjY5/KzpuHNvRdaW/a7c4PaGJjY2Ofx54FvSsjpPxqt6POQLCxsbEfzl55fF7MZgvNx1jroTI2Njb209nrh2OSluO96cpHUT/8ttjY2NjHsWdtwKyFaMODWZuBjY2Njd0eskmKVr4RUWRbFrDLbAQbGxv7F7PzoHdXOLGy3dsKGDY2NvZXstdL0cpBnPZu60ECNjY29knsXUOiuoQExa+9ZxtyYGNjYz+c/QduX/OHqq4oyAAAAABJRU5ErkJggg==" alt="微信分享二维码">
     </div>
 </div>
 
@@ -606,11 +606,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">iwiilsay小程序</a>
+                <a href="javascript:void(0)" class="js-tag color3">iwiilsay后台前端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">iwiilsay后台前端</a>
+                <a href="javascript:void(0)" class="js-tag color2">iwiilsay小程序</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -726,6 +726,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">vue学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Thinking In Java</a>
               </li>
              
@@ -734,27 +738,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">安全</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">平时积累</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">进阶</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">启动和终止线程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">线程应用实例</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -762,7 +746,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">线程应用实例</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">微课堂</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -783,6 +775,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">轻松搞定全局异常</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">安全</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">平时积累</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">进阶</a>
               </li>
              
               <li class="article-tag-list-item">

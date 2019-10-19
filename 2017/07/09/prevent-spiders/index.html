@@ -5,14 +5,14 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="//aha.me">
+  <link rel="dns-prefetch" href="//zch2017lrf.github.io">
   <title>反击爬虫，前端工程师的脑洞可以有多大？ | 神经漫游者</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="—— 同时发表于imweb.io 1. 前言对于一张网页，我们往往希望它是结构良好，内容清晰的，这样搜索引擎才能准确地认知它。而反过来，又有一些情景，我们不希望内容能被轻易获取，比方说电商网站的交易额，教育网站的题目等。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。这就是爬虫与反爬虫这一话题的由来。">
 <meta name="keywords" content="前端,安全">
 <meta property="og:type" content="article">
 <meta property="og:title" content="反击爬虫，前端工程师的脑洞可以有多大？">
-<meta property="og:url" content="//aha.me/2017/07/09/prevent-spiders/index.html">
+<meta property="og:url" content="//zch2017lrf.github.io/2017/07/09/prevent-spiders/index.html">
 <meta property="og:site_name" content="神经漫游者">
 <meta property="og:description" content="—— 同时发表于imweb.io 1. 前言对于一张网页，我们往往希望它是结构良好，内容清晰的，这样搜索引擎才能准确地认知它。而反过来，又有一些情景，我们不希望内容能被轻易获取，比方说电商网站的交易额，教育网站的题目等。因为这些内容，往往是一个产品的生命线，必须做到有效地保护。这就是爬虫与反爬虫这一话题的由来。">
 <meta property="og:locale" content="default">
@@ -325,7 +325,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABtklEQVR42u3aQVLDMAwF0N7/0nAAaPIl2SZlXlYMpfEzC4315dcrfr5az8/vvvvN4gcXF3fMnSyZLH/9rdyAi4t7npsvk9SWyTZubLi4uB/Cvd5A8ikuLu5/5V4fTfIDEy4u7nO4SfNTfXX+ni29Gi4u7oCbH1n2/bwl38XFxW1xV41GkkKWfHqzOi4u7hFur7HJ44+1DRUuLu5Jbo84H7304hVcXNyT3OpANAlQquFL8n5cXNzd3N6r86Bz0lb98i/AxcV9ALd6rJm3TzfNFS4u7nHuqhHp5LLFTROFi4t7kNsLLvPRae/6xdtChouLu5lbXSwveb3jURS14OLibubmM5Zek9MrYVHdxcXF3cbtxaPJ0aeKKBRBXFzcg9zJxYhJ8JqviIuLe547GYLOxy2FMoeLi3ucm8cc+UWr3hyknN3i4uIu4vauT1W3mm+7nLjg4uJu4OZPvoHqpat8S7i4uCe5k6g0b116rRQuLu7fcpOoIv+bakNV7tVwcXE/hNtrh6rtFi4u7jO5vQij2j7djFJwcXGPcKvj1VVHlnJogouLe4Sbl6FqgeuFI72WCRcXdxH3G8noCwnmZj0MAAAAAElFTkSuQmCC" alt="微信分享二维码">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLElEQVR42u3aW27DMAwF0ex/0+5vgSTKXFJNIXr0VeRh67gAw4ceD7yuX4u8ez2td9/ir29YMmTIOJZxLdf6MwSzvlf6+ttHI0OGjBsw1oGPb45si+ODoCxDhgwZIF0jGyLblSFDhoy9DE7tPwgZMmTIIEUsTwT5df6hFpchQ8aBDN51//7ffzLfkCFDxlGMK1yduSFJ9WpLhgwZsxmd8jL9JE83i3eRIUPGzRi1UEsCaNqGC0pWGTJkjGZ0Roxp2ZlieMtPhgwZUxnrDdUa8by5T0Jq6xdDhgwZIxgbUrHwkARPHDf8f2TIkDGC0Wn3k6yTl8F8P3G+KUOGjMMZ/RQw3S5/HLypJ0OGjNkM3uTiwwNevtYeB2q3yZAhYxyDl4skFNZIrTRRhgwZoxk8qPHAym9We3yodyhDhoxBjLRc5Ie90kBZC+UvMlwZMmQMZfAClZBqwbfV4ZchQ8ZoRrr12nV4MOVtvg8HL2TIkDGUUUsB0xvzseiGWlyGDBmDGGlbnwS+dGCZtvZQ002GDBlDGTz96h/z4iVrPLaUIUPGUAYfN5JPptsi6eOHb8mQIWMo4wpX2larFa7xNWXIkDGa0Z8MdgJxLa2sjUVlyJBxOqPW8CLN+lrY5QFXhgwZd2PwwjU9JMFf6YR+GTJkyKhll/1SNrimDBkyZOChZlrE1gaim383ZMiQcQiD3yY9qJEetkgxMmTIuAOj1g5Lj1DUtts59iFDhowRjB//F3RyxkLpaQAAAABJRU5ErkJggg==" alt="微信分享二维码">
     </div>
 </div>
 
@@ -548,11 +548,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">iwiilsay小程序</a>
+                <a href="javascript:void(0)" class="js-tag color3">iwiilsay后台前端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">iwiilsay后台前端</a>
+                <a href="javascript:void(0)" class="js-tag color2">iwiilsay小程序</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -668,6 +668,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">vue学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Thinking In Java</a>
               </li>
              
@@ -676,27 +680,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">安全</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">平时积累</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">进阶</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">启动和终止线程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">线程应用实例</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -704,7 +688,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">线程应用实例</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">微课堂</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -725,6 +717,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">轻松搞定全局异常</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">安全</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">平时积累</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">进阶</a>
               </li>
              
               <li class="article-tag-list-item">

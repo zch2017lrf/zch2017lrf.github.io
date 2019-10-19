@@ -5,14 +5,14 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="//aha.me">
+  <link rel="dns-prefetch" href="//zch2017lrf.github.io">
   <title>『Thinking in Java 读书笔记』—— 9-接口 | 神经漫游者</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Thinking in java 读书笔记  接口和内部类为我们提供一种将接口与实现分离的更加结构化的方法。  接口interface关键字使抽象的概念更买进一步，abstract关键字允许人们在类中创建一个或者多个没有任何定义的方法，但是没有提供任何相应的具体实现，这些实现是由此类创建者创建。interface这个关键字产生一个完全抽象类。它根本就没有具体的实现。 interface不仅仅是一个">
 <meta name="keywords" content="Thinking In Java,读书笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="『Thinking in Java 读书笔记』—— 9-接口">
-<meta property="og:url" content="//aha.me/1994/03/08/Thinking-in-Java-读书笔记-9-接口/index.html">
+<meta property="og:url" content="//zch2017lrf.github.io/1994/03/08/Thinking-in-Java-读书笔记-9-接口/index.html">
 <meta property="og:site_name" content="神经漫游者">
 <meta property="og:description" content="Thinking in java 读书笔记  接口和内部类为我们提供一种将接口与实现分离的更加结构化的方法。  接口interface关键字使抽象的概念更买进一步，abstract关键字允许人们在类中创建一个或者多个没有任何定义的方法，但是没有提供任何相应的具体实现，这些实现是由此类创建者创建。interface这个关键字产生一个完全抽象类。它根本就没有具体的实现。 interface不仅仅是一个">
 <meta property="og:locale" content="default">
@@ -279,7 +279,7 @@ car.wheel();
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACwUlEQVR42u3bQW7jMBAEQP//095rgKyE7hkx0KF4MmyLYjGASDcnn0/cvj/a7/ev3vn9Omn3135ONDw8PLzF0O9vdnX7ZAqSHmbjufoOHh4e3mne1W2SBeAeGQ0imMR8avDw8PDexsu318nycP/9fLrx8PDw3sxLwAl1liTg4eHhvYeXh6r5BrqNKvKl4kjWgoeHhxfz8gf0e14fOd/Dw8PDW5+q58Hrfij5lr0YLR4eHt4BXj6UvCgqKR2YLQmzceLh4eGd4LXHWnmA2xYczGKOOszFw8PDW/DaI65ZKUA+ZY+VqM5O8PDw8PBiXttFXoq6L1GdLR54eHh453jJENvTpTzkbd+ZlW3h4eHhneNtHr6zDXc+Ke3Cc5lS4+Hh4a15+c/7TVDbzvds811XRuDh4eFtz/cf+Df7NozYF3VF6x4eHh7eMd6su02g0E5u3j8eHh7e3/C+cctji1n/s5EMj8Hw8PDwRrwkFNgMfVMOOyuTLdY6PDw8vNFiMDv6yqPY9qriL3O/NcfDw8M7wGsjg2RJSJaBp4oGogUMDw8P71HefkBtLJt8cxaIXFZG4OHh4R3gJZvX9pg/jzPuAZujMjw8PLxzvKe2y7MSrnw5yaPkujs8PDy8Na+NdDfX5iUI7cYaDw8P7wRvv43elAXkyFkRAx4eHt5pXv3AXWyjk3KBWexb/zLAw8PDW/CSw6fZAVU79Nk0XU4xHh4e3jHebEOc33K2zLSlYHh4eHined+yJbFC8ukMkJcv/KcyAg8PD+8hXvvAnW2ak+i2ncRZLIKHh4f3FC+PFWYHYJuQIr+qSKnx8PDwHuK1D/T8qs2x1mfUisoIPDw8vD/ktRFAG3O0UcjlGPDw8PBew8uLBk70WcS1eHh4eMd4m/Kp+/Dinp0vM+2fAQ8PD+8cr/55Xz6B2083ocaw4eHh4aXtH1w9K/AgxKQKAAAAAElFTkSuQmCC" alt="微信分享二维码">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACqklEQVR42u3aQW6EMBAEwP3/p5NrpAjSPbYRiopTBFkzxQGbHn8+8fH147g/8/vqz/NXv/19NRln24GHh4e3UPrVcPeFzsq6L7d9fJf3wsPDwzvGS17QLSxn3Bed1HN5Hg8PD+9lvJXlb/s/eHh4eP+Dl5xZecXj4eHhvZk3W862QUMe6SbL9M1ZCx4eHl7My7tI7/n7SH8PDw8Pb7mrnkwS6/FEXnRdLR4eHt6pF2ERp86Cg7zQ5D/rOvHw8PC28vKP/La134YIbTgSRR54eHh4h3n5LfOwtY052olhQz6Nh4eHN+Lljf/7gLUdoW13tRsU8PDw8J7kzUppF9nrU8JS1w4PDw9vgTcLUpPi2vvmUUj0SYCHh4d3jPfklqxhrDCbKvDw8PCO8dom1q6kNG+V5dNJ1N/Dw8PDO8ZrX/FJO222LSC/evnFgIeHh7eVd78wzVtT7TJ95e7Ro8HDw8M7xpvdZhbRtg8ijzM+yTodDw8Pb5nXLp0TZB4itLHFLN7Fw8PDe5K3MnQeMaxEEtFUh4eHh3eAt6vb3haahMht0IyHh4d3mpf8LFn4tqR200AegtR7wfDw8PBKXl70yiaAWXA8C3wvvxjw8PDwNvHyl3X0qR+TZsvlPKTAw8PDO8drw4WW147cNt6iCvHw8PAe5M0WxMlyeWWCqcfBw8PDO8Y7EdTOHlw7kURZCx4eHt5hXjt57F1wrx94eHh453jrra9Z+LsrpPjjkeHh4eEd4K00sdqrycST/3bzdIKHh4dX8vLJYBYozCabIm64rxAPDw/vGK99Kbft/GSRfWQCw8PDw3sZL39Bt1NO+0AvR8PDw8N7Aa9dlOebtLZtUcXDw8N7hDdret0HB+1yeda++gOJh4eHd4CXD7F+s5XY4twmLTw8PLy4km87vMU6/vwrOgAAAABJRU5ErkJggg==" alt="微信分享二维码">
     </div>
 </div>
 
@@ -502,11 +502,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">iwiilsay小程序</a>
+                <a href="javascript:void(0)" class="js-tag color3">iwiilsay后台前端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">iwiilsay后台前端</a>
+                <a href="javascript:void(0)" class="js-tag color2">iwiilsay小程序</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -622,6 +622,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">vue学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Thinking In Java</a>
               </li>
              
@@ -630,27 +634,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">安全</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">平时积累</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">进阶</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">启动和终止线程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">线程应用实例</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -658,7 +642,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">线程应用实例</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">微课堂</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -679,6 +671,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">轻松搞定全局异常</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">安全</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">平时积累</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">进阶</a>
               </li>
              
               <li class="article-tag-list-item">

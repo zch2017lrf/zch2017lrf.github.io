@@ -5,23 +5,23 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="//aha.me">
+  <link rel="dns-prefetch" href="//zch2017lrf.github.io">
   <title>队列同步器 | 神经漫游者</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="队列同步器队列同步器AbstractQueuedSynchronizer（以下简称同步器），是用来构建锁或者其他同步组件的基础框架，它使用了一个int成员变量表示同步状态，通过内置的FIFO队列来完成资源获取线程的排队工作，并发包的作者（Doug Lea）期望它能够成为实现大部分同步需求的基础。">
 <meta name="keywords" content="Java中的锁,队列同步器">
 <meta property="og:type" content="article">
 <meta property="og:title" content="队列同步器">
-<meta property="og:url" content="//aha.me/2019/01/29/队列同步器/index.html">
+<meta property="og:url" content="//zch2017lrf.github.io/2019/01/29/队列同步器/index.html">
 <meta property="og:site_name" content="神经漫游者">
 <meta property="og:description" content="队列同步器队列同步器AbstractQueuedSynchronizer（以下简称同步器），是用来构建锁或者其他同步组件的基础框架，它使用了一个int成员变量表示同步状态，通过内置的FIFO队列来完成资源获取线程的排队工作，并发包的作者（Doug Lea）期望它能够成为实现大部分同步需求的基础。">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="//aha.me/assets/img/20190129114546.png">
+<meta property="og:image" content="//zch2017lrf.github.io/assets/img/20190129114546.png">
 <meta property="og:updated_time" content="2019-02-16T12:14:27.415Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="队列同步器">
 <meta name="twitter:description" content="队列同步器队列同步器AbstractQueuedSynchronizer（以下简称同步器），是用来构建锁或者其他同步组件的基础框架，它使用了一个int成员变量表示同步状态，通过内置的FIFO队列来完成资源获取线程的排队工作，并发包的作者（Doug Lea）期望它能够成为实现大部分同步需求的基础。">
-<meta name="twitter:image" content="//aha.me/assets/img/20190129114546.png">
+<meta name="twitter:image" content="//zch2017lrf.github.io/assets/img/20190129114546.png">
   
   
     <link rel="icon" href="/assets/img/bitbug_favicon.ico">
@@ -272,7 +272,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAAByklEQVR42u3aS4rDMBAFQN//0hmY7ZDkvZZle6C0MomJSlk06s9xxOv1u9598orX3/ePHQsXF3eZm2/webPk8+QA797BxcW9nvs5eCU/1G7/7vmLDRcX92HcJGzNvsXFxf2/3Flom/0duLi4T+C2hYwvKUqcFG3M1XBxcRe4bcF0x/PG+i4uLm7JfZUrT4ryYxe74+LiXsJtt0zKGcmFJk+u6n4vLi7uSdzkFpEXO9pwlhhwcXHv4s5GqdqD5cMZw7IpLi7uMrcdlkqKp20TpSiz4uLiXsJdb3zmoe2sUIiLi3sNdzZmce49q2iv4uLibubmZcr89G3sLMYscHFxL+HONmuTorxhkwdKXFzcfdx25KINfLMAh4uL+xzurHCZHKkNi1ErBRcXdxu3ns4YZSXtRafu/+Di4p7KnRUsVpqyeZkVFxf3Xm4bYvKmyHqgxMXFvYubr5XGSTt4ceT9HFxc3FO568nMrFTaJkX1YXBxcZe57ehVXu7MSx6fL0lF9MXFxT2Vm7dJ2nZL/k4UZXFxcR/GzVOXWXk0uk7h4uI+kltcR8rEJirH4OLiXshdGdmchcJhOMPFxb2Ee27BdNZ8ba9HuLi427g/TY52nUa+StUAAAAASUVORK5CYII=" alt="微信分享二维码">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACK0lEQVR42u3aQZKDMAwFUe5/aeYAE6C/5MwUcrNKJSToeaHIlo4DX+ev6+rTq3fSZx3fuGTIkPFaxnl73QeaYsjv379/uUAyZMjYgHGf+Hhw6Tv89UPMMmTIkAHKNZ6U75dGhgwZMlYxULmGqf+WcGXIkPEqBtnE8q0p4fHlW7wXlyFDxgsZ6WH9X77+Sn9DhgwZr2Kc4dXpG65Ksh+eIkOGjNGMzlEab2R2mqBBPDJkyBjKII/kqTYNmiwigsmQIWMbBi/vaqHUMOjIT4YMGaMZtRZjZ+RiwVBFJwgZMmSMYPAta/opOVxLWxQyZMjYgcE3sXybykPkzYO4EJQhQ8YgRpqJecJd1bUgSylDhozZDD6kxQtBMjaRJnd0aihDhozRjPhr+OCMk9IDuA//GDJkyBjK4KHXgqgd6/PhMxkyZOzAICHyO2sDXmnKjmdGZMiQ8XIGOYhPSTz5ksI0GEeTIUPGUEYaCi/XOkVk3M6UIUPGaEYaEPlWDZwWgjJkyNiTkZ7M8fJx1WgFqnBlyJAxmsHHv9IRsdqdrbalDBkyNmCkQfNE3GlwPhSIMmTIGMo4w4u0B9Kl4W2Jy9+UIUPGaEY/2fFRML5BLQ5byJAhYzSjP/LF25w8scZtVBkyZGzAqB2okUemAxY89cuQIUMGP9zvNxV4sn7YkcuQIUPGUh4fs0B3ypAhYwMGKfVqYM5rpWkZMmSMZvCtI3kMIdWapmmKlyFDxgjGDzdBLLopwmngAAAAAElFTkSuQmCC" alt="微信分享二维码">
     </div>
 </div>
 
@@ -495,11 +495,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">iwiilsay小程序</a>
+                <a href="javascript:void(0)" class="js-tag color3">iwiilsay后台前端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">iwiilsay后台前端</a>
+                <a href="javascript:void(0)" class="js-tag color2">iwiilsay小程序</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -615,6 +615,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">vue学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Thinking In Java</a>
               </li>
              
@@ -623,27 +627,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">安全</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">平时积累</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">进阶</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">启动和终止线程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">线程应用实例</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -651,7 +635,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">线程应用实例</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">微课堂</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -672,6 +664,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">轻松搞定全局异常</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">安全</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">平时积累</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">进阶</a>
               </li>
              
               <li class="article-tag-list-item">

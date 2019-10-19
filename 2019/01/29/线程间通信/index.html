@@ -5,24 +5,24 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="//aha.me">
+  <link rel="dns-prefetch" href="//zch2017lrf.github.io">
   <title>线程间通信 | 神经漫游者</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="线程间通信 线程开始运行，拥有自己的栈空间，就如同一个脚本一样，按照既定的代码一步一步地执行，直到终止。但是，每个运行中的线程，如果仅仅是孤立地运行，那么没有一点儿价值，或者说价值很少，如果多个线程能够相互配合完成工作，这将会带来巨大的价值。">
 <meta name="keywords" content="多线程,线程间通信">
 <meta property="og:type" content="article">
 <meta property="og:title" content="线程间通信">
-<meta property="og:url" content="//aha.me/2019/01/29/线程间通信/index.html">
+<meta property="og:url" content="//zch2017lrf.github.io/2019/01/29/线程间通信/index.html">
 <meta property="og:site_name" content="神经漫游者">
 <meta property="og:description" content="线程间通信 线程开始运行，拥有自己的栈空间，就如同一个脚本一样，按照既定的代码一步一步地执行，直到终止。但是，每个运行中的线程，如果仅仅是孤立地运行，那么没有一点儿价值，或者说价值很少，如果多个线程能够相互配合完成工作，这将会带来巨大的价值。">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="//aha.me/assets/img/20190129093642.png">
-<meta property="og:image" content="//aha.me/assets/img/20190129100347.png">
+<meta property="og:image" content="//zch2017lrf.github.io/assets/img/20190129093642.png">
+<meta property="og:image" content="//zch2017lrf.github.io/assets/img/20190129100347.png">
 <meta property="og:updated_time" content="2019-02-16T12:14:27.414Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="线程间通信">
 <meta name="twitter:description" content="线程间通信 线程开始运行，拥有自己的栈空间，就如同一个脚本一样，按照既定的代码一步一步地执行，直到终止。但是，每个运行中的线程，如果仅仅是孤立地运行，那么没有一点儿价值，或者说价值很少，如果多个线程能够相互配合完成工作，这将会带来巨大的价值。">
-<meta name="twitter:image" content="//aha.me/assets/img/20190129093642.png">
+<meta name="twitter:image" content="//zch2017lrf.github.io/assets/img/20190129093642.png">
   
   
     <link rel="icon" href="/assets/img/bitbug_favicon.ico">
@@ -299,7 +299,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAAB00lEQVR42u3aQW7DMAwEwPz/0ynQU4vCzq5oK0ExOgWK7Ux8IEiKj0e8nt/r787PdXTX32vO77pg4eLijrnP03XEnT/56A+8eBG4uLgbuefBa+3HknCWG3BxcT+TmydAyT4uLu7/4CalzuR6XFzcT+PO05S8LZKnULi4uO/itg3TOz7f2N/FxcUtuc9yJWVMsr/467i4uFu45weoaylLXsacH7sehjlcXNyN3AQxanSW3xa1Gi4u7qXc87KkDXBr4SlJp35lZLi4uFu4SfLRUtp0JyqrcHFxt3DzUJIg2pGLxYIKFxf3Zu5VI1ltQMybp4tzIri4uANu26xsBzJGqUx+Ay4u7m3cNri00HznxevDxcXdwp03NdoD1HYfFxd3JzdPa9or26eNTn5wcXEv5eYlSvsHJkEw6u/i4uLexm2PN9oyqR3qelFi4eLibuReFhGXDlmLoImLi7uROwlAbbOjLZZeVFe4uLg3cNuAkp91zoc82sNaXFzca7mT4JUfwOQN1mIwCxcX92ZuEmjmwxn5qFb9NS4u7pu4eXmz1h6NcjFcXNwP5ubDE2sv4vBpuLi4G7ltypI0PdcGvy5ri+Di4o4zh7XQs3ZUk78CXFzc7dwvi0fILx3v3dkAAAAASUVORK5CYII=" alt="微信分享二维码">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACMklEQVR42u3aQXKEMAxEUe5/6cl2FhnntwRTsfxZpQgBHouOLem68PF6O8hv19e/X8PP33DIkCFjW8ZreaxflGDIU8hzP10jQ4aMcxjr4KsB+Ifgz/p4XoYMGTLAIo+HsgwZMmR8k8Gp67+SIUOGDMIgm0kSr2TDSYp3D+7FZciQsSGjFpHf+fmR/oYMGTK2YtSK9fw+nSVm8FYyZMgYzeABt17k8SvTBkPwPjJkyDiMwbegd12Tfr6LVOBkyJAxiNEpgfEGZy1kSclPhgwZ5zDSJsH6wWlxP2hV9gtwMmTI2JBB2pNPR3BtUEOGDBknMEho8oVdLZrTTfWV3kiGDBmbM9KyVy0004Ug/wfwS2NAhgwZ4xh8LLXW1EzHL4olPxkyZBzA6DQD0lckd4s/nwwZMkYz0tIbH0uNhyTwMhQ1DGTIkDGIkW4Xa21IEqnpwGu8wpUhQ8a2DB676cuRR5I4TouAMmTImM1IC2f9UH5k0SlDhozRjLuGLdKyXTr8wcNahgwZkxid4KvFIhkjixeOMmTIOIBR24LykK0V3W5oW8qQIWMQgxe2OovFNFKDBaIMGTKGMl7hkZbeOqMVwf5bhgwZoxm1sOsPW/TDvTh2JkOGjG0ZndZjpwuRFt3+iHUZMmQcwODBR169dqYW/TJkyJDBSbXWZroNDubaZMiQIYM/AI9rENLjgStDhox/zODNAF7oTxeF6QCHDBkyzmGkjcb+yBdvl9a21jJkyBjE+AHUtyy6jY36fQAAAABJRU5ErkJggg==" alt="微信分享二维码">
     </div>
 </div>
 
@@ -522,11 +522,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">iwiilsay小程序</a>
+                <a href="javascript:void(0)" class="js-tag color3">iwiilsay后台前端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">iwiilsay后台前端</a>
+                <a href="javascript:void(0)" class="js-tag color2">iwiilsay小程序</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -642,6 +642,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">vue学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Thinking In Java</a>
               </li>
              
@@ -650,27 +654,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">安全</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">平时积累</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">进阶</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">启动和终止线程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">线程应用实例</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -678,7 +662,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">线程应用实例</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">微课堂</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -699,6 +691,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">轻松搞定全局异常</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">安全</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">平时积累</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">进阶</a>
               </li>
              
               <li class="article-tag-list-item">

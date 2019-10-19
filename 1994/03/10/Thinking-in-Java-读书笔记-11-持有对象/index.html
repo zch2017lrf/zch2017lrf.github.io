@@ -5,14 +5,14 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="//aha.me">
+  <link rel="dns-prefetch" href="//zch2017lrf.github.io">
   <title>『Thinking in Java 读书笔记』—— 11-持有对象 | 神经漫游者</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Thinking in java 读书笔记  如果一个程序只包含固定数量的且其生命期都是已知的对象，那么这是一个非常简单的程序。  通常，程序总是根据运行时才知道的某些条件去创建新对象，在此之前，不会知道所需对象的数量，甚至不知道确切的类型。为解决这个普遍的编程问题，需要在任意时刻和任意位置创建任意数量的对象。所以，就不能依靠创建命名的引用来持有每一个对象。">
 <meta name="keywords" content="Thinking In Java,读书笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="『Thinking in Java 读书笔记』—— 11-持有对象">
-<meta property="og:url" content="//aha.me/1994/03/10/Thinking-in-Java-读书笔记-11-持有对象/index.html">
+<meta property="og:url" content="//zch2017lrf.github.io/1994/03/10/Thinking-in-Java-读书笔记-11-持有对象/index.html">
 <meta property="og:site_name" content="神经漫游者">
 <meta property="og:description" content="Thinking in java 读书笔记  如果一个程序只包含固定数量的且其生命期都是已知的对象，那么这是一个非常简单的程序。  通常，程序总是根据运行时才知道的某些条件去创建新对象，在此之前，不会知道所需对象的数量，甚至不知道确切的类型。为解决这个普遍的编程问题，需要在任意时刻和任意位置创建任意数量的对象。所以，就不能依靠创建命名的引用来持有每一个对象。">
 <meta property="og:locale" content="default">
@@ -302,7 +302,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACsElEQVR42u3a0U7DMAwF0P3/Tw+J19Hu2o5hSKdPaKxtTpASc53HI76e39fV56+/fb5c93ddff/+OccuPDw8vNbQr678O1X85K7CePDw8PDWePebwdWj75+TL/3J26t34eHh4X0CL0HOC/F8svDw8PD+Iy8n5VtF8kY8PDy8T+AlYURyV5Kj5k9IyvpjWQseHh5eJ3d95Av63/682N/Dw8PDG3TVJwt3r92VL/3ROPHw8PAWeJOAoBrRbhwpiCISPDw8vAVeHp7m1PldebOtUGrj4eHhjXmn0ovJkYJ8s8kDZTw8PLzf5FX/1Z9jku2h15bDw8PD2+Plzafe8p1HG/kBrOgteHh4eAu8XlOq1/pKBl2NhpsHC/Dw8PCO8vIXVD9JXl/doqoKPDw8vDkvjxvup2De1K8GDYUzEXh4eHhHefngJqVwDzzZfqLEBQ8PD2/AmwcTk9U4KcF72xUeHh7eNq+8pLamprfZ5KMqFNZ4eHh4LV6+uFeX5uqBgPlBqx+mCQ8PD2+BVz0EUI1Wq62s6uYUTQEeHh7eUV6v2E2GXp2aahhRzqfx8PDwDvHy9tWoeR8nIskE5X8SPDw8vA1eEgHMG1HJ0p9MRBWPh4eHt8E71j2Lo4RkU8mbYeWsBQ8PD2/Mmy/rSXSbHxHIt4TokAEeHh7eAq8Hm2Skk5gjL/rx8PDw9njVB/UW+mqLK1/03xTxeHh4eAu8SWtq3h7rkSZRCB4eHt6c9yxe1XC2OnF5vFvIWvDw8PCO8vIrDybmBfS8vC4j8fDw8Iq83nGrfKC9UPjUu/Dw8PD2eL1iNym1m5Frqyq+3Bjw8PDwPoA3Ka/z8Lc3Ejw8PLzP4eWF7ySWrR5NeLPx4OHh4a3x8jDi7HI/f9foAAEeHh5ei1dtgO0x8sH18Hh4eHhj3hdefSvwSxhSNgAAAABJRU5ErkJggg==" alt="微信分享二维码">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAADJklEQVR42u3awY7iQAwFQP7/p1lpTyPtEJ7tZgWmchrBkKT6YtnPt1t83f9e15/8/Pzn9ejbf+9z/f/XT7y94sLGxsb+EPb98uqxHyGrB5QfTW7BxsbG3sruASbHdP3b5JPkUB5+jo2Njf2V7AnpVEGqHjc2NjY29qnHTJqNfOCFjY2N/c3spORcv2i1LE0Cg/86S8PGxsZ+e/akSLzb3y/Mt7GxsbHfkn0vXvkg6VTYkJDKCmxsbOxF7Mk6ThWWRwW9pZ+8KcLGxsbexD416M9LVPLS18fUizGwsbGxd7Or+GR8nzQbvYPovSc2Njb2t7HzopIfQa+xmUfLT5JtbGxs7A9n54WnN1rKx0mvi5/LoS82Njb2R7Hzhcte8lBd6DwVCT+5AzY2NvY6dhID9CKBpCj24oHegWJjY2PvZk8GQ3mRm5TM6ijqySwNGxsbewW797B8GFTFVwtVXup+eXNsbGzsFexqXFod95xaDEoOolAUsbGxsdexq5FqtXWpHs1kMahQwLCxsbEXsXtDnOqYqRcJVEtUIR7AxsbGXsSerGZOilBeqE4NvJp1GxsbG/uN2fmwZj426jUt1QapfDdsbGzsFeycmjcb+W97Q6K8iD48JmxsbOyl7PnIqTr0yRuMCTjaJ8LGxsb+QHa1tFSXbKrNSS9gLi8SYWNjYy9lV4fyvdaiN5ZKQuV8FIWNjY29iZ0XgGp7kBezU4s4eaiMjY2NvYldXa+pNi2TV88Dg/ITsbGxsRex54sy82F9XpAmi0GFB2NjY2N/FHsSrPYGT0nhOVsgf/kbGxsbexG7WpDOjod6I6HkblEbg42Njb2CnQe01asaJycNzGSd6Je6jY2Njb2IXb11dQyUf1tYoBwMv7CxsbH3sXtl6dRaZB4enCps2NjY2JvYvXB3EgD3ymQe7vZCZWxsbOxPZ1dH8PkIKb/DvIhWYwNsbGzsfex5G5D8dh4DHyu62NjY2F/Jrg6SetReVJwfHzY2Njb22SC2twBUDZWPFTBsbGzsN2b3btSLBHql6GyQgI2Njb2JXR3Q5K1FdXFnfs885MDGxsZewf4DgR9FKIM/+9MAAAAASUVORK5CYII=" alt="微信分享二维码">
     </div>
 </div>
 
@@ -525,11 +525,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">iwiilsay小程序</a>
+                <a href="javascript:void(0)" class="js-tag color3">iwiilsay后台前端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">iwiilsay后台前端</a>
+                <a href="javascript:void(0)" class="js-tag color2">iwiilsay小程序</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -645,6 +645,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">vue学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Thinking In Java</a>
               </li>
              
@@ -653,27 +657,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">安全</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">平时积累</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">进阶</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">启动和终止线程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">线程应用实例</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -681,7 +665,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">线程应用实例</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">微课堂</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -702,6 +694,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">轻松搞定全局异常</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">安全</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">平时积累</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">进阶</a>
               </li>
              
               <li class="article-tag-list-item">

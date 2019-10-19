@@ -5,14 +5,14 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="//aha.me">
+  <link rel="dns-prefetch" href="//zch2017lrf.github.io">
   <title>『数据结构与算法』—— 复杂度 | 神经漫游者</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="重要性复杂度分析是整个算法学习的精髓，只要掌握了它，数据结构和算法的内容基本上就掌握了一半。  测试结果非常依赖测试环境  测试结果受数据规模的影响很大   我们需要一个不用具体的测试数据来测试，就可以粗略地估计算法的执行效率的方法。">
 <meta name="keywords" content="数据结构与算法,平时积累,进阶">
 <meta property="og:type" content="article">
 <meta property="og:title" content="『数据结构与算法』—— 复杂度">
-<meta property="og:url" content="//aha.me/2018/09/01/数据结构与算法-复杂度/index.html">
+<meta property="og:url" content="//zch2017lrf.github.io/2018/09/01/数据结构与算法-复杂度/index.html">
 <meta property="og:site_name" content="神经漫游者">
 <meta property="og:description" content="重要性复杂度分析是整个算法学习的精髓，只要掌握了它，数据结构和算法的内容基本上就掌握了一半。  测试结果非常依赖测试环境  测试结果受数据规模的影响很大   我们需要一个不用具体的测试数据来测试，就可以粗略地估计算法的执行效率的方法。">
 <meta property="og:locale" content="default">
@@ -304,7 +304,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACL0lEQVR42u3aQW7DMAxE0dz/0i7QXVHI/kMmAUR9rYImtfUcYCKRer3wuH7H6i//3+XX6VwtHjJkyNiWcd2O+8+s3l1NbvU4yH+t7iJDhoxzGDwESfg+3PIWQMJXhgwZMmpxWQOQwJUhQ4aMlMEXfylGhgwZMu4ZPARrJbm0YvbBvbgMGTI2ZKQF/W++/mB/Q4YMGZswrtLotC35si+YjwwZMkYz+Ga1Uybj1281DGTIkDGU0Snc80IYOWBRO4L253dDhgwZoxnpYQsyOV5660ezDBkyZjOKAde4fa0VipoNMmTIGM3gsZhuLwmGx3dQ8pMhQ8Y4Ri3g+hvgWig/fAMyZMgYzeCTS7e16ZaVn6mQIUPGOQxevk+LaDxYa8W+h+9EhgwZgxiklF/bjvYBvMwnQ4aMqQw+rf4teXG/da5NhgwZ4xjpR9PY5VGeLivR74YMGTIGMToNS14OQ4ckwjhGF5IhQ8bmDD7RdDGXNgNajU8ZMmQcxuCB+97DYag9WWsJyJAhY3NG+qF3Ff1rBzVkyJBxJuM+QHmhn7cBOm3RJVWGDBmjGelUeLy+9wGloSxDhoxJjCscPP7SK6Rb5YeloQwZMgYx+EgPUtQan+nBshgjQ4aMbRmdJmJ6y1pYo8CVIUPGAYy0DcAxnY1r8DhkyJAho9Ta7ER2vIaVIUOGjFJ5Kz3ylc5KhgwZpzFqzYB+Zf5+QRnEsQwZMkYzOvHHp5geCOMbYxkyZIxm/ABNp2+F+roVFQAAAABJRU5ErkJggg==" alt="微信分享二维码">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACsUlEQVR42u3aO24DMQwFQN//0gmQKkHg9XuUtHYxWwXOfjQqRILk4xFfXz/X/79//3J9PXtP/sv/72678PDw8EZLz5d1/YZ8U5I35Oynb8DDw8M7xkuCwfUR3x7u+Xbk242Hh4f3abwk4U5+b9+f34+Hh4f3aby2uLBeJcDDw8P7ZF5SjGiT4OTZ9RLwtloLHh4eXnfqDhtg7/r7pv4eHh4eXpnUXh+4bfng+vfZGMGL1eLh4eEd4CWNqLY80d6Zt7hmLTE8PDy8E7xZKeF6cXl+u6uoUdSq8fDw8BZ4K2Ops5bVespeNOHw8PDwDvDWR69mAaPltcULPDw8vHO8PM1tx56S/yZbM9vWOovHw8PDK/vsuw7oOhbNCrJlsw0PDw9vLy8vp14vNx8RmLXchuEKDw8P7wBvloW2ra+8ELy3MYaHh4d3jpePis6WOMz0N4UcPDw8vL28tunVDqfOWmWzbRruDR4eHt6IlwSGXU+1iXibduPh4eGd5iVlhZWRqZWR03ykIApCeHh4eFt57fBo8pn1sLFtQ/Hw8PC28pKbZod+PmqQF4vrQgkeHh7e7bwVZL7cNgAUIw54eHh4N/KStDgPKu2du0IFHh4e3j28fMhgViDY1QaL3oCHh4d3jDe78rGtfJvacIWHh4f3Ll4eKtpSbFv2bUskL9aGh4eHd4DXjkCtjEbl5Yn82WjL8PDw8Lby2nJActwn6W9enG3LJX+ewsPDwzvMmxUg2oN7pZzRbhAeHh7eCV5+tUd22zA7l9Dj4eHhneDNGl0n7kxCSJJ84+Hh4d3Da4NBni63d7Yp8oun8PDw8N7Kmw1LzQYL1jcXDw8P79N4UQsq/sqsPZYk4nh4eHjnePlnVooObVk236xhlw8PDw9vxFtpgF2/Li/UzhLrbRceHh5eyvsG7ugNAanKEKoAAAAASUVORK5CYII=" alt="微信分享二维码">
     </div>
 </div>
 
@@ -527,11 +527,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">iwiilsay小程序</a>
+                <a href="javascript:void(0)" class="js-tag color3">iwiilsay后台前端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">iwiilsay后台前端</a>
+                <a href="javascript:void(0)" class="js-tag color2">iwiilsay小程序</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -647,6 +647,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">vue学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Thinking In Java</a>
               </li>
              
@@ -655,27 +659,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">安全</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">平时积累</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">进阶</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">启动和终止线程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">线程应用实例</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -683,7 +667,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">线程应用实例</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">微课堂</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -704,6 +696,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">轻松搞定全局异常</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">安全</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">平时积累</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">进阶</a>
               </li>
              
               <li class="article-tag-list-item">

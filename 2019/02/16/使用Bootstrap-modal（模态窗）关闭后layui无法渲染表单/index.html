@@ -5,14 +5,14 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="//aha.me">
+  <link rel="dns-prefetch" href="//zch2017lrf.github.io">
   <title>使用Bootstrap modal（模态窗）关闭后layui无法渲染表单 | 神经漫游者</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="1234567$(function () &amp;#123;       $(&quot;#editModal&quot;).on(&quot;shown.bs.modal&quot;,function(e)&amp;#123;           window.setTimeout(function () &amp;#123;               form.render(); //重新渲染表单           &amp;#125;,500)">
 <meta name="keywords" content="错误解决">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用Bootstrap modal（模态窗）关闭后layui无法渲染表单">
-<meta property="og:url" content="//aha.me/2019/02/16/使用Bootstrap-modal（模态窗）关闭后layui无法渲染表单/index.html">
+<meta property="og:url" content="//zch2017lrf.github.io/2019/02/16/使用Bootstrap-modal（模态窗）关闭后layui无法渲染表单/index.html">
 <meta property="og:site_name" content="神经漫游者">
 <meta property="og:description" content="1234567$(function () &amp;#123;       $(&quot;#editModal&quot;).on(&quot;shown.bs.modal&quot;,function(e)&amp;#123;           window.setTimeout(function () &amp;#123;               form.render(); //重新渲染表单           &amp;#125;,500)">
 <meta property="og:locale" content="default">
@@ -258,7 +258,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAADJklEQVR42u3aQY5iMQwEUO5/aWY70giosmHEDy8r1HSHvM/C7XJut3jd/1rJu/d/VrLbox2ev/voVG9Y2NjY2Bdh35+uHPb8iI8+t30Q+T4vHg02Njb2cexku1mpS8pY/ln7R4yNjY2N/a4WpS1CydmwsbGxsfdbt43NPjbCxsbGxs4P2o4EEtJ7xw8fydKwsbGxv56dR0Xf//oj821sbGzsL2bfy9XG/XnxmBXLoQIbGxv7IHZeABJqDkhioxZZnx8bGxv7CPYsWE8CoM14OLnWM/uSVvMEbGxs7Iuw8/HA7Lj5kLhtXYoih42NjX0c+73j2H3w1F4Jqr8AbGxs7B9gt4dOykwbJO2jqBehEjY2NvZB7Fnekh8oD/rzwe2qgcHGxsb+AXZewDbj4bYoJk1LFH5hY2NjH8duC0k+AG5Hs5vBQxF7YWNjYx/KzgtPUjbanyRjifx60ItzYmNjY/8Au/2PvW0VEsasKEaREzY2NvbR7BlyVmBm14A2ARY2Njb2eexZ8cgL3i1em8+qr+xgY2NjH8rOC8Ym4tkPa5Pxcz2owMbGxr44exYqbYa1+RB3PzaOihY2Njb2xdmfC+I3oVI7GG5DMWxsbOyT2Enb0EZOScPQNhLJA1p1XdjY2NhHsGctyuwQeePRnjD6TWxsbOwj2G3Jaa/X5MXvXeOKqPhhY2NjH8Rur9psmo1ZGDTbPxJhY2NjH83Oo/w2ctqEQfsCho2NjX0e+x6szag1Gdzm7U0bVD3cDRsbG/sgdv4x/+ehbAa9mzEDNjY29tXZyR/MSlHUCS1CrvqaTntobGxs7Muyi5B9NJTN46E2Qiou9GBjY2Mfx67/7AOj4vde94mu7GBjY2NfnH0vVx4h5Tsk4VF7TefFY8LGxsY+iJ2vWYlqm4ocX889ZgsbGxv7Iuyk5ORbJ8fNC1USJOXjjaJ6Y2NjY1+Q3RaY2ev2wbUjimKQgI2Njf3D7H0bk1/ryQfGeZHDxsbGxk7CpqSAtS3KfvyMjY2NfTa7jXvqghG0JfsH8ZEsDRsbG/vr2W1Ak7ybX6PZx1UJZnhxBxsbG/vb2X8Aj8ybp7gxr0cAAAAASUVORK5CYII=" alt="微信分享二维码">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAEOCAAAAABd2qZ5AAAD50lEQVR42u3dwW7kRgwE0Pn/n95cEySWq0jKcIA3J2M9I3U/LVBDNgF/PvHrz+Pr3+/56lPJlf/+78mqnu/+eeOFAwcOHDhOt/q8sXyrz+9/fmd7/WSPOHDgwIHjlqONsfdAnyMz/zkJXRw4cODA8Xs48qUk92pZn+P5eYU4cODAgeM3c/xQb7JkxYEDBw4cv4Ejj7c82NpYzZuMefvvxV4pDhw4cOD4foV1aP1ffn4x53HgwIEDRxxgeSzNAmwftMf7woEDBw4cRxGRLyhv1bXlXHvNzVcBHDhw4MDxMxyboHqOuqSl+F60tw8SBw4cOHBsOJJDmoRs07DL774ZkouwcODAgQPHmuMqwJIF7cM4Kcna4YbhQRQOHDhw4PhiX3mA5a299jnMWpPtV4T6FA4HDhw4cIw4NvNjtwc/7dU2hd/BzCAOHDhw4Ig33AbtZigtj7oZdNtGxIEDBw4ce452oUlMbsrC5MrJ46n/R+DAgQMHjtc42qOavEyaFV17ggIdBw4cOHDc5Fe0iLyRNyuoNoGdA0VFIw4cOHDgOOJIipx2xCFhag+Hkgdz8O0DBw4cOHCMOPYNwatGYR63sw1H78GBAwcOHK9x7Mfp2oCMjoUWDcTi2AkHDhw4cBxxbMqhPNiuyq28RVh8OcCBAwcOHEccSWgly80PgdqATMrIg3vhwIEDB45TjvycKvnUZughx90UltHkIA4cOHDgmJwBHfz9tATuoHlXtiOHgxE4cODAgWPBMZuta0cc3ii6kpivB/5w4MCBA8cLHG0Blo9H5BvIH0w+MBE9Hhw4cODAsebYjwIkQwbP8XkV51cHYDhw4MCB45ZjtrF2A/kx1ab8a6MXBw4cOHDcciQNuFmR1rbt2miflWrfrAcHDhw4cCw48kGEq6KuvWZenrUxjAMHDhw43uOYnekXtylbdXnJ1xZvw4E5HDhw4MARc+wXccWURHUew3kJigMHDhw4rjjaouhq6G3WLmyh8wbiZ1Yj4sCBAweOLzhmhzR50OZDclfE+deCf/wWBw4cOHAccbQHOW1xNRuD27QXk9X+xx5x4MCBA8eaow2nJGL3R0HJQdGMbzjfgQMHDhw4Yo4/5et5cbNo3IzfJY3C5J2fzY1x4MCBA8ci3toxhTd+OxtxaFuZOHDgwIFjw5HHWBKfbSuwfT55m282BoEDBw4cOK442nKrPV66rZX21//yUzhw4MCB4wc5ZgdCs6benml1CocDBw4cOH6EIxlH2yw3H33boH/DjQMHDhw4jjj2l9sMQOT07aNqW5Y4cODAgWPPsWqlBZduRx+SzbcjF5tDNRw4cODAEXP8BaW+P3EZALUPAAAAAElFTkSuQmCC" alt="微信分享二维码">
     </div>
 </div>
 
@@ -481,11 +481,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">iwiilsay小程序</a>
+                <a href="javascript:void(0)" class="js-tag color3">iwiilsay后台前端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">iwiilsay后台前端</a>
+                <a href="javascript:void(0)" class="js-tag color2">iwiilsay小程序</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -601,6 +601,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">vue学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Thinking In Java</a>
               </li>
              
@@ -609,27 +613,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">安全</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">平时积累</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">进阶</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">启动和终止线程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">线程应用实例</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -637,7 +621,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">线程应用实例</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">微课堂</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -658,6 +650,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">轻松搞定全局异常</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">安全</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">平时积累</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">进阶</a>
               </li>
              
               <li class="article-tag-list-item">

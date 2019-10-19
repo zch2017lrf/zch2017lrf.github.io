@@ -5,14 +5,14 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="//aha.me">
+  <link rel="dns-prefetch" href="//zch2017lrf.github.io">
   <title>线程优先级 | 神经漫游者</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="线程优先级现代操作系统基本采用时分的形式调度运行的线程，操作系统会分出一个个时间片，线程会分配到若干时间片，当线程的时间片用完了就会发生线程调度，并等待着下次分配。线程分配到的时间片多少也就决定了线程使用处理器资源的多少，而线程优先级就是决定线程需要多或者少分配一些处理器资源的线程属性。">
 <meta name="keywords" content="多线程,多线程基础">
 <meta property="og:type" content="article">
 <meta property="og:title" content="线程优先级">
-<meta property="og:url" content="//aha.me/2019/01/28/线程优先级/index.html">
+<meta property="og:url" content="//zch2017lrf.github.io/2019/01/28/线程优先级/index.html">
 <meta property="og:site_name" content="神经漫游者">
 <meta property="og:description" content="线程优先级现代操作系统基本采用时分的形式调度运行的线程，操作系统会分出一个个时间片，线程会分配到若干时间片，当线程的时间片用完了就会发生线程调度，并等待着下次分配。线程分配到的时间片多少也就决定了线程使用处理器资源的多少，而线程优先级就是决定线程需要多或者少分配一些处理器资源的线程属性。">
 <meta property="og:locale" content="default">
@@ -264,7 +264,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABx0lEQVR42u3awY7DIAxF0fz/T9NtpBbznh0cVF1WIyaQky4s23Bd8hi3cZ+ZPfm9ajZ/7Rhw4cItc0c4Yq6yNv4Y3QAXLtx+rrv1bK0yo+wznYcLF+6R3Dj10XeGCxfuf3MVhP4kXLhwz+EqxU+8dSU92lKrwYULt8DVu5T7/t7S34ULF26KO8yhfIx7uGK8HS5cuC1cN2WpJ0O5VAkuXLid3FmQqpQ6bmhTfppFdxYuXLgbuO4RSLypPh//WNOMDC5cuC3cXCBzUxz3+tePfeDChdvIXSQWYRLz7PxiFVy4cBu5ldaGntZUGqzJ2AkXLtwyt9RzFZ5RfpTFKrhw4R7D3XHUmguIcOHC7eHmihAlPNUvZCx2gwsXbjs3F27cgkpvyxp5Fly4cB/iKkmMe9zifrx9jwwuXLgtXP2aVK4N6l4FW7RN4cKF28hVSpfka+SxWAUXLtzN3GEOPd2pF1Fw4cJ9i+sGl8oFC7d8ygVWuHDhPsV9KnhVDl2MMAcXLtxGrlLY6M/kDl/tWg0uXLiHcZXjE7c9KpVDcOHCPZirv1j5r/F2uHDhNnLdl+lNk1yfBi5cuO9yc4ep9WaHG/7gwoXbwv0A5LVSwSb8HLYAAAAASUVORK5CYII=" alt="微信分享二维码">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACOElEQVR42u3aS3LCQAxFUfa/aWdKVXD7PskhZfX1iApg92Gg6Pd64et4u8i768+/f4b//YZLhgwZj2Ucyys91u9v8Wetn3v2GRkyZOzDWAe+swOlAffsnuT1xZllyJAhIwyjHC9DhgwZ/xVwSb1JEkoZMmTISItYkvahgjP8+W6uxWXIkPFARi1Efuf1n8w3ZMiQ8SjGEV7p3fixeJD98BQZMmSMZqSPWZeyPHFMv4vOI0OGjC0ZfBWMF7S8lI0beTJkyBjNSBv0neSv33q7uJsMGTLGMXgCxw+dLqF2wnGQn8qQIeOxDNLqSg+aUjuLGjJkyNiB0R8ukhWNTjqISlkZMmSMZtTa8UFlHIZjPlT4cB8ZMmQMZZCkkA8vSaJZW40N2m0yZMgYyoi/Bti10UIxKMuQIWM0oxYua8fqF7HBwECGDBnjGOlB7ypla8NU9N9DhgwZQxlp8ystU2vt/uBdGTJkDGXwNQuC4XkaL18RXoYMGaMZvBzl7TMeoNOy9qIZJ0OGjG0YaVrWad/zYcMNGa4MGTLGMWpjyPQO5N3i2FKGDBlDGSTAdcrXWkgNEkQZMmQMZRzhtT4QCZ188BDcU4YMGaMZ/WBXW7aoJYvp2pkMGTImMfjCBF/CSBt26QraRYYrQ4aMoYxOsdoPzWkJfbE5IkOGjO0ZneUJnlDGg1UZMmTIqC2VhoPSdLHstoArQ4aMhzBIEZuuatWaa/xnlSFDxj6MzoIFP3RnXMpLaxkyZIxj/ADOFp07mLGniwAAAABJRU5ErkJggg==" alt="微信分享二维码">
     </div>
 </div>
 
@@ -487,11 +487,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">iwiilsay小程序</a>
+                <a href="javascript:void(0)" class="js-tag color3">iwiilsay后台前端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">iwiilsay后台前端</a>
+                <a href="javascript:void(0)" class="js-tag color2">iwiilsay小程序</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -607,6 +607,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">vue学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Thinking In Java</a>
               </li>
              
@@ -615,27 +619,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">安全</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">平时积累</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">进阶</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">启动和终止线程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">线程应用实例</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -643,7 +627,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">线程应用实例</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">微课堂</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -664,6 +656,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">轻松搞定全局异常</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">安全</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">平时积累</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">进阶</a>
               </li>
              
               <li class="article-tag-list-item">

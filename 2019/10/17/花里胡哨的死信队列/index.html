@@ -5,14 +5,14 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="//aha.me">
+  <link rel="dns-prefetch" href="//zch2017lrf.github.io">
   <title>花里胡哨的死信队列 | 神经漫游者</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="死信队列(DLX)Dead-Letter-Exchange 利用DLX, 当消息在一个队列中变成死信(dead message)之后, 它能被重新publish到另一个Exchange, 这个Exchange就是 DLXDLX也是一个正常的Exchange, 和一般的Exchange没有区别, 它能在任何队列上被指定, 实际上就是设置某个队列的属性为死信队列">
 <meta name="keywords" content="项目总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="花里胡哨的死信队列">
-<meta property="og:url" content="//aha.me/2019/10/17/花里胡哨的死信队列/index.html">
+<meta property="og:url" content="//zch2017lrf.github.io/2019/10/17/花里胡哨的死信队列/index.html">
 <meta property="og:site_name" content="神经漫游者">
 <meta property="og:description" content="死信队列(DLX)Dead-Letter-Exchange 利用DLX, 当消息在一个队列中变成死信(dead message)之后, 它能被重新publish到另一个Exchange, 这个Exchange就是 DLXDLX也是一个正常的Exchange, 和一般的Exchange没有区别, 它能在任何队列上被指定, 实际上就是设置某个队列的属性为死信队列">
 <meta property="og:locale" content="default">
@@ -271,7 +271,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLUlEQVR42u3aQW7DMAwFUd//0u62RWBnPikXMDVaFU0q87kAIZI6DrzOi3X16e/fk90+Pz2eWDJkyHgt47xd5ME8uNqLuP9bGTJk7MO4Cov8nIa+KmXLkCFDBmH0Ezf5vgwZMmSkjM+A0uKTF7EyZMiQkSZKtN0tMt3zkVpchgwZL2TwFPn/Pz8y35AhQ8arGGe47hMiSZqrIvmzpwwZMkYzeIKrjTA5L024MmTI2I2RlqNpsVobLfDdZMiQsRuj37LngwTy3LjQlSFDxjjGqtY/f2erroUdtVwuQ4aM1zLS4SJPpp2nkMPiZddQhgwZ4xi1VMgPdvzKBT+YBrczZMiQMZSxIAnigpZcAvtytJUhQ8ZoRnrRgZPIzp0i+XISK0OGjHGMWmojwaX3TtPRwpf/gwwZMgYx+MP442vFbXq1IsbIkCHjtQxeQJKLF7WRJCcFly1kyJAxjtEZTHJGrQ2HhqkyZMgYzSCprZYWOYC03tDLlSFDxgaMtNFfa6vVWnuktJYhQ8ZuDFK48qB5QPwQiSpyGTJkbMCoXeGqXRrjB8qgdyhDhoyhDJJYyUgyDfooLRkyZOzAOMNFBp/8SJfuGYwwZciQMYhRa5mtSsr8GkcrdBkyZIxgpEm2eAINnxWPKGTIkLEBIx0ldgafnbHo5TdlyJAhIwyrfyaNB6gyZMiQ0Q661noLGnwyZMjYgMELyz6+g5EhQ8aejFUHNd7i56+vM5yQIUPGCMYP2G4ZBiykIgoAAAAASUVORK5CYII=" alt="微信分享二维码">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACuklEQVR42u3aS27CQBAFQO5/abJNhGxefyYhUnmFwDguI01PXvfjER/P1vH9u1evk/Nfz1k+8PDw8FZvffec1zOTdyZ/Cw8PD+8c72pFvTonWayTZT0vA/f3c/k+Hh4e3gfwqrd7j6/ujfHw8PD+I6+6rCcb4vuigoeHh/eZvDyKzbfUSYHJS8jxrAUPDw8v5k22s3/1+kh/Dw8PD+/AQEB1i1xtgy3fLR4eHt6phTBacHNkb1jqHl+9Dh4eHt5pXnUJrm5wC4t4MQ6+fzR4eHh453hb7ah8k51gquMLl48bDw8Pb5WXYKqb3eqD6BWkKOrFw8PDO8DL//x843uuYJR7d3h4eHgDXtKUmo9DVQcRJo23N3UPDw8Pb8zLm0bVMLcawlbbXYVCgoeHh7fKm7T/80/n7zeHGPDw8PAO83pRad706j3ESXHCw8PDO8FLGkj5p5Or7ca4l4kLHh4e3piXRwBJw6ka3ebXrF4/mnHAw8PDW+JFY0xxq6wXyybFICoYeHh4eAd4eVSaRANbYwf5Br3Q38PDw8Nb5W2FsL1gt/fd8jYdDw8Pb4mXN/KfwTHJAarjWdHPg4eHh3eAl4S5+UWTxT1/QNVQo1Dx8PDw8Aa8rXZXrzBUQ4p8u/+j7uHh4eGt8rbGoSaB7zySKMS4eHh4eEu8+Y32WmJJ4z8vP80KhoeHhzfmzVtcObsX+yYb9DdtMDw8PLwDvHxQtRr+JtvlyXH5vwIeHh7eEq/XoOrFE9UFPQ9zL38qPDw8vAO86oLbGyCYNLHyIKPawMPDw8Ob8LaKQe9BzB9Qc6YMDw8Pb8xLNriTG+0VhrWsBQ8PD+8DePPmWXUN7z1uPDw8vE/j5Ut5HjfMhxXw8PDwfofXG5yaxAdJIaluo99MRuDh4eEt8Xr/5OexQl5OegMHCwceHh5eenwB/3CIvRreYYoAAAAASUVORK5CYII=" alt="微信分享二维码">
     </div>
 </div>
 
@@ -284,6 +284,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2019/10/19/条件判断语句/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          常用语句
+        
+      </div>
+    </a>
   
   
     <a href="/2019/10/17/spring与RabbitMq的一些花里胡哨纷争/" id="article-nav-older" class="article-nav-link-wrap">
@@ -485,11 +494,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">iwiilsay小程序</a>
+                <a href="javascript:void(0)" class="js-tag color3">iwiilsay后台前端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">iwiilsay后台前端</a>
+                <a href="javascript:void(0)" class="js-tag color2">iwiilsay小程序</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -605,6 +614,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">vue学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Thinking In Java</a>
               </li>
              
@@ -613,27 +626,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">安全</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">平时积累</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">进阶</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">启动和终止线程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">线程应用实例</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -641,7 +634,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">线程应用实例</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">微课堂</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -662,6 +663,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">轻松搞定全局异常</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">安全</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">平时积累</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">进阶</a>
               </li>
              
               <li class="article-tag-list-item">

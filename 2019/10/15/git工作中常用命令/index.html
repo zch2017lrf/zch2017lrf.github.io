@@ -5,18 +5,18 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="//aha.me">
+  <link rel="dns-prefetch" href="//zch2017lrf.github.io">
   <title>git工作中常用命令 | 神经漫游者</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Git常用命令 从远端库更新内容到本地  1git pull 把文件添加到缓冲区 12git add &amp;lt;filename&amp;gt; // 添加某文件git add . // 添加所有文件">
 <meta name="keywords" content="git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git工作中常用命令">
-<meta property="og:url" content="//aha.me/2019/10/15/git工作中常用命令/index.html">
+<meta property="og:url" content="//zch2017lrf.github.io/2019/10/15/git工作中常用命令/index.html">
 <meta property="og:site_name" content="神经漫游者">
 <meta property="og:description" content="Git常用命令 从远端库更新内容到本地  1git pull 把文件添加到缓冲区 12git add &amp;lt;filename&amp;gt; // 添加某文件git add . // 添加所有文件">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-15T00:38:03.532Z">
+<meta property="og:updated_time" content="2019-10-19T01:13:39.977Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git工作中常用命令">
 <meta name="twitter:description" content="Git常用命令 从远端库更新内容到本地  1git pull 把文件添加到缓冲区 12git add &amp;lt;filename&amp;gt; // 添加某文件git add . // 添加所有文件">
@@ -216,6 +216,12 @@
 <figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">服务器</span><br><span class="line"><span class="bullet">- </span>git pull</span><br><span class="line"><span class="bullet">- </span>npm run build</span><br></pre></td></tr></table></figure>
 <h3 id="热修复流程"><a href="#热修复流程" class="headerlink" title="热修复流程"></a>热修复流程</h3><figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">-<span class="ruby"> git checkout master</span></span><br><span class="line"><span class="ruby">- git checkout -b hotfix/&lt;name&gt;</span></span><br><span class="line"><span class="ruby">- git push origin hotfix/&lt;name&gt;<span class="symbol">:hotfix/&lt;name&gt;</span> /<span class="regexp">/ 将分支推送到远程仓库</span></span></span><br><span class="line"><span class="ruby">- hotfix/&lt;name&gt; <span class="regexp">//</span> 本地提交、推送</span></span><br><span class="line"><span class="ruby">- git checkout master</span></span><br><span class="line"><span class="ruby">- git merge hotfix/&lt;name&gt;</span></span><br><span class="line"><span class="ruby">- git push</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">服务器</span><br><span class="line"><span class="bullet">- </span>git pull</span><br><span class="line"><span class="bullet">- </span>npm run build</span><br></pre></td></tr></table></figure>
+<h2 id="后端项目上线流程规范"><a href="#后端项目上线流程规范" class="headerlink" title="后端项目上线流程规范"></a>后端项目上线流程规范</h2><p>确定下版本和标签命名规则</p>
+<h3 id="一、版本号命名规则"><a href="#一、版本号命名规则" class="headerlink" title="一、版本号命名规则"></a>一、版本号命名规则</h3><p>由三段数字组成，vx.xx.xx；<br>1、第一段1位数字，从1开始递增，表示重大版本；<br>2、第二段2位数字，从01开始递增，表示大的需求；<br>3、第三段2位数字，从01开始递增，表示基于需求版本的修复或者补丁</p>
+<h3 id="二、发布包约定"><a href="#二、发布包约定" class="headerlink" title="二、发布包约定"></a>二、发布包约定</h3><p>1、普通版本发布包<br>包名：v2.22<br>打包类型：全量包</p>
+<p>2、修复版本发布包<br>包名：v2.22.01-fix<br>打包类型：增量包</p>
+<p>3、补丁版本发布包<br>包名：v2.22.01-patch<br>打包类型：原则上打增量包，具体视情况而定</p>
+<h3 id="三、其它"><a href="#三、其它" class="headerlink" title="三、其它"></a>三、其它</h3><p>git发布分支以版本名称命名<br>git标签名称命名，tag_+版本名称<br>修复 紧急 拉master<br>其他 拉dev<br>特殊 拉测试版本里的分支</p>
 
       
 
@@ -296,7 +302,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACOElEQVR42u3awWrEMAxF0fz/T6fQ1RTG5j7ZgUa+WYVpcHy8UKVI14Wv+/f6vP/8ZfT76BmyzvXEJUOGjNcy7uk1f2b01/lBrL/3y1tkyJBxAKMWZEdPkk2QgMsPRYYMGTL4RkmQrb1XhgwZMtLlSAjm5Sg5MhkyZMggxeSu4Mvxj9TiMmTIeCFjV0B84v7x/oYMGTL+PeMOL96qJG+sNQy+7EqGDBmtGfOULi1QVxoJKwchQ4aMMxlpu3G+CV588mRRhgwZ5zDSES7ySwpOA/cwKZQhQ0ZrRjowwdM7XqCm/wD+rC9DhozWjCcK1DQdJGlivLIMGTLaMdLhhjQF5CvUwrEMGTJ6MzYMWpWqSA4g68iQIaM3g2wiLTJrjUlOLX50kyFDxssZ64MXtdDMGwPxOJoMGTIaMXhhyQcj9gJQqSxDhozWDB46a/F7ZevBsIUMGTJaM9JPWkGOWWqL8mGLYWNAhgwZ7RgkCNZCMB+8CHqtaVIoQ4aMdoyV0Ye0nZkmo+gZGTJkNGXUhi14iOShvLaCDBkyTmPUStBaWsmLXvQWGTJktGasfCBbKUFRUbqQMsqQIaMTo/gJPtxQbXQjSBNlyJDRmpGma7WxDNL+JPcbUk8ZMmS8lkGCbDpmQUpf/gw6UBkyZBzAqIXOdCu7ilg0MyJDhowjGSuDFCSILx2fDBkyZOASNC1l0+ArQ4aMkxlpEbuSMqZJJEooZciQ0ZpRG3FIm45pwjc/ymKXQ4YMGe9j/AC14I50V1Bc5AAAAABJRU5ErkJggg==" alt="微信分享二维码">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACvUlEQVR42u3aQXLjMAwEwP3/p7NVe93IngHIxIfWyWUrEpsHAgHw5098ff27nr75//Pr+9tnPn1z7MLDw8MbLf3pygEbavLr05Of1oyHh4d3m5c8Ll/06/v3b0yegIeHh/cJvPb1T1uQLzQJVHh4eHifzEtS6mRxOTj5jIeHh/dbvOQgnh30s8M9D0XHai14eHh4Ma9tgH3C54v9PTw8PLxFVz0PFXmC2ybZeTD45q/w8PDwLvDy4sLF15cpcp6a4+Hh4d3jJYd4ftDvW2V5EFrVqvHw8PBGvLbk2ray9mWOWbOtzujx8PDwRrw8hd00t5Int024KNbh4eHhHeXNSqtPy2oHql4/J0noH5+Gh4eHd403KwG0hdfhEuPm2WN/Dw8PD+8arz3Q24LCLNi041Z4eHh4P8nbUGf37De0aIDh4eHhHeLlh+9mxGp20OebFZWP8fDw8I7y2kGB9sUzdt4YexMw8PDw8I7y2kO2vbMNKu3mvgk5eHh4eBd47ZDT7NBvRw1moQIPDw/vZ3h58TQvVbxOedshrVkp+ZuUGg8PD+8Qr751tKw2DLRJ85tv8PDw8I7y2gb/bMRqU/Jo346Hh4d3m7cJDHnS3D5/9pZo3AoPDw/vEG/TXsoP/VmwmQ0o4OHh4d3m5Y38fARqVs5oxxSioIWHh4d3gdcGibZNtRk+OJXc4+Hh4Z3ltWXTtkmWL3qPfJNS4+Hh4V3j5UMA+ThUO6SVR7M34QEPDw/vKO+rvGYHfb5BeaEh2mI8PDy8C7xZYSI/xJOmVxuEWjweHh7eDV4eDNomVl7s2JR0h6MDeHh4eGteGww2h3jbNtu06/Dw8PA+gdcODeTBpl1DtCl4eHh4v8q7N26VJOvDASw8PDy8a7y26ZW3pjZLzMNJNBmBh4eHd4g3+1e/Hb3KW1+nNgIPDw/vAu8vz5Ff9DbyEUkAAAAASUVORK5CYII=" alt="微信分享二维码">
     </div>
 </div>
 
@@ -348,7 +354,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Git常用命令"><span class="toc-number">1.</span> <span class="toc-text">Git常用命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git分支管理规范"><span class="toc-number">2.</span> <span class="toc-text">Git分支管理规范</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#master-主分支"><span class="toc-number">2.1.</span> <span class="toc-text">master 主分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#release-预发布分支"><span class="toc-number">2.2.</span> <span class="toc-text">release 预发布分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#develop-测试分支"><span class="toc-number">2.3.</span> <span class="toc-text">develop 测试分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#feature-开发（功能）分支"><span class="toc-number">2.4.</span> <span class="toc-text">feature/ 开发（功能）分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#hotfix-修复BUG分支"><span class="toc-number">2.5.</span> <span class="toc-text">hotfix/ 修复BUG分支</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#前端项目上线流程规范"><span class="toc-number">3.</span> <span class="toc-text">前端项目上线流程规范</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#测试环境"><span class="toc-number">3.1.</span> <span class="toc-text">测试环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#正式-验收环境"><span class="toc-number">3.2.</span> <span class="toc-text">正式/验收环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#热修复流程"><span class="toc-number">3.3.</span> <span class="toc-text">热修复流程</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Git常用命令"><span class="toc-number">1.</span> <span class="toc-text">Git常用命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git分支管理规范"><span class="toc-number">2.</span> <span class="toc-text">Git分支管理规范</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#master-主分支"><span class="toc-number">2.1.</span> <span class="toc-text">master 主分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#release-预发布分支"><span class="toc-number">2.2.</span> <span class="toc-text">release 预发布分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#develop-测试分支"><span class="toc-number">2.3.</span> <span class="toc-text">develop 测试分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#feature-开发（功能）分支"><span class="toc-number">2.4.</span> <span class="toc-text">feature/ 开发（功能）分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#hotfix-修复BUG分支"><span class="toc-number">2.5.</span> <span class="toc-text">hotfix/ 修复BUG分支</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#前端项目上线流程规范"><span class="toc-number">3.</span> <span class="toc-text">前端项目上线流程规范</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#测试环境"><span class="toc-number">3.1.</span> <span class="toc-text">测试环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#正式-验收环境"><span class="toc-number">3.2.</span> <span class="toc-text">正式/验收环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#热修复流程"><span class="toc-number">3.3.</span> <span class="toc-text">热修复流程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#后端项目上线流程规范"><span class="toc-number">4.</span> <span class="toc-text">后端项目上线流程规范</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、版本号命名规则"><span class="toc-number">4.1.</span> <span class="toc-text">一、版本号命名规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、发布包约定"><span class="toc-number">4.2.</span> <span class="toc-text">二、发布包约定</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、其它"><span class="toc-number">4.3.</span> <span class="toc-text">三、其它</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -519,11 +525,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">iwiilsay小程序</a>
+                <a href="javascript:void(0)" class="js-tag color3">iwiilsay后台前端</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">iwiilsay后台前端</a>
+                <a href="javascript:void(0)" class="js-tag color2">iwiilsay小程序</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -639,6 +645,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">vue学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Thinking In Java</a>
               </li>
              
@@ -647,27 +657,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">安全</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">平时积累</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">进阶</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">启动和终止线程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">线程应用实例</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -675,7 +665,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">线程应用实例</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">微课堂</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -696,6 +694,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">轻松搞定全局异常</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">安全</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">平时积累</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">进阶</a>
               </li>
              
               <li class="article-tag-list-item">
