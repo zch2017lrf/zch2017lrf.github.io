@@ -5,14 +5,14 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="//zch2017lrf.github.io">
+  <link rel="dns-prefetch" href="//aha.me">
   <title>神经漫游者</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="擅长各项后端技能，研究移动端开发与后端性能。此为博客一枚。">
 <meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
 <meta property="og:type" content="website">
 <meta property="og:title" content="神经漫游者">
-<meta property="og:url" content="//zch2017lrf.github.io/page/11/index.html">
+<meta property="og:url" content="//aha.me/page/11/index.html">
 <meta property="og:site_name" content="神经漫游者">
 <meta property="og:description" content="擅长各项后端技能，研究移动端开发与后端性能。此为博客一枚。">
 <meta property="og:locale" content="default">
@@ -51,7 +51,7 @@
 		  <h1 class="header-author"><a href="/">Kaleldo</a></h1>
 		</hgroup>
 		
-		<p class="header-subtitle">不要说自己为了梦想去努力吃了多少苦，总有人比你更努力，更上进。</p>
+		<p class="header-subtitle">本来对博客持有一种如果别人写过那么再写就没有意义的想法，想看的时候看别人的写好的文章不就好了吗？最近明白了，写博客也是一种学习，哪怕与人雷同哪怕千篇一律，只要自己动手，有所收获就不亏。如果还能帮到其他小伙伴，那就更好。</p>
 		
 
 		<nav class="header-menu">
@@ -109,7 +109,7 @@
 			  <h1 class="header-author js-header-author">Kaleldo</h1>
 			</hgroup>
 			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>不要说自己为了梦想去努力吃了多少苦，总有人比你更努力，更上进。<i class="icon icon-quo-right"></i></p>
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>本来对博客持有一种如果别人写过那么再写就没有意义的想法，想看的时候看别人的写好的文章不就好了吗？最近明白了，写博客也是一种学习，哪怕与人雷同哪怕千篇一律，只要自己动手，有所收获就不亏。如果还能帮到其他小伙伴，那就更好。<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -153,6 +153,482 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-Thinking-in-Java-读书笔记-13-字符串" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/1994/04/15/Thinking-in-Java-读书笔记-13-字符串/">『Thinking in Java 读书笔记』—— 13-字符串</a>
+    </h1>
+  
+
+        
+        <a href="/1994/04/15/Thinking-in-Java-读书笔记-13-字符串/" class="archive-article-date">
+  	<time datetime="1994-04-15T07:13:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>1994-04-15</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://xiaweizi.cn/categories/Thinking-In-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" target="_blank" rel="noopener">Thinking in java 读书笔记</a></p>
+<h2 id="不可变-String"><a href="#不可变-String" class="headerlink" title="不可变 String"></a>不可变 String</h2><blockquote>
+<p><code>String</code> 对象是不可变的，具有只读特性。</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Immutable</span> </span>&#123;  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">upcase</span><span class="params">(String s)</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">return</span> s.toUpperCase();  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;  </span><br><span class="line">        String q = <span class="string">"howdy"</span>;  </span><br><span class="line">        print(q); <span class="comment">// howdy  </span></span><br><span class="line">        String qq = upcase(q);  </span><br><span class="line">        print(qq); <span class="comment">// HOWDY  </span></span><br><span class="line">        print(q); <span class="comment">// howdy(原有 String 没有改变)  </span></span><br><span class="line">    &#125;  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="comment">// out:</span></span><br><span class="line"><span class="comment">// howdy  </span></span><br><span class="line"><span class="comment">// HOWDY  </span></span><br><span class="line"><span class="comment">// howdy</span></span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/1994/04/15/Thinking-in-Java-读书笔记-13-字符串/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Thinking In Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/ThinkingInJava读书笔记/" class="article-tag-list-link color2">Thinking In Java 读书笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/1994/04/15/Thinking-in-Java-读书笔记-13-字符串/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Thinking-in-Java-读书笔记-12-通过异常处理错误" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/1994/03/11/Thinking-in-Java-读书笔记-12-通过异常处理错误/">『Thinking in Java 读书笔记』—— 12-通过异常处理错误</a>
+    </h1>
+  
+
+        
+        <a href="/1994/03/11/Thinking-in-Java-读书笔记-12-通过异常处理错误/" class="archive-article-date">
+  	<time datetime="1994-03-11T07:13:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>1994-03-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://xiaweizi.cn/categories/Thinking-In-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" target="_blank" rel="noopener">Thinking in java 读书笔记</a></p>
+<blockquote>
+<p><code>Java</code> 的基本理念是 「结构不佳的代码不能运行。</p>
+</blockquote>
+<p>发现错误的理想时机是在编译阶段，也就是在你试图运行程序之前。然而，编译期间并不能找出所有的错误，余下的问题必须在运行期间解决。这就需要错误源通过某种方式，把适当的信息传递给某个接受者—接收者将知道如何正确处理这个问题。</p>
+        
+          <a class="article-more-a" href="/1994/03/11/Thinking-in-Java-读书笔记-12-通过异常处理错误/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Thinking In Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/ThinkingInJava读书笔记/" class="article-tag-list-link color2">Thinking In Java 读书笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/1994/03/11/Thinking-in-Java-读书笔记-12-通过异常处理错误/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Thinking-in-Java-读书笔记-11-持有对象" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/1994/03/10/Thinking-in-Java-读书笔记-11-持有对象/">『Thinking in Java 读书笔记』—— 11-持有对象</a>
+    </h1>
+  
+
+        
+        <a href="/1994/03/10/Thinking-in-Java-读书笔记-11-持有对象/" class="archive-article-date">
+  	<time datetime="1994-03-10T07:13:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>1994-03-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://xiaweizi.cn/categories/Thinking-In-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" target="_blank" rel="noopener">Thinking in java 读书笔记</a></p>
+<blockquote>
+<p>如果一个程序只包含固定数量的且其生命期都是已知的对象，那么这是一个非常简单的程序。</p>
+</blockquote>
+<p>通常，程序总是根据运行时才知道的某些条件去创建新对象，在此之前，不会知道所需对象的数量，甚至不知道确切的类型。为解决这个普遍的编程问题，需要在任意时刻和任意位置创建任意数量的对象。所以，就不能依靠创建命名的引用来持有每一个对象。</p>
+        
+          <a class="article-more-a" href="/1994/03/10/Thinking-in-Java-读书笔记-11-持有对象/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Thinking In Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/ThinkingInJava读书笔记/" class="article-tag-list-link color2">Thinking In Java 读书笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/1994/03/10/Thinking-in-Java-读书笔记-11-持有对象/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Thinking-in-Java-读书笔记-10-内部类" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/1994/03/09/Thinking-in-Java-读书笔记-10-内部类/">『Thinking in Java 读书笔记』—— 10-内部类</a>
+    </h1>
+  
+
+        
+        <a href="/1994/03/09/Thinking-in-Java-读书笔记-10-内部类/" class="archive-article-date">
+  	<time datetime="1994-03-09T07:13:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>1994-03-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://xiaweizi.cn/categories/Thinking-In-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" target="_blank" rel="noopener">Thinking in java 读书笔记</a></p>
+<blockquote>
+<p>可以将一个类的定义放在另一个类的定义内部，这就是内部类。</p>
+</blockquote>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>内部类非常的有用，因为它允许你把一些逻辑相关的类组织在一块，并控制位于内部的类的可视性，内部类和组合是完全不同的概念，这点很重要。</p>
+        
+          <a class="article-more-a" href="/1994/03/09/Thinking-in-Java-读书笔记-10-内部类/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Thinking In Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/ThinkingInJava读书笔记/" class="article-tag-list-link color2">Thinking In Java 读书笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/1994/03/09/Thinking-in-Java-读书笔记-10-内部类/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Thinking-in-Java-读书笔记-9-接口" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/1994/03/08/Thinking-in-Java-读书笔记-9-接口/">『Thinking in Java 读书笔记』—— 9-接口</a>
+    </h1>
+  
+
+        
+        <a href="/1994/03/08/Thinking-in-Java-读书笔记-9-接口/" class="archive-article-date">
+  	<time datetime="1994-03-08T07:13:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>1994-03-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://xiaweizi.cn/categories/Thinking-In-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" target="_blank" rel="noopener">Thinking in java 读书笔记</a></p>
+<blockquote>
+<p>接口和内部类为我们提供一种将接口与实现分离的更加结构化的方法。</p>
+</blockquote>
+<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><p><code>interface</code>关键字使抽象的概念更买进一步，<code>abstract</code>关键字允许人们在类中创建一个或者多个没有任何定义的方法，但是没有提供任何相应的具体实现，这些实现是由此类创建者创建。<code>interface</code>这个关键字产生一个完全抽象类。它根本就没有具体的实现。</p>
+<p><code>interface</code>不仅仅是一个极度抽象的类，因为它允许人们通过创建一个能够被向上转型为多种基类的类型，来实现某种类似多重继承变种的特性。</p>
+        
+          <a class="article-more-a" href="/1994/03/08/Thinking-in-Java-读书笔记-9-接口/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Thinking In Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/ThinkingInJava读书笔记/" class="article-tag-list-link color2">Thinking In Java 读书笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/1994/03/08/Thinking-in-Java-读书笔记-9-接口/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-Thinking-in-Java-读书笔记-8-多态" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -444,477 +920,9 @@
 
 
   
-    <article id="post-Thinking-in-Java-读书笔记-5-初始化与清理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/1994/03/02/Thinking-in-Java-读书笔记-5-初始化与清理/">『Thinking in Java 读书笔记』—— 5-初始化与清理</a>
-    </h1>
-  
-
-        
-        <a href="/1994/03/02/Thinking-in-Java-读书笔记-5-初始化与清理/" class="archive-article-date">
-  	<time datetime="1994-03-02T08:25:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>1994-03-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="http://xiaweizi.cn/categories/Thinking-In-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" target="_blank" rel="noopener">Thinking in java 读书笔记</a></p>
-<blockquote>
-<p>随着计算机革命的发展，不安全的编码方式逐渐成为编程代价高昂的主因之一。</p>
-</blockquote>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>初始化和清理是涉及程序安全的了两个问题，如果处理不好的话，很容易在运行的时候出现奔溃，造成很不好的用户体验。首先初始化，在开发的过程中，每当创建基本类型或者是其他对象，都会下意识的初始化，虽然全局变量会默认有个初始值，局部变量编译时期就会报错，但是我们还是要养成创建同时初始化的好习惯。至于清理，不像 <code>C/C++</code>内存需要自己分配和释放，<code>Java</code>内置的虚拟机，已经帮助我们完成这件事情了，但是在开发的过程中，还是要注意一些资源的释放，免得造成内存泄漏等异常。</p>
-        
-          <a class="article-more-a" href="/1994/03/02/Thinking-in-Java-读书笔记-5-初始化与清理/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Thinking In Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/ThinkingInJava读书笔记/" class="article-tag-list-link color2">Thinking In Java 读书笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/1994/03/02/Thinking-in-Java-读书笔记-5-初始化与清理/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Thinking-in-Java-读书笔记-4-控制执行流程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/1994/02/28/Thinking-in-Java-读书笔记-4-控制执行流程/">『Thinking in Java 读书笔记』—— 4-控制执行流程</a>
-    </h1>
-  
-
-        
-        <a href="/1994/02/28/Thinking-in-Java-读书笔记-4-控制执行流程/" class="archive-article-date">
-  	<time datetime="1994-02-28T10:27:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>1994-02-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="http://xiaweizi.cn/categories/Thinking-In-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" target="_blank" rel="noopener">Thinking in java 读书笔记</a></p>
-<p>就像有知觉的生物一样，程序必须在执行过程中控制它的世界，并做出选择。在 Java 中，你要使用执行控制语句来做出选择。**</p>
-<p>作为一名程序员，尤其经常接触业务需求的开发人员，那流程的接触是必不可少的，基本的用法也是很熟练，所以在这就不介绍流程的基础知识了，直接看代码。</p>
-        
-          <a class="article-more-a" href="/1994/02/28/Thinking-in-Java-读书笔记-4-控制执行流程/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Thinking In Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/ThinkingInJava读书笔记/" class="article-tag-list-link color2">Thinking In Java 读书笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/1994/02/28/Thinking-in-Java-读书笔记-4-控制执行流程/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Thinking-in-Java-读书笔记-3-操作符" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/1994/02/26/Thinking-in-Java-读书笔记-3-操作符/">『Thinking in Java 读书笔记』—— 3-操作符</a>
-    </h1>
-  
-
-        
-        <a href="/1994/02/26/Thinking-in-Java-读书笔记-3-操作符/" class="archive-article-date">
-  	<time datetime="1994-02-26T12:46:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>1994-02-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="http://xiaweizi.cn/categories/Thinking-In-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" target="_blank" rel="noopener">Thinking in java 读书笔记</a></p>
-<p>在最底层，Java 中的数据是通过使用操作符来操作的。**</p>
-<p> 作为一个开发将近一年的程序员，对这些基本的操作符的掌握还是算熟练的，因此就不过多介绍了，毕竟大家基本上都知道，但是还是把内容过了一遍，笔记就不赘述了。一切的理论都不如实践来的实际，遇到模棱两可的，不如直接通过程序跑一下进行验证。</p>
-        
-          <a class="article-more-a" href="/1994/02/26/Thinking-in-Java-读书笔记-3-操作符/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Thinking In Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/ThinkingInJava读书笔记/" class="article-tag-list-link color2">Thinking In Java 读书笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/1994/02/26/Thinking-in-Java-读书笔记-3-操作符/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Thinking-in-Java-读书笔记-2-一切都是对象" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/1994/02/25/Thinking-in-Java-读书笔记-2-一切都是对象/">『Thinking in Java 读书笔记』—— 2-一切都是对象</a>
-    </h1>
-  
-
-        
-        <a href="/1994/02/25/Thinking-in-Java-读书笔记-2-一切都是对象/" class="archive-article-date">
-  	<time datetime="1994-02-25T12:46:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>1994-02-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="http://xiaweizi.cn/categories/Thinking-In-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" target="_blank" rel="noopener">Thinking in java 读书笔记</a></p>
-<blockquote>
-<p>如果我们说另一种不同的语言，那么我们就会觉得一个有些不同的世界。<br> —Luduing Wittgerstein(1889-1951)</p>
-</blockquote>
-<h2 id="1-用引用操作对象"><a href="#1-用引用操作对象" class="headerlink" title="1. 用引用操作对象"></a>1. 用引用操作对象</h2><p>尽管一切都是对象，但是操纵的标识符实际上是对象的一个「引用」，可以看做成日常生活中电视机和遥控器的关系。只要拥有遥控器，就能保持着与电视机的连接，对电视声音和节目的调整，实际上都是对遥控器(引用)的操作。</p>
-        
-          <a class="article-more-a" href="/1994/02/25/Thinking-in-Java-读书笔记-2-一切都是对象/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Thinking In Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/ThinkingInJava读书笔记/" class="article-tag-list-link color2">Thinking In Java 读书笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/1994/02/25/Thinking-in-Java-读书笔记-2-一切都是对象/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Thinking-in-Java-读书笔记-1-对象导论" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/1994/02/24/Thinking-in-Java-读书笔记-1-对象导论/">『Thinking in Java 读书笔记』—— 1-对象导论</a>
-    </h1>
-  
-
-        
-        <a href="/1994/02/24/Thinking-in-Java-读书笔记-1-对象导论/" class="archive-article-date">
-  	<time datetime="1994-02-24T12:46:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>1994-02-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="http://xiaweizi.cn/categories/Thinking-In-Java-%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" target="_blank" rel="noopener">Thinking in java 读书笔记</a></p>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>从本章开始，逐渐记录笔者在阅读「Thinking in Java」时，内容的积累、代码的实践和个人编程的心得，重要的是个人的成长。正式工作将近一年的我，有必要重新温故一下<code>Java</code>的核心基础，巩固自身的硬实力，从根本感受<code>Java</code>语言的魅力，而不是局限于敲代码，完成产品需求。更重要的是领悟每种语言的特色，融入其中，提升自己，感受学习带来的快乐！足以！</p>
-        
-          <a class="article-more-a" href="/1994/02/24/Thinking-in-Java-读书笔记-1-对象导论/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Thinking In Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/ThinkingInJava读书笔记/" class="article-tag-list-link color2">Thinking In Java 读书笔记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/1994/02/24/Thinking-in-Java-读书笔记-1-对象导论/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/10/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span>
+      <a class="extend prev" rel="prev" href="/page/10/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/12/">Next &raquo;</a>
     </nav>
   
 
@@ -1017,6 +1025,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">springBoot</a>
               </li>
              
@@ -1025,19 +1037,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Java中的锁</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Lock接口</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">容器源码分析2</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1053,15 +1057,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">iwiilsay小程序</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">数据结构与算法</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">容器源码分析2</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">仿土巴兔小程序</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">iwiilsay小程序</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1073,15 +1081,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">spring 使用属性文件</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Java基础</a>
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1093,11 +1097,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">java提高</a>
+                <a href="javascript:void(0)" class="js-tag color2">Java基础</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">lambda</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">java提高</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1109,15 +1117,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">事务</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">文件上传</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">事务</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1145,10 +1153,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">项目分析</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">mybatis</a>
               </li>
              
@@ -1161,15 +1165,43 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">虚拟机</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">接口文档</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">yapi</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Docker</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">IDEA</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">spring4</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ActiveMQ</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">延时队列</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">MAVEN</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">中间件</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">vue学习</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1178,6 +1210,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">读书笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">项目分析</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1217,11 +1253,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">使用Spring Cache集成Redis</a>
+                <a href="javascript:void(0)" class="js-tag color4">SpringDataJpa</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">SpringDataJpa</a>
+                <a href="javascript:void(0)" class="js-tag color2">使用Spring Cache集成Redis</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1332,7 +1368,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">Kaleldo，&lt;br&gt;热爱写高级bug&lt;br/&gt;目前是一枚后端&lt;br/&gt;&lt;br&gt;年轻无为，卖马为生。</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">Kaleldo &lt;br&gt;&lt;br&gt; 热爱生活 &lt;br&gt;&lt;br&gt;本来对博客持有一种如果别人写过那么再写就没有意义的想法，想看的时候看别人的写好的文章不就好了吗？最近明白了，写博客也是一种学习，哪怕与人雷同哪怕千篇一律，只要自己动手，有所收获就不亏。如果还能帮到其他小伙伴，那就更好！&lt;br&gt;年轻无为，卖马为生。</div>
   	  	
     	</section>
     

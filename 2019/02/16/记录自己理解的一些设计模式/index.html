@@ -5,14 +5,14 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="//zch2017lrf.github.io">
+  <link rel="dns-prefetch" href="//aha.me">
   <title>记录自己理解的一些设计模式 | 神经漫游者</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="策略模式">
 <meta name="keywords" content="设计模式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="记录自己理解的一些设计模式">
-<meta property="og:url" content="//zch2017lrf.github.io/2019/02/16/记录自己理解的一些设计模式/index.html">
+<meta property="og:url" content="//aha.me/2019/02/16/记录自己理解的一些设计模式/index.html">
 <meta property="og:site_name" content="神经漫游者">
 <meta property="og:description" content="策略模式">
 <meta property="og:locale" content="default">
@@ -52,7 +52,7 @@
 		  <h1 class="header-author"><a href="/">Kaleldo</a></h1>
 		</hgroup>
 		
-		<p class="header-subtitle">不要说自己为了梦想去努力吃了多少苦，总有人比你更努力，更上进。</p>
+		<p class="header-subtitle">本来对博客持有一种如果别人写过那么再写就没有意义的想法，想看的时候看别人的写好的文章不就好了吗？最近明白了，写博客也是一种学习，哪怕与人雷同哪怕千篇一律，只要自己动手，有所收获就不亏。如果还能帮到其他小伙伴，那就更好。</p>
 		
 
 		<nav class="header-menu">
@@ -110,7 +110,7 @@
 			  <h1 class="header-author js-header-author">Kaleldo</h1>
 			</hgroup>
 			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>不要说自己为了梦想去努力吃了多少苦，总有人比你更努力，更上进。<i class="icon icon-quo-right"></i></p>
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>本来对博客持有一种如果别人写过那么再写就没有意义的想法，想看的时候看别人的写好的文章不就好了吗？最近明白了，写博客也是一种学习，哪怕与人雷同哪怕千篇一律，只要自己动手，有所收获就不亏。如果还能帮到其他小伙伴，那就更好。<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -280,7 +280,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACrElEQVR42u3aQW7cMAwF0Nz/0inQVRet539SmkmB51WAsWU9BZBokl9f8fX9+3r+9c97vh+vZOTk2WMXHh4e3mjqz8O1E03GaZdytnx4eHh493j5cO1h0MLy5Y6WBg8PD++jvLPHSR404+Hh4f3vvNnWnycjZsuNh4eH937eLIRtUwYJqV3KY7kWPDw8vJg3m/Rn/75Y38PDw8NbVNVnm/KsaeD58Bi+Cw8PD+8Crw18n++fpV83zQTROHh4eHjXeG1qIIld8xESRvsWPDw8vBu8NuTd/Drb+tvFevHFgIeHh7fmzR7I79+Xstr0xItzDw8PD+8Qry163a68tSH44XYBPDw8vEdeW+g6uyjtMuUfAHh4eHj3eLOyVpvqnSWF83/DsAELDw8P7ygvL3dtnr1RzYv6I/Dw8PAWvCSYTopVbVicY/Ik71/egoeHh3eB127i+wRrfszMGgvw8PDw3sNrv9zbBql84RJ8m3PAw8PDu8HbJx1OZVNnrVcvwno8PDy8o7w8RN4vRF4ey2EvlgMPDw/vLbzZVPL2glkKuC224eHh4b2HN0uY5kFzXh7bFNiKSh0eHh7egtcWn5KQN2+l2hwSL0R4eHh4F3izzXe/0c/C5bzp6sCk8fDw8MoCVT7FpL1g01DVhtov2Hh4eHhrXj71NkRup5IA6nHw8PDwLvPa8n8eBJ9KJdeHBx4eHt4F3myjz5sJTrUCHFsgPDw8vDXvu7zyF2xSukn7QrTEeHh4eBd4+8rR8+vzglb+6yzdjIeHh3eWd2pa+Zizw2b4LB4eHt413qk2rE2gvAnW/3k/Hh4e3kd5m4NhVnJLGgvw8PDwfj4vPwDyTb9twCoWAg8PD+8a71QDVtvvlITXq+MBDw8P7wKvLYC1Cd/ZaLMC2/DCw8PDS3m/ALjMkpc5Y9GJAAAAAElFTkSuQmCC" alt="微信分享二维码">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACuElEQVR42u3aMXLjQAwEQP3/07qqS+8kzywWloJm5LJscZsBgRrg8Yiv59/r1W+e/1yv/iv5tvwM1y48PDy8o6O/uvK/SQ7xHpz/b34ePDw8vD3e2de9+svk6MlDfH+e6PHh4eHhfZQ36Wbfl6L3d5w063h4eHjfwDs7XBtD4OHh4X0/L2+a87AgOehZ0LCSteDh4eHFvHYA9g0/L8738PDw8AZT9fal3A772/C3Pi0eHh7eAm++MpXw8qO33x8tH+Dh4eGt8dpFqLOFgKTvzQtMtPiFh4eHt8Br2982pGgPegaOsmo8PDy8MS/5urzhPgsy2pY6H6Hh4eHhbfDywpC3wvOFg/wkxdIAHh4e3lVe8rrPj5JTz+KMIoDAw8PDW+Ml8WgeDeTNd3v3eTHDw8PDm/POYoL21ZzEE8m92tPi4eHhbfDayKCNepOjtIWkyFfw8PDw1nj5IfJYoS0h7WitXlzAw8PDu8TLm928RW6D2r1P8fDw8PZ4Z6/7vEHPw9/8sUYFAw8PD2+B1w6l8rB10kzfWjLAw8PD2+DlbfHdFrndaGiHYXh4eHh7vDw+uBX1Tl73+YMotsnw8PDwSt5kxSp5ceeDrrOGHg8PD+9TvPb27Zg/LwltwPFD+cHDw8Nb4J0tOSUN7jycnUcSeHh4eBu8s2H82fB+EuAePjI8PDy8X+dNxvZtdRoxzgoDHh4e3hGvXbpqW+15aNtePywN4OHh4Y15z/LKo4p2bJZ8mheVlztleHh4eGPevJ6cBRM5uB28Pe6WSzw8PLy3zXRbDPLXcb5GkDTlyb3w8PDwfofXDp9uRbd5MTgML/Dw8PA+yrs1jspXDfI1rAuFAQ8PD2+ZN187aKdUSQT8n9/j4eHhrfHOwoj89Z0PwHJkVEjw8PDwFnjzAVhSHu5+2uLx8PDwLvH+AGt/kpfMI1X/AAAAAElFTkSuQmCC" alt="微信分享二维码">
     </div>
 </div>
 
@@ -471,6 +471,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">springBoot</a>
               </li>
              
@@ -479,19 +483,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Java中的锁</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Lock接口</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">容器源码分析2</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -507,15 +503,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">iwiilsay小程序</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">数据结构与算法</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">容器源码分析2</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">仿土巴兔小程序</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">iwiilsay小程序</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -527,15 +527,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">spring 使用属性文件</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Java基础</a>
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -547,11 +543,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">java提高</a>
+                <a href="javascript:void(0)" class="js-tag color2">Java基础</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">lambda</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">java提高</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -563,15 +563,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">事务</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">文件上传</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">事务</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -599,10 +599,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">项目分析</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">mybatis</a>
               </li>
              
@@ -615,15 +611,43 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">虚拟机</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">接口文档</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">yapi</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Docker</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">IDEA</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">spring4</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ActiveMQ</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">延时队列</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">MAVEN</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">中间件</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">vue学习</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -632,6 +656,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">读书笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">项目分析</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -671,11 +699,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">使用Spring Cache集成Redis</a>
+                <a href="javascript:void(0)" class="js-tag color4">SpringDataJpa</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">SpringDataJpa</a>
+                <a href="javascript:void(0)" class="js-tag color2">使用Spring Cache集成Redis</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -786,7 +814,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">Kaleldo，&lt;br&gt;热爱写高级bug&lt;br/&gt;目前是一枚后端&lt;br/&gt;&lt;br&gt;年轻无为，卖马为生。</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">Kaleldo &lt;br&gt;&lt;br&gt; 热爱生活 &lt;br&gt;&lt;br&gt;本来对博客持有一种如果别人写过那么再写就没有意义的想法，想看的时候看别人的写好的文章不就好了吗？最近明白了，写博客也是一种学习，哪怕与人雷同哪怕千篇一律，只要自己动手，有所收获就不亏。如果还能帮到其他小伙伴，那就更好！&lt;br&gt;年轻无为，卖马为生。</div>
   	  	
     	</section>
     
