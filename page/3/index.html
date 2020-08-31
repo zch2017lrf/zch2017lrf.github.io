@@ -154,31 +154,30 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="springboot-Ajax跨域请求，同时保证session一致" class="article article-type-springboot  article-index" itemscope itemprop="blogPost">
+    <article id="springboot-vue基础" class="article article-type-springboot  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/04/17/Ajax跨域请求，同时保证session一致/">Ajax跨域请求，同时保证session一致</a>
+      <a class="article-title" href="/2019/12/27/vue基础/">vue基础</a>
     </h1>
   
 
         
-        <a href="/2019/04/17/Ajax跨域请求，同时保证session一致/" class="archive-article-date">
-  	<time datetime="2019-04-17T02:13:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-17</time>
+        <a href="/2019/12/27/vue基础/" class="archive-article-date">
+  	<time datetime="2019-12-27T07:21:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>最近在项目中碰到一个问题，ajax跨域请求时，每次tomcat都会生成一个新的session。</p>
-<p>在百度中找到了解决方法。<a href="http://blog.sina.com.cn/s/blog_e774c01e0102we37.html" target="_blank" rel="noopener">http://blog.sina.com.cn/s/blog_e774c01e0102we37.html</a></p>
-<p>当我们在进行跨域访问的时候，我们的sessionId就不会被保存下来，也就是说，每一次的请求，服务器就会以为是一个新的人，而不是同一个人，为了解决这样的办法，需要对跨域访问的request头部重写。</p>
+        <h2 id="监听事件"><a href="#监听事件" class="headerlink" title="监听事件"></a>监听事件</h2><h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="keyword">div</span> <span class="built_in">id</span>=<span class="string">"vue"</span>&gt;</span><br><span class="line">    &lt;button v-<span class="keyword">on</span>:click=<span class="string">"sayHi"</span>&gt;点我&lt;/button&gt;</span><br><span class="line">&lt;/<span class="keyword">div</span>&gt;</span><br></pre></td></tr></table></figure>
+<p>也可以这样</p>
         
-          <a class="article-more-a" href="/2019/04/17/Ajax跨域请求，同时保证session一致/#more">more >></a>
+          <a class="article-more-a" href="/2019/12/27/vue基础/#more">more >></a>
         
       
 
@@ -192,7 +191,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springBoot</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
         		</li>
       		
 		</ul>
@@ -204,7 +203,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/springBoot/" class="article-tag-list-link color1">springBoot</a>
+        			<a href="/categories/项目小结/" class="article-tag-list-link color5">项目小结</a>
         		</li>
       		
 		</ul>
@@ -213,7 +212,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/04/17/Ajax跨域请求，同时保证session一致/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/12/27/vue基础/">展开全文 >></a>
         </p>
       
 
@@ -243,29 +242,30 @@
 
 
   
-    <article id="springboot-轻松搞定数据验证（二）" class="article article-type-springboot  article-index" itemscope itemprop="blogPost">
+    <article id="springboot-JSON-stringify-和JSON-parse-的作用" class="article article-type-springboot  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/19/轻松搞定数据验证（二）/">轻松搞定数据验证（二）</a>
+      <a class="article-title" href="/2019/12/27/JSON-stringify-和JSON-parse-的作用/">JSON.stringify()和JSON.parse()的作用</a>
     </h1>
   
 
         
-        <a href="/2019/02/19/轻松搞定数据验证（二）/" class="archive-article-date">
-  	<time datetime="2019-02-19T14:19:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-19</time>
+        <a href="/2019/12/27/JSON-stringify-和JSON-parse-的作用/" class="archive-article-date">
+  	<time datetime="2019-12-27T07:20:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>一起来学SpringBoot | 第十九篇：轻松搞定数据验证（一） 中介绍了数据有效性校验的重要性，也简单介绍了如何用轻松的方式搞定数据有效性校验，但是当系统自带的注解无法满足我们的要求时候应该咋办呢？这就是本章将给各位介绍的自定义 Validator 注解</p>
+        <p>(1)JSON.stringify() 从一个对象中解析出字符串</p>
+<p>JSON.stringify({“a”:”1”,”b”:”2”})</p>
         
-          <a class="article-more-a" href="/2019/02/19/轻松搞定数据验证（二）/#more">more >></a>
+          <a class="article-more-a" href="/2019/12/27/JSON-stringify-和JSON-parse-的作用/#more">more >></a>
         
       
 
@@ -279,11 +279,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springBoot</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">轻松搞定数据验证（二）</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
         		</li>
       		
 		</ul>
@@ -295,11 +291,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/springBoot/" class="article-tag-list-link color1">springBoot</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/轻松搞定数据验证（二）/" class="article-tag-list-link color2">轻松搞定数据验证（二）</a>
+        			<a href="/categories/项目小结/" class="article-tag-list-link color5">项目小结</a>
         		</li>
       		
 		</ul>
@@ -308,7 +300,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/02/19/轻松搞定数据验证（二）/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/12/27/JSON-stringify-和JSON-parse-的作用/">展开全文 >></a>
         </p>
       
 
@@ -338,29 +330,29 @@
 
 
   
-    <article id="springboot-轻松搞定数据验证（一）" class="article article-type-springboot  article-index" itemscope itemprop="blogPost">
+    <article id="springboot-腾讯云通信im服务端花里胡哨实战" class="article article-type-springboot  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/19/轻松搞定数据验证（一）/">轻松搞定数据验证（一）</a>
+      <a class="article-title" href="/2019/12/27/腾讯云通信im服务端花里胡哨实战/">腾讯云通信im服务端花里胡哨实战</a>
     </h1>
   
 
         
-        <a href="/2019/02/19/轻松搞定数据验证（一）/" class="archive-article-date">
-  	<time datetime="2019-02-19T13:48:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-19</time>
+        <a href="/2019/12/27/腾讯云通信im服务端花里胡哨实战/" class="archive-article-date">
+  	<time datetime="2019-12-27T07:18:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>对于任何一个应用而言，客户端做的数据有效性验证都不是安全有效的，而数据验证又是一个企业级项目架构上最为基础的功能模块，这时候就要求我们在服务端接收到数据的时候也对数据的有效性进行验证。为什么这么说呢？往往我们在编写程序的时候都会感觉后台的验证无关紧要，毕竟客户端已经做过验证了，后端没必要在浪费资源对数据进行验证了，但恰恰是这种思维最为容易被别人钻空子。毕竟只要有点开发经验的都知道，我们完全可以模拟 HTTP 请求到后台地址，模拟请求过程中发送一些涉及系统安全的数据到后台，后果可想而知….</p>
+        <p>最近因为公司业务需求要接入腾讯云通信的im服务，做完基础版后有点闲暇时间想总结下。<br><strong>动手集成到自己项目的时候需要注意以下几个点：</strong></p>
         
-          <a class="article-more-a" href="/2019/02/19/轻松搞定数据验证（一）/#more">more >></a>
+          <a class="article-more-a" href="/2019/12/27/腾讯云通信im服务端花里胡哨实战/#more">more >></a>
         
       
 
@@ -374,11 +366,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springBoot</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">IM</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">轻松搞定数据验证（一）</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">腾讯云</a>
         		</li>
       		
 		</ul>
@@ -390,11 +382,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/springBoot/" class="article-tag-list-link color1">springBoot</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/轻松搞定数据验证（一）/" class="article-tag-list-link color2">轻松搞定数据验证（一）</a>
+        			<a href="/categories/技术总结/" class="article-tag-list-link color5">技术总结</a>
         		</li>
       		
 		</ul>
@@ -403,7 +391,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/02/19/轻松搞定数据验证（一）/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/12/27/腾讯云通信im服务端花里胡哨实战/">展开全文 >></a>
         </p>
       
 
@@ -433,29 +421,29 @@
 
 
   
-    <article id="springboot-轻松搞定全局异常" class="article article-type-springboot  article-index" itemscope itemprop="blogPost">
+    <article id="springboot-花里胡哨操作maven私服" class="article article-type-springboot  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/19/轻松搞定全局异常/">轻松搞定全局异常</a>
+      <a class="article-title" href="/2019/12/27/花里胡哨操作maven私服/">花里胡哨操作maven私服</a>
     </h1>
   
 
         
-        <a href="/2019/02/19/轻松搞定全局异常/" class="archive-article-date">
-  	<time datetime="2019-02-19T13:30:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-19</time>
+        <a href="/2019/12/27/花里胡哨操作maven私服/" class="archive-article-date">
+  	<time datetime="2019-12-27T07:17:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>实际项目开发中，程序往往会发生各式各样的异常情况，特别是身为服务端开发人员的我们，总是不停的编写接口提供给前端调用，分工协作的情况下，避免不了异常的发生，如果直接将错误的信息直接暴露给用户，这样的体验可想而知，且对黑客而言，详细异常信息往往会提供非常大的帮助…</p>
+        <p>上传maven私服之前我们先，创建个仓库<br><img src="https://img-blog.csdnimg.cn/20191223172416922.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzY0NzIyNA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
         
-          <a class="article-more-a" href="/2019/02/19/轻松搞定全局异常/#more">more >></a>
+          <a class="article-more-a" href="/2019/12/27/花里胡哨操作maven私服/#more">more >></a>
         
       
 
@@ -469,11 +457,15 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springBoot</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Docker</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">轻松搞定全局异常</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">IDEA</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">maven</a>
         		</li>
       		
 		</ul>
@@ -485,11 +477,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/springBoot/" class="article-tag-list-link color1">springBoot</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/轻松搞定全局异常/" class="article-tag-list-link color4">轻松搞定全局异常</a>
+        			<a href="/categories/技术总结/" class="article-tag-list-link color5">技术总结</a>
         		</li>
       		
 		</ul>
@@ -498,7 +486,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/02/19/轻松搞定全局异常/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/12/27/花里胡哨操作maven私服/">展开全文 >></a>
         </p>
       
 
@@ -528,29 +516,34 @@
 
 
   
-    <article id="springboot-定时任务详解" class="article article-type-springboot  article-index" itemscope itemprop="blogPost">
+    <article id="springboot-Spring-花里胡哨的-Import用法" class="article article-type-springboot  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/19/定时任务详解/">定时任务详解</a>
+      <a class="article-title" href="/2019/12/27/Spring-花里胡哨的-Import用法/">Spring 花里胡哨的@Import用法</a>
     </h1>
   
 
         
-        <a href="/2019/02/19/定时任务详解/" class="archive-article-date">
-  	<time datetime="2019-02-19T05:36:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-19</time>
+        <a href="/2019/12/27/Spring-花里胡哨的-Import用法/" class="archive-article-date">
+  	<time datetime="2019-12-27T06:38:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在我们日常开发中，经常会遇到 数据定时增量同步、定时发送邮件、爬虫定时抓取 的需求；这时我们可以采用定时任务的方式去进行工作…..<br>
+        <p><img src="https://user-gold-cdn.xitu.io/2019/12/27/16f4554ef1d622fe?w=1920&amp;h=1080&amp;f=jpeg&amp;s=955492" alt="在这里插入图片描述"></p>
+<h2 id="Import"><a href="#Import" class="headerlink" title="@Import"></a>@Import</h2><p>@Import 注解支持导入普通 java 类，并将其声明成一个bean。主要用于将多个分散的 java config 配置类融合成一个更大的 config 类。</p>
+<ul>
+<li>@Import 注解在 4.2 之前只支持导入配置类。</li>
+<li>在4.2之后 @Import 注解支持导入普通的 java 类,并将其声明成一个 bean。</li>
+</ul>
         
-          <a class="article-more-a" href="/2019/02/19/定时任务详解/#more">more >></a>
+          <a class="article-more-a" href="/2019/12/27/Spring-花里胡哨的-Import用法/#more">more >></a>
         
       
 
@@ -566,6 +559,14 @@
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springBoot</a>
         		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">IDEA</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">spring4</a>
+        		</li>
       		
 		</ul>
 	</div>
@@ -576,7 +577,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/springBoot/" class="article-tag-list-link color1">springBoot</a>
+        			<a href="/categories/技术总结/" class="article-tag-list-link color5">技术总结</a>
         		</li>
       		
 		</ul>
@@ -585,7 +586,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/02/19/定时任务详解/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/12/27/Spring-花里胡哨的-Import用法/">展开全文 >></a>
         </p>
       
 
@@ -615,30 +616,31 @@
 
 
   
-    <article id="springboot-集成Swagger在线调试" class="article article-type-springboot  article-index" itemscope itemprop="blogPost">
+    <article id="springboot-spring-boot-花里胡哨的热部署-DevTools" class="article article-type-springboot  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/18/集成Swagger在线调试/">集成Swagger在线调试</a>
+      <a class="article-title" href="/2019/12/27/spring-boot-花里胡哨的热部署-DevTools/">spring boot 花里胡哨的热部署(DevTools)</a>
     </h1>
   
 
         
-        <a href="/2019/02/18/集成Swagger在线调试/" class="archive-article-date">
-  	<time datetime="2019-02-18T13:47:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-18</time>
+        <a href="/2019/12/27/spring-boot-花里胡哨的热部署-DevTools/" class="archive-article-date">
+  	<time datetime="2019-12-27T06:37:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>随着互联网技术的发展，现在的网站架构基本都由原来的后端渲染，变成了：前端渲染、前后端分离的形态，而且前端技术和后端技术在各自的道路上越走越远。</p>
-<p>前端和后端唯一联系，变成了API接口；API文档自然就成了前后端开发人员联系的纽带，变得尤为的重要，swagger就是一款让你更好的书写API文档的框架。<br>
+        <blockquote>
+<p>平日里开发项目中，修改了Java代码或者配置文件的时候，必须手动重启项目才能生效。所谓的热部署就是在你修改了后端代码后不需要手动重启，工具会帮你快速的自动重启是修改生效。原理就是重启项目，但比手动重启快多了,其深层原理是使用了两个ClassLoader，一个Classloader加载那些不会改变的类（第三方Jar包），另一个ClassLoader加载会更改的类，称为restart<br>ClassLoader，这样在有代码更改的时候，原来的restart ClassLoader 被丢弃，重新创建一个restart<br>ClassLoader，由于需要加载的类相比较少，所以实现了较快的重启时间。<br><a href="http://blog.csdn.net/isea533/article/details/70495714" target="_blank" rel="noopener">灵感来源于1948</a></p>
+</blockquote>
         
-          <a class="article-more-a" href="/2019/02/18/集成Swagger在线调试/#more">more >></a>
+          <a class="article-more-a" href="/2019/12/27/spring-boot-花里胡哨的热部署-DevTools/#more">more >></a>
         
       
 
@@ -656,7 +658,11 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">集成Swagger在线调试</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Docker</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">IDEA</a>
         		</li>
       		
 		</ul>
@@ -668,11 +674,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/springBoot/" class="article-tag-list-link color1">springBoot</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/集成Swagger在线调试/" class="article-tag-list-link color4">集成Swagger在线调试</a>
+        			<a href="/categories/直播项目技术总结/" class="article-tag-list-link color4">直播项目技术总结</a>
         		</li>
       		
 		</ul>
@@ -681,7 +683,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/02/18/集成Swagger在线调试/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/12/27/spring-boot-花里胡哨的热部署-DevTools/">展开全文 >></a>
         </p>
       
 
@@ -711,29 +713,36 @@
 
 
   
-    <article id="springboot-使用Spring-Cache集成Redis" class="article article-type-springboot  article-index" itemscope itemprop="blogPost">
+    <article id="springboot-Centos7部署yapi" class="article article-type-springboot  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/18/使用Spring-Cache集成Redis/">使用Spring Cache集成Redis</a>
+      <a class="article-title" href="/2019/12/27/Centos7部署yapi/">Centos7部署yapi</a>
     </h1>
   
 
         
-        <a href="/2019/02/18/使用Spring-Cache集成Redis/" class="archive-article-date">
-  	<time datetime="2019-02-18T11:09:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-18</time>
+        <a href="/2019/12/27/Centos7部署yapi/" class="archive-article-date">
+  	<time datetime="2019-12-27T06:35:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Spring 3.1 引入了激动人心的基于注释（annotation）的缓存（cache）技术，它本质上不是一个具体的缓存实现方案（例如 EHCache 或者 Redis），而是一个对缓存使用的抽象，通过在既有代码中添加少量它定义的各种 annotation，即能够达到缓存方法的返回对象的效果。</p>
+        <p>@<a href="Centos7部署yapi">TOC</a></p>
+<h2 id="生产环境"><a href="#生产环境" class="headerlink" title="生产环境"></a>生产环境</h2><ul>
+<li>mongodb</li>
+<li>node</li>
+<li>pm2</li>
+<li>yapi</li>
+</ul>
+<h2 id="mongodb安装步骤"><a href="#mongodb安装步骤" class="headerlink" title="mongodb安装步骤"></a>mongodb安装步骤</h2>
         
-          <a class="article-more-a" href="/2019/02/18/使用Spring-Cache集成Redis/#more">more >></a>
+          <a class="article-more-a" href="/2019/12/27/Centos7部署yapi/#more">more >></a>
         
       
 
@@ -747,11 +756,15 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springBoot</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">虚拟机</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">使用Spring Cache集成Redis</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">接口文档</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">yapi</a>
         		</li>
       		
 		</ul>
@@ -763,11 +776,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/springBoot/" class="article-tag-list-link color1">springBoot</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/使用SpringCache集成Redis/" class="article-tag-list-link color2">使用Spring Cache集成Redis</a>
+        			<a href="/categories/项目技术总结/" class="article-tag-list-link color2">项目技术总结</a>
         		</li>
       		
 		</ul>
@@ -776,7 +785,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/02/18/使用Spring-Cache集成Redis/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/12/27/Centos7部署yapi/">展开全文 >></a>
         </p>
       
 
@@ -806,29 +815,35 @@
 
 
   
-    <article id="springboot-整合Lettuce-Redis" class="article article-type-springboot  article-index" itemscope itemprop="blogPost">
+    <article id="springboot-maven私服-花里胡哨的搭建" class="article article-type-springboot  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/18/整合Lettuce-Redis/">整合Lettuce Redis</a>
+      <a class="article-title" href="/2019/12/27/maven私服-花里胡哨的搭建/">maven私服,花里胡哨的搭建</a>
     </h1>
   
 
         
-        <a href="/2019/02/18/整合Lettuce-Redis/" class="archive-article-date">
-  	<time datetime="2019-02-18T10:53:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-18</time>
+        <a href="/2019/12/27/maven私服-花里胡哨的搭建/" class="archive-article-date">
+  	<time datetime="2019-12-27T06:33:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-27</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Spring Boot 除了支持常见的ORM框架外，更是对常用的中间件提供了非常好封装，随着Spring Boot2.x的到来，支持的组件越来越丰富，也越来越成熟，其中对Redis的支持不仅仅是丰富了它的API，更是替换掉底层Jedis的依赖，取而代之换成了Lettuce(生菜)<br>
+        <h2 id="为何用到Maven私服？"><a href="#为何用到Maven私服？" class="headerlink" title="为何用到Maven私服？"></a>为何用到Maven私服？</h2><blockquote>
+<p>在实际开发中，项目中可能会用到第三方的jar、内部通讯的服务接口都会打入到公司的私服中。</p>
+</blockquote>
+<p>我们从项目实际开发来看：</p>
+<ol>
+<li>一些无法从外部仓库下载的构件，例如内部的项目还能部署到私服上，以便供其他依赖项目使用。</li>
+<li><p>为了节省带宽和时间，在局域网内架设一个私有的仓库服务器，用其代理所有外部的远程仓库。当本地Maven项目需要下载构件时，先去私服请求，如果私服没有，则再去远程仓库请求，从远程仓库下载构件后，把构件缓存在私服上。这样，及时暂时没有Internet链接，由于私服已经缓存了大量构件，整个项目还是可以正常使用的。同时，也降低了中央仓库的符合。</p>
         
-          <a class="article-more-a" href="/2019/02/18/整合Lettuce-Redis/#more">more >></a>
+          <a class="article-more-a" href="/2019/12/27/maven私服-花里胡哨的搭建/#more">more >></a>
         
       
 
@@ -842,7 +857,15 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">springBoot</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">虚拟机</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Docker</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">MAVEN</a>
         		</li>
       		
 		</ul>
@@ -854,7 +877,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/springBoot/" class="article-tag-list-link color1">springBoot</a>
+        			<a href="/categories/直播项目技术总结/" class="article-tag-list-link color4">直播项目技术总结</a>
         		</li>
       		
 		</ul>
@@ -863,7 +886,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/02/18/整合Lettuce-Redis/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/12/27/maven私服-花里胡哨的搭建/">展开全文 >></a>
         </p>
       
 
@@ -895,7 +918,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
     </nav>
   
 
@@ -907,7 +930,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 Kaleldo
+    		&copy; 2020 Kaleldo
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/zch2017lrf/zch2017lrf.github.io" target="_blank">Yilia</a> by aha
@@ -998,10 +1021,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">springBoot</a>
               </li>
              
@@ -1010,11 +1029,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Java中的锁</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Lock接口</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">容器源码分析2</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1030,19 +1057,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">iwiilsay小程序</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">数据结构与算法</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">容器源码分析2</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">仿土巴兔小程序</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">iwiilsay小程序</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1054,11 +1077,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">spring 使用属性文件</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+                <a href="javascript:void(0)" class="js-tag color2">Java基础</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1070,15 +1097,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Java基础</a>
+                <a href="javascript:void(0)" class="js-tag color2">java提高</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">lambda</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">java提高</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1090,15 +1113,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">事务</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">文件上传</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">事务</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1126,6 +1149,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">项目分析</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">mybatis</a>
               </li>
              
@@ -1135,6 +1162,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">docker</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1158,6 +1189,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">spring4</a>
               </li>
              
@@ -1174,19 +1209,47 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+                <a href="javascript:void(0)" class="js-tag color3">IM</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Thinking In Java</a>
+                <a href="javascript:void(0)" class="js-tag color4">腾讯云</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">读书笔记</a>
+                <a href="javascript:void(0)" class="js-tag color1">maven</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">项目分析</a>
+                <a href="javascript:void(0)" class="js-tag color5">Linux常用命令</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Mysql常用命令</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">开源项目</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Java多线程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Java序列化</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">VUE</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">网络基础</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1292,6 +1355,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     	<section class="tools-section tools-section-friends" q-show="friends">
   		
         <ul class="search-ul">
+          
+            <li class="search-li">
+              <a href="https://github.com/zch2017lrf/SpringCloudDemo" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>SpringCloud学习过程</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="https://github.com/zch2017lrf/springbootDemo" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>SpringBoot日常总结</a>
+            </li>
           
             <li class="search-li">
               <a href="https://gitee.com/zch2017lrf" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>码云地址</a>
